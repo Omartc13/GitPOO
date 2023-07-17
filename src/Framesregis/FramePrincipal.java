@@ -7,6 +7,7 @@ package Framesregis;
 import Clases.Registro_Gerente;
 import conexionbd.Conexion;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
