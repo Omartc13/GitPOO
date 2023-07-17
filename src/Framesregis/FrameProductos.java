@@ -512,9 +512,9 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel5.add(cmbTipocomes, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, 120, -1));
 
         jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("Arial Black", 2, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 0));
+        jTextField1.setBackground(new java.awt.Color(7, 62, 91));
+        jTextField1.setFont(new java.awt.Font("Stencil", 2, 36)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(246, 241, 241));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("REGISTROS DE PRODUCTOS COMESTIBLES");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -709,9 +709,9 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel7.add(txtdiri3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 180, 80, -1));
 
         jTextField3.setEditable(false);
-        jTextField3.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField3.setFont(new java.awt.Font("Arial Black", 2, 24)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(255, 255, 0));
+        jTextField3.setBackground(new java.awt.Color(7, 62, 91));
+        jTextField3.setFont(new java.awt.Font("Stencil", 2, 36)); // NOI18N
+        jTextField3.setForeground(new java.awt.Color(246, 241, 241));
         jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField3.setText("REGISTROS DE PRODUCTOS DE MAQUILLAJES");
         jTextField3.addActionListener(new java.awt.event.ActionListener() {

@@ -89,6 +89,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jSeparator8 = new javax.swing.JSeparator();
         jSeparator9 = new javax.swing.JSeparator();
         jLabel13 = new javax.swing.JLabel();
+        btnEditar = new javax.swing.JButton();
         PanelEm = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -475,6 +476,14 @@ public class FramePrincipal extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/2942813 1.png"))); // NOI18N
         jLabel13.setText("Administradores");
         PanelAd.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 490, -1));
+
+        btnEditar.setText("Editar");
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
+        PanelAd.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
 
         PanelPri.add(PanelAd, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 360));
 
@@ -1858,6 +1867,24 @@ FrameSucursales abrir = new FrameSucursales();
         
     }//GEN-LAST:event_jButton14ActionPerformed
 
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        String na= txtBusNamAd.getText();
+        String ap= txtBusApeAd.getText();
+        String dn= txtBuscDniAd.getText();
+        String an=txtBuscAniAd.getText();
+        String afi=txtBusAfiAd.getText();
+        
+        try {
+            PreparedStatement pps= cn.prepareStatement("UPDATE empleadoad SET Nombre='"+na+"',Apellido='"+ap+"',DNI='"+dn+"',AnioIng='"+an+"',Afiliacion='"+afi+"' Where DNI="+dn);
+            pps.execute();
+            JOptionPane.showMessageDialog(null, "Datos acutalizados");
+            
+        } catch (SQLException ex) {
+                Logger.getLogger(FramePrincipal.class.getName()).log(Level.SEVERE, null, ex);
+            }
+    
+    }//GEN-LAST:event_btnEditarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1907,6 +1934,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JPanel PanelSucPri;
     private javax.swing.JPanel PanelSucProv;
     private javax.swing.JPanel PanelprinProvedores;
+    private javax.swing.JButton btnEditar;
     private javax.swing.JComboBox<String> cmbProductos;
     private javax.swing.JComboBox<String> cmbTipoProv;
     private javax.swing.JComboBox<String> cmbtipoSucursal;

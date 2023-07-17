@@ -104,7 +104,7 @@ public class FrameSucursales extends javax.swing.JFrame {
 
         JtabbedPane.setBackground(new java.awt.Color(204, 255, 255));
         JtabbedPane.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        JtabbedPane.setForeground(new java.awt.Color(0, 0, 0));
+        JtabbedPane.setForeground(new java.awt.Color(7, 62, 91));
         JtabbedPane.setToolTipText("");
         JtabbedPane.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         JtabbedPane.setName(""); // NOI18N
@@ -247,9 +247,9 @@ public class FrameSucursales extends javax.swing.JFrame {
         jPanel4.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 810, 230));
 
         jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("Arial Black", 2, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 0));
+        jTextField1.setBackground(new java.awt.Color(7, 62, 91));
+        jTextField1.setFont(new java.awt.Font("Stencil", 2, 36)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(246, 241, 241));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("REGISTROS DE SUCURSALES DE LIMA");
         jPanel4.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 862, 61));
@@ -445,11 +445,12 @@ public class FrameSucursales extends javax.swing.JFrame {
         jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 240, 800, 171));
 
         jTextField2.setEditable(false);
-        jTextField2.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField2.setFont(new java.awt.Font("Arial Black", 2, 24)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 0));
-        jTextField2.setText("                 REGISTROS DE SUCURSALES DE PROVINCIAS");
-        jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 862, 52));
+        jTextField2.setBackground(new java.awt.Color(7, 62, 91));
+        jTextField2.setFont(new java.awt.Font("Stencil", 2, 36)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(246, 241, 241));
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField2.setText("REGISTROS DE SUCURSALES DE PROVINCIAS");
+        jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 862, 60));
 
         JtabbedPane.addTab("Provincia", jPanel3);
 

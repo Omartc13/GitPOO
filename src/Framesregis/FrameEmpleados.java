@@ -255,9 +255,9 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel2.add(cmbSueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 154, -1, -1));
 
         jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("Arial Black", 2, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 0));
+        jTextField1.setBackground(new java.awt.Color(7, 62, 91));
+        jTextField1.setFont(new java.awt.Font("Stencil", 2, 30)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(246, 241, 241));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("REGISTROS DE ADMINISTRADORES DE LA EMPRESA");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -297,17 +297,17 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Nombres: ");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 20));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, 20));
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Apellidos:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 108, -1, 30));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, -1, 30));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("DNI:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 120, -1, -1));
 
         cmbtipo.setBackground(new java.awt.Color(246, 241, 241));
         cmbtipo.setForeground(new java.awt.Color(0, 0, 0));
@@ -317,13 +317,13 @@ public class FrameEmpleados extends javax.swing.JFrame {
                 cmbtipoActionPerformed(evt);
             }
         });
-        jPanel1.add(cmbtipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, 130, -1));
+        jPanel1.add(cmbtipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, 130, -1));
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 84, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Tipo de trabajador:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, -1, -1));
 
         txtapellidos.setBackground(new java.awt.Color(246, 241, 241));
         txtapellidos.setForeground(new java.awt.Color(0, 0, 0));
@@ -332,7 +332,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
                 txtapellidosKeyTyped(evt);
             }
         });
-        jPanel1.add(txtapellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 251, -1));
+        jPanel1.add(txtapellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 251, -1));
 
         txtnombre.setBackground(new java.awt.Color(246, 241, 241));
         txtnombre.setForeground(new java.awt.Color(0, 0, 0));
@@ -341,7 +341,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
                 txtnombreKeyTyped(evt);
             }
         });
-        jPanel1.add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 251, -1));
+        jPanel1.add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 251, -1));
 
         txtdni.setBackground(new java.awt.Color(246, 241, 241));
         txtdni.setForeground(new java.awt.Color(0, 0, 0));
@@ -350,7 +350,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
                 txtdniKeyTyped(evt);
             }
         });
-        jPanel1.add(txtdni, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 130, -1));
+        jPanel1.add(txtdni, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 130, -1));
 
         tblEmpleado.setBackground(new java.awt.Color(246, 241, 241));
         tblEmpleado.setForeground(new java.awt.Color(0, 0, 0));
@@ -423,11 +423,12 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel1.add(SALIR, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, -1, 39));
 
         jTextField2.setEditable(false);
-        jTextField2.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField2.setFont(new java.awt.Font("Arial Black", 2, 24)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 0));
-        jTextField2.setText("          REGISTROS DE EMPLEADOS DE LA EMPRESA");
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 50));
+        jTextField2.setBackground(new java.awt.Color(7, 62, 91));
+        jTextField2.setFont(new java.awt.Font("Stencil", 2, 36)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(246, 241, 241));
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField2.setText("REGISTROS DE EMPLEADOS DE LA EMPRESA");
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 60));
 
         jTabbedPane1.addTab("Empleado", jPanel1);
 

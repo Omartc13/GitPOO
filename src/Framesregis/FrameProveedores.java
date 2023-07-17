@@ -223,9 +223,9 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel2.add(BTNLimpiarPI, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 470, 80, 30));
 
         jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("Arial Black", 2, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 0));
+        jTextField1.setBackground(new java.awt.Color(7, 62, 91));
+        jTextField1.setFont(new java.awt.Font("Stencil", 2, 36)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(246, 241, 241));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("REGISTROS DE PROVEEDORES INTERNOS");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -449,10 +449,11 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel3.add(BTNLimpiarPE, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 490, 113, 33));
 
         jTextField2.setEditable(false);
-        jTextField2.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField2.setFont(new java.awt.Font("Arial Black", 2, 24)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 0));
-        jTextField2.setText("                     REGISTROS DE PROVEEDORES EXTERNOS");
+        jTextField2.setBackground(new java.awt.Color(7, 62, 91));
+        jTextField2.setFont(new java.awt.Font("Stencil", 2, 36)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(246, 241, 241));
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField2.setText("REGISTROS DE PROVEEDORES EXTERNOS");
         jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 932, 70));
 
         jTabbedPane1.addTab("Proveedor externo", jPanel3);
@@ -719,10 +720,10 @@ public class FrameProveedores extends javax.swing.JFrame {
     private void TXTrucKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TXTrucKeyTyped
 
         
-//        if (TXTruc.getText().length()>=11)
-//        {
-//            evt.consume();
-//        }
+        if (TXTruc.getText().length()>=11)
+        {
+            evt.consume();
+        }
         
     }//GEN-LAST:event_TXTrucKeyTyped
 
