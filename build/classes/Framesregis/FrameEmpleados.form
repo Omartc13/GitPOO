@@ -245,7 +245,7 @@
                   </AuxValues>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="551" y="74" width="115" height="-1"/>
+                      <AbsoluteConstraints x="551" y="74" width="130" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -279,7 +279,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="551" y="114" width="114" height="-1"/>
+                      <AbsoluteConstraints x="551" y="114" width="130" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -479,7 +479,7 @@
                   </AuxValues>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="551" y="154" width="-1" height="-1"/>
+                      <AbsoluteConstraints x="551" y="154" width="130" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -590,7 +590,7 @@
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="5">
-                    <StringItem index="0" value="--Seleccionar"/>
+                    <StringItem index="0" value="--Seleccionar--"/>
                     <StringItem index="1" value="Cajero"/>
                     <StringItem index="2" value="Limpieza"/>
                     <StringItem index="3" value="Seguridad"/>

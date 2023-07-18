@@ -241,7 +241,7 @@ public class FrameProductos extends javax.swing.JFrame {
 
         cmbtipfabri.setBackground(new java.awt.Color(246, 241, 241));
         cmbtipfabri.setForeground(new java.awt.Color(0, 0, 0));
-        cmbtipfabri.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "90% Natural", "50% Natural" }));
+        cmbtipfabri.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "90% Natural", "50% Natural" }));
         cmbtipfabri.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbtipfabriActionPerformed(evt);
@@ -508,7 +508,7 @@ public class FrameProductos extends javax.swing.JFrame {
 
         cmbTipocomes.setBackground(new java.awt.Color(246, 241, 241));
         cmbTipocomes.setForeground(new java.awt.Color(0, 0, 0));
-        cmbTipocomes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecionar", "Fruta/Verdura", "Embutidos", "Otros", "Bebida", "Proteina" }));
+        cmbTipocomes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Selecionar--", "Fruta/Verdura", "Embutidos", "Otros", "Bebida", "Proteina" }));
         jPanel5.add(cmbTipocomes, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, 120, -1));
 
         jTextField1.setEditable(false);
@@ -612,7 +612,7 @@ public class FrameProductos extends javax.swing.JFrame {
 
         cmbtipfabri3.setBackground(new java.awt.Color(246, 241, 241));
         cmbtipfabri3.setForeground(new java.awt.Color(0, 0, 0));
-        cmbtipfabri3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Cruelty free", "NO CF" }));
+        cmbtipfabri3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Cruelty free", "NO CF" }));
         jPanel7.add(cmbtipfabri3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 110, 120, -1));
 
         tblMakeup.setBackground(new java.awt.Color(246, 241, 241));

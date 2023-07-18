@@ -162,7 +162,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
                 cmbAfilActionPerformed(evt);
             }
         });
-        jPanel2.add(cmbAfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 74, 115, -1));
+        jPanel2.add(cmbAfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 74, 130, -1));
 
         jLabel11.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
@@ -176,7 +176,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
                 txtAñoKeyTyped(evt);
             }
         });
-        jPanel2.add(txtAño, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 114, 114, -1));
+        jPanel2.add(txtAño, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 114, 130, -1));
 
         tblAdministrador.setBackground(new java.awt.Color(246, 241, 241));
         tblAdministrador.setModel(new javax.swing.table.DefaultTableModel(
@@ -252,7 +252,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
                 cmbSueldoActionPerformed(evt);
             }
         });
-        jPanel2.add(cmbSueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 154, -1, -1));
+        jPanel2.add(cmbSueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 154, 130, -1));
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(7, 62, 91));
@@ -311,7 +311,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
 
         cmbtipo.setBackground(new java.awt.Color(246, 241, 241));
         cmbtipo.setForeground(new java.awt.Color(0, 0, 0));
-        cmbtipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar", "Cajero", "Limpieza", "Seguridad", "Asistente" }));
+        cmbtipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Cajero", "Limpieza", "Seguridad", "Asistente" }));
         cmbtipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbtipoActionPerformed(evt);
