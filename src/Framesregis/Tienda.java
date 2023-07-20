@@ -6,6 +6,10 @@ import java.awt.Image;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -21,7 +25,7 @@ public class Tienda extends javax.swing.JFrame {
     
     
     Conexion db= new Conexion();
-    
+    Connection cn=  db.conectar();
         
 
     public Tienda() {
@@ -181,39 +185,8 @@ public class Tienda extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_ButSalirActionPerformed
     
-    public void accesoUsuario(String user,String pass){
-        
-        String usuariocorrecto=null;
-        String passwordcorrecto=null;
-        
-        try{
-            Connection cn =db.conectar();
-            PreparedStatement pst= cn.prepareStatement("Select Usuario,Contraseña from usuario");
-            ResultSet rs= pst.executeQuery();
             
-            if(rs.next()){
-                usuariocorrecto=rs.getString(1);
-                passwordcorrecto=rs.getString(2);
-                
-            }
-            
-            if(user.equals(usuariocorrecto)&& pass.equals(passwordcorrecto)){
-                JOptionPane.showMessageDialog(null, "Login correcto: "+user);
-                abrirframeprin();
-                
-                
-                
-                
-            }else if (!user.equals(usuariocorrecto) || !pass.equals(passwordcorrecto)) {
-                JOptionPane.showMessageDialog(null, "Usuario o contraseñas incorrectas");
-            }
-            
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Error: ");
-            System.out.println(e);
-        }
-        
-    }
+    
     
     public void abrirframeprin(){
         FramePrincipal tiendaFrame = new FramePrincipal();
@@ -224,11 +197,26 @@ public class Tienda extends javax.swing.JFrame {
     
     
     private void ButEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButEntActionPerformed
-        
-        String user= txtusuario.getText();
-        String pass= txtcontra.getText();
-        accesoUsuario(user,pass);
-        
+        String user=txtusuario.getText();
+        String contra=txtcontra.getText();
+        String sql="Select Usuario, Contraseña From usuario Where Usuario='"+user+"' and Contraseña='"+contra+"'";
+        Statement st;
+        if (user.equalsIgnoreCase("") || contra.equalsIgnoreCase("")){
+            JOptionPane.showMessageDialog(null, "Uno o mas campos vacios");
+        }else{
+            try {
+                st=cn.createStatement();
+                ResultSet rs=st.executeQuery(sql);
+                if(rs.next()){
+                    JOptionPane.showMessageDialog(null, "Bienvenido: "+user);
+                    abrirframeprin();    
+                }else{
+                    JOptionPane.showMessageDialog(null, "Usuario o Contraseña incorreco");
+                }    
+            } catch (SQLException ex) {
+                Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+            }
+        }
     }//GEN-LAST:event_ButEntActionPerformed
 
     private void txtusuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtusuarioMouseClicked
