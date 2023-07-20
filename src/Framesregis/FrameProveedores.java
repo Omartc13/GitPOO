@@ -141,7 +141,7 @@ public class FrameProveedores extends javax.swing.JFrame {
 
         CMBarea.setBackground(new java.awt.Color(246, 241, 241));
         CMBarea.setForeground(new java.awt.Color(0, 0, 0));
-        CMBarea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Dirección", "Recursos Humanos", "Finanzas", "Marketing", "Tecnología" }));
+        CMBarea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Dirección", "Recursos Humanos", "Finanzas", "Marketing", "Tecnología" }));
         CMBarea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CMBareaActionPerformed(evt);
