@@ -88,10 +88,10 @@ public class FramePrincipal extends javax.swing.JFrame {
         btnEditarEmple = new javax.swing.JButton();
         jcomboTipoEm = new javax.swing.JComboBox<>();
         jSeparator62 = new javax.swing.JSeparator();
-        btnEditar = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
         PanelAd = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
+        btnEditar = new javax.swing.JButton();
         txtBuscDniAd = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -501,7 +501,7 @@ public class FramePrincipal extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        PanelEm.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 140, -1));
+        PanelEm.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, 140, -1));
 
         jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
@@ -544,29 +544,6 @@ public class FramePrincipal extends javax.swing.JFrame {
         jSeparator62.setForeground(new java.awt.Color(0, 0, 0));
         PanelEm.add(jSeparator62, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 310, 10));
 
-        btnEditar.setBackground(new java.awt.Color(246, 241, 241));
-        btnEditar.setForeground(new java.awt.Color(0, 0, 0));
-        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/5854505 1.png"))); // NOI18N
-        btnEditar.setText("Editar");
-        btnEditar.setActionCommand(" Editar");
-        btnEditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarActionPerformed(evt);
-            }
-        });
-        PanelEm.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 110, -1));
-
-        jButton7.setBackground(new java.awt.Color(246, 241, 241));
-        jButton7.setForeground(new java.awt.Color(0, 0, 0));
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/64673 1.png"))); // NOI18N
-        jButton7.setText("Consultar");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        PanelEm.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 380, 140, 40));
-
         PanelPri.add(PanelEm, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 450));
 
         PanelAd.setBackground(new java.awt.Color(246, 241, 241));
@@ -577,6 +554,29 @@ public class FramePrincipal extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("DNI:");
         PanelAd.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 150, -1));
+
+        jButton7.setBackground(new java.awt.Color(246, 241, 241));
+        jButton7.setForeground(new java.awt.Color(0, 0, 0));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/64673 1.png"))); // NOI18N
+        jButton7.setText("Consultar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        PanelAd.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 380, 140, 40));
+
+        btnEditar.setBackground(new java.awt.Color(246, 241, 241));
+        btnEditar.setForeground(new java.awt.Color(0, 0, 0));
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/5854505 1.png"))); // NOI18N
+        btnEditar.setText("Editar");
+        btnEditar.setActionCommand(" Editar");
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
+        PanelAd.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 110, -1));
 
         txtBuscDniAd.setBackground(new java.awt.Color(246, 241, 241));
         txtBuscDniAd.setForeground(new java.awt.Color(0, 0, 0));
