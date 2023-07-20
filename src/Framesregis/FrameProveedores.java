@@ -571,7 +571,7 @@ public class FrameProveedores extends javax.swing.JFrame {
     }
     
     private void BTNguardarPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNguardarPEActionPerformed
-    int ruc=0;
+    long ruc=0L;
     int anio=0;
     int tele=0;
     boolean datosValidos = true;
@@ -592,7 +592,7 @@ public class FrameProveedores extends javax.swing.JFrame {
         datosValidos = false;}
         
         try {
-        ruc = Integer.parseInt(TXTruc.getText());
+        ruc = Long.parseLong(TXTruc.getText());
         if (String.valueOf(ruc).length() != 11) {
         JOptionPane.showMessageDialog(null, "El RUC debe tener 11 dígitos");
         datosValidos = false; // Marcar los datos como no válidos
@@ -648,7 +648,7 @@ public class FrameProveedores extends javax.swing.JFrame {
             try {
                 PreparedStatement pps=  cn.prepareStatement("INSERT INTO provedorext(NombreEmp,RUC,Telefono,Direccion,Correo,AnioColab,GerenteGe) VALUES(?,?,?,?,?,?,?)");
                 pps.setString(1, nom);
-                pps.setInt(2, ruc);
+                pps.setLong(2, ruc);
                 pps.setInt(3, tele);
                 pps.setString(4, dir);
                 pps.setString(5, cor);

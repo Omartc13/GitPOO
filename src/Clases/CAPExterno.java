@@ -9,7 +9,7 @@ package Clases;
  * @author yosse
  */
 public class CAPExterno extends CADatosEncargado{
-    private int RUC;
+    private long RUC;
     private String direccion;
     private int telefono;
     private String correo;
@@ -17,7 +17,7 @@ public class CAPExterno extends CADatosEncargado{
     private int añoIngreso;
 
 
-    public CAPExterno(int RUC, String direccion, int telefono, String correo, String encargado, String nombreProveedor, int añoIngreso) {
+    public CAPExterno(long RUC, String direccion, int telefono, String correo, String encargado, String nombreProveedor, int añoIngreso) {
         super(nombreProveedor);
         this.RUC = RUC;
         this.direccion = direccion;
@@ -42,7 +42,7 @@ public class CAPExterno extends CADatosEncargado{
         this.encargado = encargado;
     }
 
-    public int getRUC() {
+    public long getRUC() {
         return RUC;
     }
 

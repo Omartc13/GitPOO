@@ -501,7 +501,7 @@ public class FramePrincipal extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        PanelEm.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, 140, -1));
+        PanelEm.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 140, -1));
 
         jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
