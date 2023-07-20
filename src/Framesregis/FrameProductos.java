@@ -918,7 +918,7 @@ public class FrameProductos extends javax.swing.JFrame {
         
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
-public static boolean validarLetras(String datos){
+    public static boolean validarLetras(String datos){
         return datos.matches("[a-zA-Z ]*");
     }
 
