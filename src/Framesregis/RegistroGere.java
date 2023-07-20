@@ -163,6 +163,11 @@ public class RegistroGere extends javax.swing.JFrame {
                 txtnuevoDNIActionPerformed(evt);
             }
         });
+        txtnuevoDNI.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnuevoDNIKeyTyped(evt);
+            }
+        });
         jPanel2.add(txtnuevoDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 384, -1));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
@@ -247,17 +252,13 @@ public class RegistroGere extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButEntActionPerformed
+        
         Registro_Gerente reg = new Registro_Gerente();
-        
-        
         String dni= txtnuevoDNI.getText();
         String Nombre= txtnuevoNombre.getText();
         String Apellido= txtnuevoApellido.getText();
         String Usuario= txtnuevoUsuario.getText();
         String contraseña=txtcontra.getText();
-        
-        
-        
         reg.guardarusuario(dni, Nombre, Apellido, Usuario, contraseña);
         
     }//GEN-LAST:event_ButEntActionPerformed
@@ -303,6 +304,13 @@ public class RegistroGere extends javax.swing.JFrame {
         ti.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_ButEnt1ActionPerformed
+
+    private void txtnuevoDNIKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnuevoDNIKeyTyped
+        if (txtnuevoDNI.getText().length()>=8)
+        {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtnuevoDNIKeyTyped
         
     /**
      * @param args the command line arguments
