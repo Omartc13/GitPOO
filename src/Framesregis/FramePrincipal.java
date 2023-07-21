@@ -330,6 +330,7 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 255));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel5.setBackground(new java.awt.Color(175, 211, 226));
@@ -471,6 +472,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jButton7.setForeground(new java.awt.Color(0, 0, 0));
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/64673 1.png"))); // NOI18N
         jButton7.setText("Consultar");
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -484,6 +486,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/5854505 1.png"))); // NOI18N
         btnEditar.setText("Editar");
         btnEditar.setActionCommand(" Editar");
+        btnEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);
@@ -570,6 +573,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         butEliEmpAd.setForeground(new java.awt.Color(0, 0, 0));
         butEliEmpAd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 6.png"))); // NOI18N
         butEliEmpAd.setText("Eliminar");
+        butEliEmpAd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         butEliEmpAd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butEliEmpAdActionPerformed(evt);
@@ -632,6 +636,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jButton8.setForeground(new java.awt.Color(0, 0, 0));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/64673 1.png"))); // NOI18N
         jButton8.setText("  Consultar");
+        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -664,6 +669,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         btnEditarEmple.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/5854505 1.png"))); // NOI18N
         btnEditarEmple.setText("Editar");
         btnEditarEmple.setActionCommand(" Editar");
+        btnEditarEmple.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEditarEmple.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarEmpleActionPerformed(evt);
@@ -686,6 +692,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         butEliEmp.setForeground(new java.awt.Color(0, 0, 0));
         butEliEmp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 6.png"))); // NOI18N
         butEliEmp.setText("Eliminar");
+        butEliEmp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         butEliEmp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butEliEmpActionPerformed(evt);
@@ -772,6 +779,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jButton10.setForeground(new java.awt.Color(0, 0, 0));
         jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/64673 1.png"))); // NOI18N
         jButton10.setText("Consultar");
+        jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
@@ -890,6 +898,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         btnEditarProMake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/5854505 1.png"))); // NOI18N
         btnEditarProMake.setText("Editar");
         btnEditarProMake.setActionCommand(" Editar");
+        btnEditarProMake.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEditarProMake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarProMakeActionPerformed(evt);
@@ -902,6 +911,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         butEliProdMake.setForeground(new java.awt.Color(0, 0, 0));
         butEliProdMake.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 6.png"))); // NOI18N
         butEliProdMake.setText("Eliminar");
+        butEliProdMake.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         butEliProdMake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butEliProdMakeActionPerformed(evt);
@@ -967,6 +977,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jButton9.setForeground(new java.awt.Color(0, 0, 0));
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/64673 1.png"))); // NOI18N
         jButton9.setText("Consultar");
+        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -1052,6 +1063,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         btnEditarProComes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/5854505 1.png"))); // NOI18N
         btnEditarProComes.setText("Editar");
         btnEditarProComes.setActionCommand(" Editar");
+        btnEditarProComes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEditarProComes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarProComesActionPerformed(evt);
@@ -1064,6 +1076,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         butEliProdComes.setForeground(new java.awt.Color(0, 0, 0));
         butEliProdComes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 6.png"))); // NOI18N
         butEliProdComes.setText("Eliminar");
+        butEliProdComes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         butEliProdComes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butEliProdComesActionPerformed(evt);
@@ -1129,6 +1142,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/64673 1.png"))); // NOI18N
         jButton6.setText("Consultar");
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -1231,6 +1245,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         btnEditarHigi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/5854505 1.png"))); // NOI18N
         btnEditarHigi.setText("Editar");
         btnEditarHigi.setActionCommand(" Editar");
+        btnEditarHigi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEditarHigi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarHigiActionPerformed(evt);
@@ -1243,6 +1258,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         butEliProdHigi.setForeground(new java.awt.Color(0, 0, 0));
         butEliProdHigi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 6.png"))); // NOI18N
         butEliProdHigi.setText("Eliminar");
+        butEliProdHigi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         butEliProdHigi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butEliProdHigiActionPerformed(evt);
@@ -1319,6 +1335,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jButton12.setForeground(new java.awt.Color(0, 0, 0));
         jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/64673 1.png"))); // NOI18N
         jButton12.setText("Consultar");
+        jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
@@ -1416,6 +1433,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         btnEditarProvExt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/5854505 1.png"))); // NOI18N
         btnEditarProvExt.setText("Editar");
         btnEditarProvExt.setActionCommand(" Editar");
+        btnEditarProvExt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEditarProvExt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarProvExtActionPerformed(evt);
@@ -1428,6 +1446,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         butEliProvExt.setForeground(new java.awt.Color(0, 0, 0));
         butEliProvExt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 6.png"))); // NOI18N
         butEliProvExt.setText("Eliminar");
+        butEliProvExt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         butEliProvExt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butEliProvExtActionPerformed(evt);
@@ -1477,6 +1496,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jButton11.setForeground(new java.awt.Color(0, 0, 0));
         jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/64673 1.png"))); // NOI18N
         jButton11.setText("Consultar");
+        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
@@ -1502,6 +1522,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         btnEditarProvInt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/5854505 1.png"))); // NOI18N
         btnEditarProvInt.setText("Editar");
         btnEditarProvInt.setActionCommand(" Editar");
+        btnEditarProvInt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEditarProvInt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarProvIntActionPerformed(evt);
@@ -1514,6 +1535,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         butEliProvInt.setForeground(new java.awt.Color(0, 0, 0));
         butEliProvInt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 6.png"))); // NOI18N
         butEliProvInt.setText("Eliminar");
+        butEliProvInt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         butEliProvInt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butEliProvIntActionPerformed(evt);
@@ -1599,6 +1621,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jButton14.setForeground(new java.awt.Color(0, 0, 0));
         jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/64673 1.png"))); // NOI18N
         jButton14.setText("Consultar");
+        jButton14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
@@ -1703,6 +1726,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         btnEditarSucPro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/5854505 1.png"))); // NOI18N
         btnEditarSucPro.setText("Editar");
         btnEditarSucPro.setActionCommand(" Editar");
+        btnEditarSucPro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEditarSucPro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarSucProActionPerformed(evt);
@@ -1715,6 +1739,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         butEliSucpro.setForeground(new java.awt.Color(0, 0, 0));
         butEliSucpro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 6.png"))); // NOI18N
         butEliSucpro.setText("Eliminar");
+        butEliSucpro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         butEliSucpro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butEliSucproActionPerformed(evt);
@@ -1799,6 +1824,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jButton13.setForeground(new java.awt.Color(0, 0, 0));
         jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/64673 1.png"))); // NOI18N
         jButton13.setText("Consultar");
+        jButton13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
@@ -1828,6 +1854,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         btnEditarSucPri.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/5854505 1.png"))); // NOI18N
         btnEditarSucPri.setText("Editar");
         btnEditarSucPri.setActionCommand(" Editar");
+        btnEditarSucPri.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEditarSucPri.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarSucPriActionPerformed(evt);
@@ -1840,6 +1867,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         butEliSucPri.setForeground(new java.awt.Color(0, 0, 0));
         butEliSucPri.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 6.png"))); // NOI18N
         butEliSucPri.setText("Eliminar");
+        butEliSucPri.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         butEliSucPri.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 butEliSucPriActionPerformed(evt);

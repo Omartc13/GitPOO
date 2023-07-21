@@ -157,6 +157,7 @@ public class FrameProveedores extends javax.swing.JFrame {
         BTNguardarPI.setBackground(new java.awt.Color(0, 153, 253));
         BTNguardarPI.setForeground(new java.awt.Color(0, 0, 0));
         BTNguardarPI.setText("AGREGAR");
+        BTNguardarPI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNguardarPI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BTNguardarPIActionPerformed(evt);
@@ -167,6 +168,7 @@ public class FrameProveedores extends javax.swing.JFrame {
         BTNborrarPI.setBackground(new java.awt.Color(255, 0, 0));
         BTNborrarPI.setForeground(new java.awt.Color(0, 0, 0));
         BTNborrarPI.setText("ELIMINAR PROVEEDOR");
+        BTNborrarPI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNborrarPI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BTNborrarPIActionPerformed(evt);
@@ -177,6 +179,7 @@ public class FrameProveedores extends javax.swing.JFrame {
         BTNvolverPI.setBackground(new java.awt.Color(255, 0, 0));
         BTNvolverPI.setForeground(new java.awt.Color(0, 0, 0));
         BTNvolverPI.setText("VOLVER");
+        BTNvolverPI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNvolverPI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BTNvolverPIActionPerformed(evt);
@@ -215,6 +218,7 @@ public class FrameProveedores extends javax.swing.JFrame {
         BTNLimpiarPI.setBackground(new java.awt.Color(255, 255, 255));
         BTNLimpiarPI.setForeground(new java.awt.Color(0, 0, 0));
         BTNLimpiarPI.setText("LIMPIAR");
+        BTNLimpiarPI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNLimpiarPI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BTNLimpiarPIActionPerformed(evt);
@@ -376,6 +380,7 @@ public class FrameProveedores extends javax.swing.JFrame {
         BTNguardarPE.setBackground(new java.awt.Color(0, 153, 255));
         BTNguardarPE.setForeground(new java.awt.Color(0, 0, 0));
         BTNguardarPE.setText("AGREGAR");
+        BTNguardarPE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNguardarPE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BTNguardarPEActionPerformed(evt);
@@ -386,6 +391,7 @@ public class FrameProveedores extends javax.swing.JFrame {
         BTNborrarPE.setBackground(new java.awt.Color(255, 0, 0));
         BTNborrarPE.setForeground(new java.awt.Color(0, 0, 0));
         BTNborrarPE.setText("ELIMINAR PROVEEDOR");
+        BTNborrarPE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNborrarPE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BTNborrarPEActionPerformed(evt);
@@ -396,6 +402,7 @@ public class FrameProveedores extends javax.swing.JFrame {
         BTNvolverPE.setBackground(new java.awt.Color(255, 0, 0));
         BTNvolverPE.setForeground(new java.awt.Color(0, 0, 0));
         BTNvolverPE.setText("SALIR");
+        BTNvolverPE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNvolverPE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BTNvolverPEActionPerformed(evt);
@@ -441,6 +448,7 @@ public class FrameProveedores extends javax.swing.JFrame {
         BTNLimpiarPE.setBackground(new java.awt.Color(255, 255, 255));
         BTNLimpiarPE.setForeground(new java.awt.Color(0, 0, 0));
         BTNLimpiarPE.setText("LIMPIAR");
+        BTNLimpiarPE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNLimpiarPE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BTNLimpiarPEActionPerformed(evt);

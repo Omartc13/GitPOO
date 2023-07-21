@@ -23,6 +23,9 @@
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="ff" green="ff" red="cc" type="rgb"/>
     </Property>
+    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+      <Color id="Hand Cursor"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -451,6 +454,9 @@
                                           <Image iconType="3" name="/imagenes/64673 1.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Consultar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
@@ -477,6 +483,9 @@
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Editar"/>
                                         <Property name="actionCommand" type="java.lang.String" value=" Editar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarActionPerformed"/>
@@ -778,6 +787,9 @@
                                           <Image iconType="3" name="/imagenes/image 6.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Eliminar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butEliEmpAdActionPerformed"/>
@@ -949,6 +961,9 @@
                                           <Image iconType="3" name="/imagenes/64673 1.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="  Consultar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
@@ -1040,6 +1055,9 @@
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Editar"/>
                                         <Property name="actionCommand" type="java.lang.String" value=" Editar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarEmpleActionPerformed"/>
@@ -1110,6 +1128,9 @@
                                           <Image iconType="3" name="/imagenes/image 6.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Eliminar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butEliEmpActionPerformed"/>
@@ -1359,6 +1380,9 @@
                                           <Image iconType="3" name="/imagenes/64673 1.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Consultar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton10ActionPerformed"/>
@@ -1744,6 +1768,9 @@
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Editar"/>
                                         <Property name="actionCommand" type="java.lang.String" value=" Editar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarProMakeActionPerformed"/>
@@ -1769,6 +1796,9 @@
                                           <Image iconType="3" name="/imagenes/image 6.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Eliminar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butEliProdMakeActionPerformed"/>
@@ -1948,6 +1978,9 @@
                                           <Image iconType="3" name="/imagenes/64673 1.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Consultar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton9ActionPerformed"/>
@@ -2231,6 +2264,9 @@
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Editar"/>
                                         <Property name="actionCommand" type="java.lang.String" value=" Editar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarProComesActionPerformed"/>
@@ -2256,6 +2292,9 @@
                                           <Image iconType="3" name="/imagenes/image 6.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Eliminar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butEliProdComesActionPerformed"/>
@@ -2435,6 +2474,9 @@
                                           <Image iconType="3" name="/imagenes/64673 1.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Consultar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
@@ -2769,6 +2811,9 @@
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Editar"/>
                                         <Property name="actionCommand" type="java.lang.String" value=" Editar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarHigiActionPerformed"/>
@@ -2794,6 +2839,9 @@
                                           <Image iconType="3" name="/imagenes/image 6.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Eliminar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butEliProdHigiActionPerformed"/>
@@ -3025,6 +3073,9 @@
                                           <Image iconType="3" name="/imagenes/64673 1.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Consultar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
@@ -3319,6 +3370,9 @@
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Editar"/>
                                         <Property name="actionCommand" type="java.lang.String" value=" Editar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarProvExtActionPerformed"/>
@@ -3344,6 +3398,9 @@
                                           <Image iconType="3" name="/imagenes/image 6.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Eliminar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butEliProvExtActionPerformed"/>
@@ -3492,6 +3549,9 @@
                                           <Image iconType="3" name="/imagenes/64673 1.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Consultar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton11ActionPerformed"/>
@@ -3570,6 +3630,9 @@
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Editar"/>
                                         <Property name="actionCommand" type="java.lang.String" value=" Editar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarProvIntActionPerformed"/>
@@ -3595,6 +3658,9 @@
                                           <Image iconType="3" name="/imagenes/image 6.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Eliminar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butEliProvIntActionPerformed"/>
@@ -3840,6 +3906,9 @@
                                           <Image iconType="3" name="/imagenes/64673 1.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Consultar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton14ActionPerformed"/>
@@ -4171,6 +4240,9 @@
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Editar"/>
                                         <Property name="actionCommand" type="java.lang.String" value=" Editar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarSucProActionPerformed"/>
@@ -4196,6 +4268,9 @@
                                           <Image iconType="3" name="/imagenes/image 6.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Eliminar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butEliSucproActionPerformed"/>
@@ -4463,6 +4538,9 @@
                                           <Image iconType="3" name="/imagenes/64673 1.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Consultar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton13ActionPerformed"/>
@@ -4546,6 +4624,9 @@
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Editar"/>
                                         <Property name="actionCommand" type="java.lang.String" value=" Editar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarSucPriActionPerformed"/>
@@ -4571,6 +4652,9 @@
                                           <Image iconType="3" name="/imagenes/image 6.png"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Eliminar"/>
+                                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                                          <Color id="Hand Cursor"/>
+                                        </Property>
                                       </Properties>
                                       <Events>
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="butEliSucPriActionPerformed"/>

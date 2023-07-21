@@ -277,6 +277,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(0, 162, 232));
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Insertar");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -287,6 +288,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(237, 28, 36));
         jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Eliminar");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -297,6 +299,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Limpiar");
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -353,6 +356,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(255, 0, 0));
         jButton4.setForeground(new java.awt.Color(0, 0, 0));
         jButton4.setText("VOLVER");
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -461,6 +465,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jButton7.setBackground(new java.awt.Color(0, 162, 232));
         jButton7.setForeground(new java.awt.Color(0, 0, 0));
         jButton7.setText("Insertar");
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -471,6 +476,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jButton8.setBackground(new java.awt.Color(237, 28, 36));
         jButton8.setForeground(new java.awt.Color(0, 0, 0));
         jButton8.setText("Eliminar");
+        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -481,6 +487,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jButton9.setBackground(new java.awt.Color(255, 255, 255));
         jButton9.setForeground(new java.awt.Color(0, 0, 0));
         jButton9.setText("Limpiar");
+        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -527,6 +534,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(255, 0, 0));
         jButton5.setForeground(new java.awt.Color(0, 0, 0));
         jButton5.setText("VOLVER");
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -646,6 +654,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jButton10.setBackground(new java.awt.Color(0, 162, 232));
         jButton10.setForeground(new java.awt.Color(0, 0, 0));
         jButton10.setText("Insertar");
+        jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
@@ -656,6 +665,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jButton11.setBackground(new java.awt.Color(237, 28, 36));
         jButton11.setForeground(new java.awt.Color(0, 0, 0));
         jButton11.setText("Eliminar");
+        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
@@ -666,6 +676,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jButton12.setBackground(new java.awt.Color(255, 255, 255));
         jButton12.setForeground(new java.awt.Color(0, 0, 0));
         jButton12.setText("Limpiar");
+        jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
@@ -724,6 +735,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jButton6.setBackground(new java.awt.Color(237, 28, 36));
         jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.setText("VOLVER");
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);

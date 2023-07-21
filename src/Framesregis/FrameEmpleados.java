@@ -202,6 +202,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
         btnLimp.setBackground(new java.awt.Color(255, 255, 255));
         btnLimp.setForeground(new java.awt.Color(0, 0, 0));
         btnLimp.setText("LIMPIAR");
+        btnLimp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLimp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimpActionPerformed(evt);
@@ -212,6 +213,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
         btnAgregar.setBackground(new java.awt.Color(0, 162, 232));
         btnAgregar.setForeground(new java.awt.Color(0, 0, 0));
         btnAgregar.setText("AGREGAR");
+        btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregarActionPerformed(evt);
@@ -222,6 +224,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
         delete.setBackground(new java.awt.Color(255, 0, 0));
         delete.setForeground(new java.awt.Color(0, 0, 0));
         delete.setText("ELIMINAR EMPLEADO");
+        delete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteActionPerformed(evt);
@@ -232,6 +235,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 0, 0));
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("VOLVER");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -385,16 +389,18 @@ public class FrameEmpleados extends javax.swing.JFrame {
         elimTabla.setBackground(new java.awt.Color(255, 255, 255));
         elimTabla.setForeground(new java.awt.Color(0, 0, 0));
         elimTabla.setText("LIMPIAR");
+        elimTabla.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         elimTabla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 elimTablaActionPerformed(evt);
             }
         });
-        jPanel1.add(elimTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 470, -1, 39));
+        jPanel1.add(elimTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 460, -1, 39));
 
         agregar.setBackground(new java.awt.Color(0, 162, 232));
         agregar.setForeground(new java.awt.Color(0, 0, 0));
         agregar.setText("AGREGAR");
+        agregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         agregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agregarActionPerformed(evt);
@@ -405,6 +411,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
         Delete.setBackground(new java.awt.Color(255, 0, 0));
         Delete.setForeground(new java.awt.Color(0, 0, 0));
         Delete.setText("ELIMINAR EMPLEADO");
+        Delete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DeleteActionPerformed(evt);
@@ -415,6 +422,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
         SALIR.setBackground(new java.awt.Color(255, 0, 0));
         SALIR.setForeground(new java.awt.Color(0, 0, 0));
         SALIR.setText("VOLVER");
+        SALIR.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         SALIR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SALIRActionPerformed(evt);

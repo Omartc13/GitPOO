@@ -116,6 +116,7 @@ public class Tienda extends javax.swing.JFrame {
         ButEnt.setFont(new java.awt.Font("Stencil", 0, 14)); // NOI18N
         ButEnt.setForeground(new java.awt.Color(246, 241, 241));
         ButEnt.setText("Entrar");
+        ButEnt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ButEnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButEntActionPerformed(evt);

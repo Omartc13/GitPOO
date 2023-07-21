@@ -205,6 +205,7 @@ public class FrameSucursales extends javax.swing.JFrame {
         botonIngr.setBackground(new java.awt.Color(25, 140, 255));
         botonIngr.setForeground(new java.awt.Color(0, 0, 0));
         botonIngr.setText("AGREGAR");
+        botonIngr.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botonIngr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonIngrActionPerformed(evt);
@@ -215,6 +216,7 @@ public class FrameSucursales extends javax.swing.JFrame {
         botonLim.setBackground(new java.awt.Color(255, 255, 255));
         botonLim.setForeground(new java.awt.Color(0, 0, 0));
         botonLim.setText("LIMPIAR");
+        botonLim.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botonLim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonLimActionPerformed(evt);
@@ -225,6 +227,7 @@ public class FrameSucursales extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(204, 0, 0));
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("VOLVER");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -370,6 +373,7 @@ public class FrameSucursales extends javax.swing.JFrame {
         botonIngProv.setBackground(new java.awt.Color(25, 140, 255));
         botonIngProv.setForeground(new java.awt.Color(0, 0, 0));
         botonIngProv.setText("AGREGAR");
+        botonIngProv.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botonIngProv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonIngProvActionPerformed(evt);
@@ -380,6 +384,7 @@ public class FrameSucursales extends javax.swing.JFrame {
         botonLimProv.setBackground(new java.awt.Color(255, 255, 255));
         botonLimProv.setForeground(new java.awt.Color(0, 0, 0));
         botonLimProv.setText("LIMPIAR");
+        botonLimProv.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botonLimProv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonLimProvActionPerformed(evt);
@@ -423,6 +428,7 @@ public class FrameSucursales extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(255, 0, 51));
         jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("VOLVER");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);

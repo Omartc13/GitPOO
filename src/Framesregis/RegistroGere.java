@@ -3,6 +3,7 @@ package Framesregis;
 
 
 import Clases.Registro_Gerente;
+import javax.swing.JOptionPane;
 
 
 
@@ -112,6 +113,7 @@ public class RegistroGere extends javax.swing.JFrame {
         ButEnt.setFont(new java.awt.Font("Stencil", 0, 14)); // NOI18N
         ButEnt.setForeground(new java.awt.Color(246, 241, 241));
         ButEnt.setText("Registrar");
+        ButEnt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ButEnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButEntActionPerformed(evt);
@@ -250,17 +252,50 @@ public class RegistroGere extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public static boolean validarLetras(String datos){
+        return datos.matches("[a-zA-Z. ]*");
+    }
+    
+    public static boolean validarNumeros(String num){
+        return num.matches("[0-9]*");
+    }
+    
     private void ButEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButEntActionPerformed
         
+        boolean datosValidos = true;
+       
+        if (txtcontra.getText().isEmpty()||txtnuevoUsuario.getText().isEmpty()||txtnuevoApellido.getText().isEmpty()||txtnuevoNombre.getText().isEmpty()||
+            txtnuevoDNI.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Existen campos incompletos", "Campos incompletos", JOptionPane.ERROR_MESSAGE);
+            datosValidos = false;}
+        else{
         Registro_Gerente reg = new Registro_Gerente();
-        String dni= txtnuevoDNI.getText();
-        String Nombre= txtnuevoNombre.getText();
-        String Apellido= txtnuevoApellido.getText();
-        String Usuario= txtnuevoUsuario.getText();
-        String contraseña=txtcontra.getText();
-        reg.guardarusuario(dni, Nombre, Apellido, Usuario, contraseña);
         
+        String Nombre= txtnuevoNombre.getText();
+        if (!validarLetras(txtnuevoNombre.getText())) 
+        {JOptionPane.showMessageDialog(null, "Error al ingresar dato NOMBRE");
+        datosValidos = false;}
+        
+        String Apellido= txtnuevoApellido.getText();
+        if (!validarLetras(txtnuevoApellido.getText())) 
+        {JOptionPane.showMessageDialog(null, "Error al ingresar dato APELLIDO");
+        datosValidos = false;}
+        
+        String Usuario= txtnuevoUsuario.getText();
+        
+        
+        String dni = txtnuevoDNI.getText();
+        if (!validarNumeros(txtnuevoDNI.getText())) 
+        {JOptionPane.showMessageDialog(null, "Error al ingresar dato DNI");
+        datosValidos = false;}
+        
+        String contraseña=txtcontra.getText();
+       
+            if (datosValidos) {
+                reg.guardarusuario(dni, Nombre, Apellido, Usuario, contraseña);
+            }
+
+        }
     }//GEN-LAST:event_ButEntActionPerformed
 
     private void ButSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButSalirActionPerformed
