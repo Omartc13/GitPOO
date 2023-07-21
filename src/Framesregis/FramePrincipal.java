@@ -14,6 +14,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -22,6 +23,7 @@ import javax.swing.JOptionPane;
 public class FramePrincipal extends javax.swing.JFrame {
         Conexion db= new Conexion();
         Connection cn=  db.conectar();
+        DefaultTableModel tusuario = new DefaultTableModel();
         
     /**
      * Creates new form FramePrincipal
@@ -29,6 +31,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     public FramePrincipal() {
         
         initComponents();
+        
         PanelAd.setVisible(false);
         PanelEm.setVisible(false);
         
@@ -41,6 +44,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         
         PanelSucPri.setVisible(false);
         PanelSucProv.setVisible(false);
+        mostrartableusu();
     }
     
     
@@ -307,15 +311,10 @@ public class FramePrincipal extends javax.swing.JFrame {
         butEliSucPri = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtusunombre = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        txtusuapelli = new javax.swing.JTextField();
-        jLabel62 = new javax.swing.JLabel();
-        jLabel71 = new javax.swing.JLabel();
-        txtusudni = new javax.swing.JTextField();
         jButton15 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblusuario = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -1893,41 +1892,6 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(25, 167, 206));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Usuario(2).png"))); // NOI18N
-        jPanel6.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 510, 200));
-
-        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Nombre");
-        jPanel6.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 60, 20));
-
-        txtusunombre.setBackground(new java.awt.Color(246, 241, 241));
-        txtusunombre.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel6.add(txtusunombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 150, -1));
-
-        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel6.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 100, 30));
-
-        txtusuapelli.setBackground(new java.awt.Color(246, 241, 241));
-        txtusuapelli.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel6.add(txtusuapelli, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 150, -1));
-
-        jLabel62.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel62.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel62.setText("DNI:");
-        jPanel6.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
-
-        jLabel71.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel71.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel71.setText("Apellidos:");
-        jPanel6.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
-
-        txtusudni.setBackground(new java.awt.Color(246, 241, 241));
-        txtusudni.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel6.add(txtusudni, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 150, -1));
-
         jButton15.setBackground(new java.awt.Color(246, 241, 241));
         jButton15.setForeground(new java.awt.Color(0, 0, 0));
         jButton15.setText("Registrar nuevo Usuario ");
@@ -1936,9 +1900,31 @@ public class FramePrincipal extends javax.swing.JFrame {
                 jButton15ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, -1, 30));
+        jPanel6.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 500, -1, 30));
 
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 510, 470));
+        tblusuario.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "DNI", "Nombre", "Apellido", "Usuario"
+            }
+        ));
+        jScrollPane1.setViewportView(tblusuario);
+
+        jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 550, 350));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 7.png"))); // NOI18N
+        jLabel1.setText("Usuarios");
+        jPanel6.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 590, 60));
+
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 590, 550));
 
         jTabbedPane1.addTab("USUARIO", jPanel1);
 
@@ -1950,11 +1936,37 @@ public class FramePrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     public void mostrarinfousu(){
-        
         String sql="Select * From usuario";
+    }
+    public void mostrartableusu(){
+        tusuario= new DefaultTableModel();
+        tusuario.addColumn("Nombre");
+        tusuario.addColumn("Apellido");
+        tusuario.addColumn("Usuario");
+        tblusuario.setModel(tusuario);
+        String datos [] = new String [3];
+        String sql="Select DNI,Nombre,Apellido,Usuario From usuario";
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                //usando la clase generica               
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                tusuario.addRow(datos);
+            }
+            tblusuario.setModel(tusuario);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+        
         
         
     }
+    
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     FrameEmpleados abrir = new FrameEmpleados();
@@ -2944,7 +2956,6 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -2955,7 +2966,6 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -2989,7 +2999,6 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
@@ -2999,7 +3008,6 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
@@ -3017,6 +3025,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
@@ -3090,6 +3099,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JComboBox<String> jcomboTipoEm;
     private javax.swing.JComboBox<String> jcomboTipoFaProMake;
     private javax.swing.JComboBox<String> jcomboTipoFabHigi;
+    private javax.swing.JTable tblusuario;
     private javax.swing.JTextField txtBusApeAd;
     private javax.swing.JTextField txtBusDistSucPri;
     private javax.swing.JTextField txtBusEncSucPri;
@@ -3141,8 +3151,5 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JTextField txtBusdniEm;
     private javax.swing.JTextField txtBusnameEm;
     private javax.swing.JTextField txtBustelfSucPri;
-    private javax.swing.JTextField txtusuapelli;
-    private javax.swing.JTextField txtusudni;
-    private javax.swing.JTextField txtusunombre;
     // End of variables declaration//GEN-END:variables
 }
