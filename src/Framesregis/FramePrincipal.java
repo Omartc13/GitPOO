@@ -314,7 +314,11 @@ public class FramePrincipal extends javax.swing.JFrame {
         jButton15 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblusuario = new javax.swing.JTable();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jButton16 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -1737,7 +1741,7 @@ public class FramePrincipal extends javax.swing.JFrame {
                 jButton15ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 480, -1, 50));
+        jPanel6.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 480, -1, 50));
 
         tblusuario.setBackground(new java.awt.Color(246, 241, 241));
         tblusuario.setForeground(new java.awt.Color(0, 0, 0));
@@ -1754,14 +1758,40 @@ public class FramePrincipal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblusuario);
 
-        jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 550, 350));
+        jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 540, 240));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel13.setBackground(new java.awt.Color(175, 211, 226));
+        jPanel13.setForeground(new java.awt.Color(0, 153, 153));
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/hffdfgg-removebg-preview.png"))); // NOI18N
+        jPanel13.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 150, 140));
+
+        jLabel1.setBackground(new java.awt.Color(0, 102, 102));
+        jLabel1.setFont(new java.awt.Font("Serif", 1, 28)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 153));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 7.png"))); // NOI18N
-        jLabel1.setText("Usuarios");
-        jPanel6.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 590, 60));
+        jLabel1.setText("GERENTES GENERALES ");
+        jPanel13.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, -1, -1));
+
+        jLabel40.setFont(new java.awt.Font("Serif", 1, 28)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel40.setText("DISTRIBUCION VITAL");
+        jPanel13.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 330, -1));
+
+        jPanel6.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 540, 170));
+
+        jButton16.setBackground(new java.awt.Color(246, 241, 241));
+        jButton16.setForeground(new java.awt.Color(0, 0, 0));
+        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 8.png"))); // NOI18N
+        jButton16.setText("Registrar nuevo Usuario ");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, -1, 50));
 
         jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 590, 550));
 
@@ -2700,6 +2730,12 @@ FrameSucursales abrir = new FrameSucursales();
         }
     }//GEN-LAST:event_butEliSucproActionPerformed
 
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        Tienda ti= new Tienda();
+        ti.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton16ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2778,6 +2814,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2797,6 +2834,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -2818,6 +2856,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
@@ -2858,6 +2897,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
