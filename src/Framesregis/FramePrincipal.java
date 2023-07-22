@@ -1733,7 +1733,6 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton15.setBackground(new java.awt.Color(246, 241, 241));
-        jButton15.setForeground(new java.awt.Color(0, 0, 0));
         jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 8.png"))); // NOI18N
         jButton15.setText("Registrar nuevo Usuario ");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
@@ -1744,7 +1743,6 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel6.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 480, -1, 50));
 
         tblusuario.setBackground(new java.awt.Color(246, 241, 241));
-        tblusuario.setForeground(new java.awt.Color(0, 0, 0));
         tblusuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -1783,9 +1781,8 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel6.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 540, 170));
 
         jButton16.setBackground(new java.awt.Color(246, 241, 241));
-        jButton16.setForeground(new java.awt.Color(0, 0, 0));
         jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 8.png"))); // NOI18N
-        jButton16.setText("Registrar nuevo Usuario ");
+        jButton16.setText("Regresar al Login");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton16ActionPerformed(evt);
@@ -2733,7 +2730,7 @@ FrameSucursales abrir = new FrameSucursales();
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         Tienda ti= new Tienda();
         ti.setVisible(true);
-        this.setVisible(false);
+        this.setVisible(false); 
     }//GEN-LAST:event_jButton16ActionPerformed
 
     /**
