@@ -315,7 +315,6 @@ public class FramePrincipal extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblusuario = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jButton16 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -1730,14 +1729,18 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton15.setBackground(new java.awt.Color(246, 241, 241));
+        jButton15.setForeground(new java.awt.Color(0, 0, 0));
+        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 8.png"))); // NOI18N
         jButton15.setText("Registrar nuevo Usuario ");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton15ActionPerformed(evt);
             }
         });
-        jPanel6.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 500, -1, 30));
+        jPanel6.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 480, -1, 50));
 
+        tblusuario.setBackground(new java.awt.Color(246, 241, 241));
+        tblusuario.setForeground(new java.awt.Color(0, 0, 0));
         tblusuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -1751,16 +1754,14 @@ public class FramePrincipal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblusuario);
 
-        jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 550, 350));
+        jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 550, 350));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 7.png"))); // NOI18N
         jLabel1.setText("Usuarios");
         jPanel6.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 590, 60));
-
-        jButton16.setText("jButton16");
-        jPanel6.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, -1, -1));
 
         jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 590, 550));
 
@@ -1778,11 +1779,12 @@ public class FramePrincipal extends javax.swing.JFrame {
     }
     public void mostrartableusu(){
         tusuario= new DefaultTableModel();
+        tusuario.addColumn("DNI");
         tusuario.addColumn("Nombre");
         tusuario.addColumn("Apellido");
         tusuario.addColumn("Usuario");
         tblusuario.setModel(tusuario);
-        String datos [] = new String [3];
+        String datos [] = new String [4];
         String sql="Select DNI,Nombre,Apellido,Usuario From usuario";
         Statement st;
         try{
@@ -1793,6 +1795,7 @@ public class FramePrincipal extends javax.swing.JFrame {
                 datos[0]=rs.getString(1);
                 datos[1]=rs.getString(2);
                 datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
                 tusuario.addRow(datos);
             }
             tblusuario.setModel(tusuario);
@@ -2775,7 +2778,6 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
