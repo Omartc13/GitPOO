@@ -54,7 +54,6 @@ public class FrameProveedores extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         CMBarea = new javax.swing.JComboBox<>();
         BTNguardarPI = new javax.swing.JButton();
-        BTNborrarPI = new javax.swing.JButton();
         BTNvolverPI = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblInterno = new javax.swing.JTable();
@@ -76,7 +75,6 @@ public class FrameProveedores extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         TXTencar = new javax.swing.JTextField();
         BTNguardarPE = new javax.swing.JButton();
-        BTNborrarPE = new javax.swing.JButton();
         BTNvolverPE = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblExterno = new javax.swing.JTable();
@@ -89,13 +87,11 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
-        jTabbedPane1.setForeground(new java.awt.Color(0, 0, 0));
 
         jPanel2.setBackground(new java.awt.Color(153, 217, 234));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TXTnomPI.setBackground(new java.awt.Color(246, 241, 241));
-        TXTnomPI.setForeground(new java.awt.Color(0, 0, 0));
         TXTnomPI.setName(""); // NOI18N
         TXTnomPI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,17 +109,14 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel2.add(TXTnomPI, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 143, -1));
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("NOMBRE DEL ENCARGADO:");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("DNI:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, -1, 24));
 
         TXTDNIPI.setBackground(new java.awt.Color(246, 241, 241));
-        TXTDNIPI.setForeground(new java.awt.Color(0, 0, 0));
         TXTDNIPI.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TXTDNIPIKeyPressed(evt);
@@ -135,12 +128,10 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel2.add(TXTDNIPI, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 91, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("ÁREA:");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, -1, 25));
 
         CMBarea.setBackground(new java.awt.Color(246, 241, 241));
-        CMBarea.setForeground(new java.awt.Color(0, 0, 0));
         CMBarea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Dirección", "Recursos Humanos", "Finanzas", "Marketing", "Tecnología" }));
         CMBarea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,7 +146,6 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel2.add(CMBarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 100, 160, -1));
 
         BTNguardarPI.setBackground(new java.awt.Color(0, 153, 253));
-        BTNguardarPI.setForeground(new java.awt.Color(0, 0, 0));
         BTNguardarPI.setText("AGREGAR");
         BTNguardarPI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNguardarPI.addActionListener(new java.awt.event.ActionListener() {
@@ -165,19 +155,7 @@ public class FrameProveedores extends javax.swing.JFrame {
         });
         jPanel2.add(BTNguardarPI, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, 90, 30));
 
-        BTNborrarPI.setBackground(new java.awt.Color(255, 0, 0));
-        BTNborrarPI.setForeground(new java.awt.Color(0, 0, 0));
-        BTNborrarPI.setText("ELIMINAR PROVEEDOR");
-        BTNborrarPI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BTNborrarPI.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTNborrarPIActionPerformed(evt);
-            }
-        });
-        jPanel2.add(BTNborrarPI, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 470, -1, 30));
-
         BTNvolverPI.setBackground(new java.awt.Color(255, 0, 0));
-        BTNvolverPI.setForeground(new java.awt.Color(0, 0, 0));
         BTNvolverPI.setText("VOLVER");
         BTNvolverPI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNvolverPI.addActionListener(new java.awt.event.ActionListener() {
@@ -185,10 +163,9 @@ public class FrameProveedores extends javax.swing.JFrame {
                 BTNvolverPIActionPerformed(evt);
             }
         });
-        jPanel2.add(BTNvolverPI, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 470, 92, 30));
+        jPanel2.add(BTNvolverPI, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 470, 92, 30));
 
         tblInterno.setBackground(new java.awt.Color(246, 241, 241));
-        tblInterno.setForeground(new java.awt.Color(0, 0, 0));
         tblInterno.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -216,7 +193,6 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 810, 290));
 
         BTNLimpiarPI.setBackground(new java.awt.Color(255, 255, 255));
-        BTNLimpiarPI.setForeground(new java.awt.Color(0, 0, 0));
         BTNLimpiarPI.setText("LIMPIAR");
         BTNLimpiarPI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNLimpiarPI.addActionListener(new java.awt.event.ActionListener() {
@@ -245,7 +221,6 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("NOMBRE DE LA EMPRESA:");
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 190, 24));
 
@@ -261,7 +236,6 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel3.add(TXTnomPE, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 110, 120, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("RUC DE LA EMPRESA:");
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 200, 20));
@@ -283,7 +257,6 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel3.add(TXTruc, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 200, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("AÑO DE COLABORACIÓN:");
         jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, -1, 20));
 
@@ -304,7 +277,6 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel3.add(TXTañoPE, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 190, 120, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("TELÉFONO DE LA EMPRESA:");
         jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, -1, 20));
 
@@ -325,7 +297,6 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel3.add(TXTtelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 150, 120, 30));
 
         jLabel9.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("CORREO:");
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 200, 20));
@@ -342,7 +313,6 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel3.add(TXTcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 200, -1));
 
         jLabel10.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("DIRECCIÓN DE LA EMPRESA:");
         jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, 24));
@@ -361,7 +331,6 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel3.add(TXTdirec, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 200, -1));
 
         jLabel11.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("GERENTE GENERAL:");
         jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 190, -1));
@@ -378,7 +347,6 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel3.add(TXTencar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 200, -1));
 
         BTNguardarPE.setBackground(new java.awt.Color(0, 153, 255));
-        BTNguardarPE.setForeground(new java.awt.Color(0, 0, 0));
         BTNguardarPE.setText("AGREGAR");
         BTNguardarPE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNguardarPE.addActionListener(new java.awt.event.ActionListener() {
@@ -388,19 +356,7 @@ public class FrameProveedores extends javax.swing.JFrame {
         });
         jPanel3.add(BTNguardarPE, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 490, -1, 30));
 
-        BTNborrarPE.setBackground(new java.awt.Color(255, 0, 0));
-        BTNborrarPE.setForeground(new java.awt.Color(0, 0, 0));
-        BTNborrarPE.setText("ELIMINAR PROVEEDOR");
-        BTNborrarPE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BTNborrarPE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTNborrarPEActionPerformed(evt);
-            }
-        });
-        jPanel3.add(BTNborrarPE, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, -1, 30));
-
         BTNvolverPE.setBackground(new java.awt.Color(255, 0, 0));
-        BTNvolverPE.setForeground(new java.awt.Color(0, 0, 0));
         BTNvolverPE.setText("SALIR");
         BTNvolverPE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNvolverPE.addActionListener(new java.awt.event.ActionListener() {
@@ -408,10 +364,9 @@ public class FrameProveedores extends javax.swing.JFrame {
                 BTNvolverPEActionPerformed(evt);
             }
         });
-        jPanel3.add(BTNvolverPE, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 490, 100, 30));
+        jPanel3.add(BTNvolverPE, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 490, 100, 30));
 
         tblExterno.setBackground(new java.awt.Color(246, 241, 241));
-        tblExterno.setForeground(new java.awt.Color(0, 0, 0));
         tblExterno.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
@@ -446,7 +401,6 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel3.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 860, 220));
 
         BTNLimpiarPE.setBackground(new java.awt.Color(255, 255, 255));
-        BTNLimpiarPE.setForeground(new java.awt.Color(0, 0, 0));
         BTNLimpiarPE.setText("LIMPIAR");
         BTNLimpiarPE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNLimpiarPE.addActionListener(new java.awt.event.ActionListener() {
@@ -678,21 +632,6 @@ public class FrameProveedores extends javax.swing.JFrame {
     public static boolean validarLetras(String datos){
         return datos.matches("[a-zA-Z .]*");
     }
-    private void BTNborrarPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNborrarPEActionPerformed
-        DefaultTableModel model = (DefaultTableModel) tblExterno.getModel();
-        if(tblExterno.getSelectedRowCount()== 1){
-            model.removeRow(tblExterno.getSelectedRow());
-           
-        }else{
-            if(tblExterno.getRowCount()== 0){
-                JOptionPane.showMessageDialog(null,"La tabla esta vacía");
-                           
-            }else{ 
-                JOptionPane.showMessageDialog(null, "Debe seleccionar una fila");
-            }
-        }
-    }//GEN-LAST:event_BTNborrarPEActionPerformed
-
     private void BTNLimpiarPEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNLimpiarPEActionPerformed
         TXTnomPE.setText("");
         TXTruc.setText("");
@@ -791,21 +730,6 @@ public class FrameProveedores extends javax.swing.JFrame {
    abrir.setVisible(true);
    this.setVisible(false);               
     }//GEN-LAST:event_BTNvolverPIActionPerformed
-
-    private void BTNborrarPIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNborrarPIActionPerformed
-        DefaultTableModel model = (DefaultTableModel) tblInterno.getModel();
-        if(tblInterno.getSelectedRowCount()== 1){
-            model.removeRow(tblInterno.getSelectedRow());
-
-        }else{
-            if(tblInterno.getRowCount()== 0){
-                JOptionPane.showMessageDialog(null,"La tabla esta vacía");
-            }else{
-                JOptionPane.showMessageDialog(null, "Debe seleccionar una fila");
-            }
-        }
-
-    }//GEN-LAST:event_BTNborrarPIActionPerformed
 
     private void BTNguardarPIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNguardarPIActionPerformed
         int dni=0;
@@ -948,8 +872,6 @@ public class FrameProveedores extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BTNLimpiarPE;
     private javax.swing.JButton BTNLimpiarPI;
-    private javax.swing.JButton BTNborrarPE;
-    private javax.swing.JButton BTNborrarPI;
     private javax.swing.JButton BTNguardarPE;
     private javax.swing.JButton BTNguardarPI;
     private javax.swing.JButton BTNvolverPE;

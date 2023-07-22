@@ -79,7 +79,6 @@ public class FrameProductos extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblHigiene = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         txtcontenido = new javax.swing.JTextField();
@@ -102,7 +101,6 @@ public class FrameProductos extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         tblComida = new javax.swing.JTable();
         jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
@@ -126,7 +124,6 @@ public class FrameProductos extends javax.swing.JFrame {
         jScrollPane5 = new javax.swing.JScrollPane();
         tblMakeup = new javax.swing.JTable();
         jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         jLabel31 = new javax.swing.JLabel();
         txttonos3 = new javax.swing.JTextField();
@@ -149,13 +146,11 @@ public class FrameProductos extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Nombre del Producto:");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, 200, -1));
 
         txtNamePro.setBackground(new java.awt.Color(246, 241, 241));
-        txtNamePro.setForeground(new java.awt.Color(0, 0, 0));
         txtNamePro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtNameProKeyTyped(evt);
@@ -165,13 +160,11 @@ public class FrameProductos extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Código:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 120, 20));
 
         txtCod.setBackground(new java.awt.Color(246, 241, 241));
-        txtCod.setForeground(new java.awt.Color(0, 0, 0));
         txtCod.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCodActionPerformed(evt);
@@ -186,13 +179,11 @@ public class FrameProductos extends javax.swing.JFrame {
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Codigo Proveedor:");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 150, -1));
 
         txtCodPro.setBackground(new java.awt.Color(246, 241, 241));
-        txtCodPro.setForeground(new java.awt.Color(0, 0, 0));
         txtCodPro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtCodProKeyTyped(evt);
@@ -202,20 +193,17 @@ public class FrameProductos extends javax.swing.JFrame {
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Tipo Fabricado:");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 70, 160, -1));
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Precio:");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 100, -1));
 
         txtPrecio.setBackground(new java.awt.Color(246, 241, 241));
-        txtPrecio.setForeground(new java.awt.Color(0, 0, 0));
         txtPrecio.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtPrecioKeyTyped(evt);
@@ -225,13 +213,11 @@ public class FrameProductos extends javax.swing.JFrame {
 
         jLabel6.setBackground(new java.awt.Color(0, 0, 0));
         jLabel6.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Stock:");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 90, -1));
 
         txtStock.setBackground(new java.awt.Color(246, 241, 241));
-        txtStock.setForeground(new java.awt.Color(0, 0, 0));
         txtStock.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtStockKeyTyped(evt);
@@ -240,7 +226,6 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel2.add(txtStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 160, 90, -1));
 
         cmbtipfabri.setBackground(new java.awt.Color(246, 241, 241));
-        cmbtipfabri.setForeground(new java.awt.Color(0, 0, 0));
         cmbtipfabri.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "90% Natural", "50% Natural" }));
         cmbtipfabri.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -250,7 +235,6 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel2.add(cmbtipfabri, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 100, 120, -1));
 
         tblHigiene.setBackground(new java.awt.Color(246, 241, 241));
-        tblHigiene.setForeground(new java.awt.Color(0, 0, 0));
         tblHigiene.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
@@ -275,7 +259,6 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 780, 260));
 
         jButton1.setBackground(new java.awt.Color(0, 162, 232));
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Insertar");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -285,19 +268,7 @@ public class FrameProductos extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 100, 30));
 
-        jButton2.setBackground(new java.awt.Color(237, 28, 36));
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
-        jButton2.setText("Eliminar");
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 470, -1, 30));
-
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Limpiar");
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -309,13 +280,11 @@ public class FrameProductos extends javax.swing.JFrame {
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Contenido:");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 100, -1));
 
         txtcontenido.setBackground(new java.awt.Color(246, 241, 241));
-        txtcontenido.setForeground(new java.awt.Color(0, 0, 0));
         txtcontenido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtcontenidoActionPerformed(evt);
@@ -330,13 +299,11 @@ public class FrameProductos extends javax.swing.JFrame {
 
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
         jLabel8.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Tipo");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 90, -1));
 
         txttipo.setBackground(new java.awt.Color(246, 241, 241));
-        txttipo.setForeground(new java.awt.Color(0, 0, 0));
         jPanel2.add(txttipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 90, -1));
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, -1, -1));
 
@@ -354,7 +321,6 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 60));
 
         jButton4.setBackground(new java.awt.Color(255, 0, 0));
-        jButton4.setForeground(new java.awt.Color(0, 0, 0));
         jButton4.setText("VOLVER");
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -362,7 +328,7 @@ public class FrameProductos extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 470, 80, 30));
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 470, 80, 30));
 
         jTabbedPane1.addTab("Higiene", jPanel2);
 
@@ -371,24 +337,20 @@ public class FrameProductos extends javax.swing.JFrame {
 
         jLabel17.setBackground(new java.awt.Color(0, 0, 0));
         jLabel17.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("Nombre del Producto:");
         jPanel5.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, 190, -1));
 
         txtNamePro2.setBackground(new java.awt.Color(246, 241, 241));
-        txtNamePro2.setForeground(new java.awt.Color(0, 0, 0));
         jPanel5.add(txtNamePro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 130, -1));
 
         jLabel18.setBackground(new java.awt.Color(0, 0, 0));
         jLabel18.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Codigo:");
         jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 120, -1));
 
         txtCod2.setBackground(new java.awt.Color(246, 241, 241));
-        txtCod2.setForeground(new java.awt.Color(0, 0, 0));
         txtCod2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtCod2KeyTyped(evt);
@@ -398,13 +360,11 @@ public class FrameProductos extends javax.swing.JFrame {
 
         jLabel19.setBackground(new java.awt.Color(0, 0, 0));
         jLabel19.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("Codigo Proveedor:");
         jPanel5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, 130, -1));
 
         txtCodPro2.setBackground(new java.awt.Color(246, 241, 241));
-        txtCodPro2.setForeground(new java.awt.Color(0, 0, 0));
         txtCodPro2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtCodPro2KeyTyped(evt);
@@ -414,28 +374,23 @@ public class FrameProductos extends javax.swing.JFrame {
 
         jLabel21.setBackground(new java.awt.Color(0, 0, 0));
         jLabel21.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("Precio:");
         jPanel5.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 90, -1));
 
         txtPrecio2.setBackground(new java.awt.Color(246, 241, 241));
-        txtPrecio2.setForeground(new java.awt.Color(0, 0, 0));
         jPanel5.add(txtPrecio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 90, -1));
 
         jLabel22.setBackground(new java.awt.Color(0, 0, 0));
         jLabel22.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setText("Stock:");
         jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 90, -1));
 
         txtStock2.setBackground(new java.awt.Color(246, 241, 241));
-        txtStock2.setForeground(new java.awt.Color(0, 0, 0));
         jPanel5.add(txtStock2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 90, -1));
 
         tblComida.setBackground(new java.awt.Color(246, 241, 241));
-        tblComida.setForeground(new java.awt.Color(0, 0, 0));
         tblComida.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -463,7 +418,6 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel5.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 760, 260));
 
         jButton7.setBackground(new java.awt.Color(0, 162, 232));
-        jButton7.setForeground(new java.awt.Color(0, 0, 0));
         jButton7.setText("Insertar");
         jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -473,19 +427,7 @@ public class FrameProductos extends javax.swing.JFrame {
         });
         jPanel5.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, 100, 30));
 
-        jButton8.setBackground(new java.awt.Color(237, 28, 36));
-        jButton8.setForeground(new java.awt.Color(0, 0, 0));
-        jButton8.setText("Eliminar");
-        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-        jPanel5.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 470, 110, 30));
-
         jButton9.setBackground(new java.awt.Color(255, 255, 255));
-        jButton9.setForeground(new java.awt.Color(0, 0, 0));
         jButton9.setText("Limpiar");
         jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -497,24 +439,20 @@ public class FrameProductos extends javax.swing.JFrame {
 
         jLabel24.setBackground(new java.awt.Color(0, 0, 0));
         jLabel24.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setText("Tipo:");
         jPanel5.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 70, 120, -1));
 
         jLabel20.setBackground(new java.awt.Color(0, 0, 0));
         jLabel20.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText("Caducidad:");
         jPanel5.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 100, -1));
 
         txtcaducidad1.setBackground(new java.awt.Color(246, 241, 241));
-        txtcaducidad1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel5.add(txtcaducidad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 100, -1));
 
         cmbTipocomes.setBackground(new java.awt.Color(246, 241, 241));
-        cmbTipocomes.setForeground(new java.awt.Color(0, 0, 0));
         cmbTipocomes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Selecionar--", "Fruta/Verdura", "Embutidos", "Otros", "Bebida", "Proteina" }));
         jPanel5.add(cmbTipocomes, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, 120, -1));
 
@@ -532,7 +470,6 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel5.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 60));
 
         jButton5.setBackground(new java.awt.Color(255, 0, 0));
-        jButton5.setForeground(new java.awt.Color(0, 0, 0));
         jButton5.setText("VOLVER");
         jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -540,7 +477,7 @@ public class FrameProductos extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 90, 30));
+        jPanel5.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, 90, 30));
 
         jTabbedPane1.addTab("Comestible", jPanel5);
 
@@ -548,23 +485,19 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel25.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(0, 0, 0));
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel25.setText("Nombre del Producto:");
         jPanel7.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, 190, -1));
 
         txtNamePro3.setBackground(new java.awt.Color(246, 241, 241));
-        txtNamePro3.setForeground(new java.awt.Color(0, 0, 0));
         jPanel7.add(txtNamePro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 130, -1));
 
         jLabel26.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(0, 0, 0));
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel26.setText("Codigo:");
         jPanel7.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 90, -1));
 
         txtCod3.setBackground(new java.awt.Color(246, 241, 241));
-        txtCod3.setForeground(new java.awt.Color(0, 0, 0));
         txtCod3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtCod3KeyTyped(evt);
@@ -573,13 +506,11 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel7.add(txtCod3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 110, -1));
 
         jLabel27.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(0, 0, 0));
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel27.setText("Codigo Proveedor:");
         jPanel7.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 180, -1));
 
         txtCodPro3.setBackground(new java.awt.Color(246, 241, 241));
-        txtCodPro3.setForeground(new java.awt.Color(0, 0, 0));
         txtCodPro3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtCodPro3KeyTyped(evt);
@@ -588,29 +519,24 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel7.add(txtCodPro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 120, -1));
 
         jLabel28.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(0, 0, 0));
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel28.setText("Tipo Fabricado");
         jPanel7.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 80, 120, -1));
 
         jLabel29.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(0, 0, 0));
         jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel29.setText("Precio:");
         jPanel7.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 90, -1));
 
         txtPrecio3.setBackground(new java.awt.Color(246, 241, 241));
-        txtPrecio3.setForeground(new java.awt.Color(0, 0, 0));
         jPanel7.add(txtPrecio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 71, -1));
 
         jLabel30.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel30.setForeground(new java.awt.Color(0, 0, 0));
         jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel30.setText("Stock:");
         jPanel7.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 90, -1));
 
         txtStock3.setBackground(new java.awt.Color(246, 241, 241));
-        txtStock3.setForeground(new java.awt.Color(0, 0, 0));
         txtStock3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtStock3KeyTyped(evt);
@@ -619,12 +545,10 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel7.add(txtStock3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 71, -1));
 
         cmbtipfabri3.setBackground(new java.awt.Color(246, 241, 241));
-        cmbtipfabri3.setForeground(new java.awt.Color(0, 0, 0));
         cmbtipfabri3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Cruelty free", "NO CF" }));
         jPanel7.add(cmbtipfabri3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 110, 120, -1));
 
         tblMakeup.setBackground(new java.awt.Color(246, 241, 241));
-        tblMakeup.setForeground(new java.awt.Color(0, 0, 0));
         tblMakeup.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null},
@@ -652,7 +576,6 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel7.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 760, 240));
 
         jButton10.setBackground(new java.awt.Color(0, 162, 232));
-        jButton10.setForeground(new java.awt.Color(0, 0, 0));
         jButton10.setText("Insertar");
         jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -662,19 +585,7 @@ public class FrameProductos extends javax.swing.JFrame {
         });
         jPanel7.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, 100, 30));
 
-        jButton11.setBackground(new java.awt.Color(237, 28, 36));
-        jButton11.setForeground(new java.awt.Color(0, 0, 0));
-        jButton11.setText("Eliminar");
-        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
-            }
-        });
-        jPanel7.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 470, 110, 30));
-
         jButton12.setBackground(new java.awt.Color(255, 255, 255));
-        jButton12.setForeground(new java.awt.Color(0, 0, 0));
         jButton12.setText("Limpiar");
         jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -685,13 +596,11 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel7.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 470, -1, 30));
 
         jLabel31.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(0, 0, 0));
         jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel31.setText("Tonos");
         jPanel7.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 80, -1));
 
         txttonos3.setBackground(new java.awt.Color(246, 241, 241));
-        txttonos3.setForeground(new java.awt.Color(0, 0, 0));
         txttonos3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txttonos3ActionPerformed(evt);
@@ -700,23 +609,19 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel7.add(txttonos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 90, 20));
 
         jLabel32.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(0, 0, 0));
         jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel32.setText("Tipo");
         jPanel7.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 80, -1));
 
         txttipo3.setBackground(new java.awt.Color(246, 241, 241));
-        txttipo3.setForeground(new java.awt.Color(0, 0, 0));
         jPanel7.add(txttipo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 80, -1));
 
         jLabel9.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Dirigido para:");
         jPanel7.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, -1, -1));
 
         txtdiri3.setBackground(new java.awt.Color(246, 241, 241));
-        txtdiri3.setForeground(new java.awt.Color(0, 0, 0));
         jPanel7.add(txtdiri3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 180, 80, -1));
 
         jTextField3.setEditable(false);
@@ -733,7 +638,6 @@ public class FrameProductos extends javax.swing.JFrame {
         jPanel7.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 60));
 
         jButton6.setBackground(new java.awt.Color(237, 28, 36));
-        jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.setText("VOLVER");
         jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -741,7 +645,7 @@ public class FrameProductos extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel7.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 80, 30));
+        jPanel7.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 470, 80, 30));
 
         jTabbedPane1.addTab("Make Up", jPanel7);
 
@@ -940,22 +844,6 @@ public class FrameProductos extends javax.swing.JFrame {
     }
 
     
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       DefaultTableModel model = (DefaultTableModel) tblHigiene.getModel();
-        if(tblHigiene.getSelectedRowCount()== 1){
-            model.removeRow(tblHigiene.getSelectedRow());
-            
-        }else{
-            if(tblHigiene.getRowCount()== 0){
-                JOptionPane.showMessageDialog(null,"La tabla esta vacía");
-                           
-            }else{ 
-                JOptionPane.showMessageDialog(null, "Debe seleccionar una fila");
-            }
-        }
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         
         //Elimina Campos del formulario
@@ -1121,23 +1009,6 @@ public class FrameProductos extends javax.swing.JFrame {
         
         }
     }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        
-      DefaultTableModel model = (DefaultTableModel) tblComida.getModel();
-        if(tblComida.getSelectedRowCount()== 1){
-            model.removeRow(tblComida.getSelectedRow());
-            
-        }else{
-            if(tblComida.getRowCount()== 0){
-                JOptionPane.showMessageDialog(null,"La tabla esta vacía");
-                           
-            }else{ 
-                JOptionPane.showMessageDialog(null, "Debe seleccionar una fila");
-            }
-        }
-        
-    }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         
@@ -1320,22 +1191,6 @@ public class FrameProductos extends javax.swing.JFrame {
         
         }  
     }//GEN-LAST:event_jButton10ActionPerformed
-
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        
-        DefaultTableModel model = (DefaultTableModel) tblMakeup.getModel();
-        if(tblMakeup.getSelectedRowCount()== 1){
-            model.removeRow(tblMakeup.getSelectedRow());
-            
-        }else{
-            if(tblMakeup.getRowCount()== 0){
-                JOptionPane.showMessageDialog(null,"La tabla esta vacía");
-                           
-            }else{ 
-                JOptionPane.showMessageDialog(null, "Debe seleccionar una fila");
-            }
-        }
-    }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         txtCod3.setText("");
@@ -1533,15 +1388,12 @@ public class FrameProductos extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbtipfabri3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel17;

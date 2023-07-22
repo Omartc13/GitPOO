@@ -67,7 +67,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
         tblAdministrador = new javax.swing.JTable();
         btnLimp = new javax.swing.JButton();
         btnAgregar = new javax.swing.JButton();
-        delete = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         cmbSueldo = new javax.swing.JComboBox<>();
@@ -86,7 +85,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
         tblEmpleado = new javax.swing.JTable();
         elimTabla = new javax.swing.JButton();
         agregar = new javax.swing.JButton();
-        Delete = new javax.swing.JButton();
         SALIR = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
 
@@ -94,7 +92,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
         setTitle("Empleados");
 
         jTabbedPane1.setBackground(new java.awt.Color(246, 241, 241));
-        jTabbedPane1.setForeground(new java.awt.Color(0, 0, 0));
 
         jPanel3.setBackground(new java.awt.Color(246, 241, 241));
         jPanel3.setForeground(new java.awt.Color(246, 241, 241));
@@ -103,22 +100,18 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Nombres: ");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 76, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Apellidos:");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 116, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("DNI:");
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 156, -1, -1));
 
         txtNombre.setBackground(new java.awt.Color(246, 241, 241));
-        txtNombre.setForeground(new java.awt.Color(0, 0, 0));
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombreActionPerformed(evt);
@@ -132,7 +125,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 74, 228, -1));
 
         txtApellidos.setBackground(new java.awt.Color(246, 241, 241));
-        txtApellidos.setForeground(new java.awt.Color(0, 0, 0));
         txtApellidos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtApellidosKeyTyped(evt);
@@ -141,7 +133,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel2.add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 114, 229, -1));
 
         txtDNI.setBackground(new java.awt.Color(246, 241, 241));
-        txtDNI.setForeground(new java.awt.Color(0, 0, 0));
         txtDNI.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtDNIKeyTyped(evt);
@@ -150,12 +141,10 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel2.add(txtDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 154, 230, -1));
 
         jLabel10.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Afiliación:");
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 76, -1, -1));
 
         cmbAfil.setBackground(new java.awt.Color(246, 241, 241));
-        cmbAfil.setForeground(new java.awt.Color(0, 0, 0));
         cmbAfil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "AFP", "ONP", "Otros" }));
         cmbAfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,12 +154,10 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel2.add(cmbAfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 74, 130, -1));
 
         jLabel11.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Año de ingreso:");
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 116, -1, -1));
 
         txtAño.setBackground(new java.awt.Color(246, 241, 241));
-        txtAño.setForeground(new java.awt.Color(0, 0, 0));
         txtAño.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtAñoKeyTyped(evt);
@@ -200,7 +187,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 197, 690, 257));
 
         btnLimp.setBackground(new java.awt.Color(255, 255, 255));
-        btnLimp.setForeground(new java.awt.Color(0, 0, 0));
         btnLimp.setText("LIMPIAR");
         btnLimp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLimp.addActionListener(new java.awt.event.ActionListener() {
@@ -211,7 +197,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel2.add(btnLimp, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 470, -1, 30));
 
         btnAgregar.setBackground(new java.awt.Color(0, 162, 232));
-        btnAgregar.setForeground(new java.awt.Color(0, 0, 0));
         btnAgregar.setText("AGREGAR");
         btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
@@ -221,19 +206,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
         });
         jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, -1, 30));
 
-        delete.setBackground(new java.awt.Color(255, 0, 0));
-        delete.setForeground(new java.awt.Color(0, 0, 0));
-        delete.setText("ELIMINAR EMPLEADO");
-        delete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        delete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteActionPerformed(evt);
-            }
-        });
-        jPanel2.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 470, -1, 30));
-
         jButton1.setBackground(new java.awt.Color(255, 0, 0));
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("VOLVER");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -241,15 +214,13 @@ public class FrameEmpleados extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 470, -1, 30));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 470, -1, 30));
 
         jLabel12.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Sueldo:");
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 156, 107, -1));
 
         cmbSueldo.setBackground(new java.awt.Color(246, 241, 241));
-        cmbSueldo.setForeground(new java.awt.Color(0, 0, 0));
         cmbSueldo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "2000", "3000", "4000", "5000", "6000", "7000", "8000", " " }));
         cmbSueldo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -299,22 +270,18 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Nombres: ");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, 20));
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Apellidos:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, -1, 30));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("DNI:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 120, -1, -1));
 
         cmbtipo.setBackground(new java.awt.Color(246, 241, 241));
-        cmbtipo.setForeground(new java.awt.Color(0, 0, 0));
         cmbtipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Cajero", "Limpieza", "Seguridad", "Asistente" }));
         cmbtipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -325,12 +292,10 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 84, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Tipo de trabajador:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, -1, -1));
 
         txtapellidos.setBackground(new java.awt.Color(246, 241, 241));
-        txtapellidos.setForeground(new java.awt.Color(0, 0, 0));
         txtapellidos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtapellidosKeyTyped(evt);
@@ -339,7 +304,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel1.add(txtapellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 251, -1));
 
         txtnombre.setBackground(new java.awt.Color(246, 241, 241));
-        txtnombre.setForeground(new java.awt.Color(0, 0, 0));
         txtnombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtnombreKeyTyped(evt);
@@ -348,7 +312,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel1.add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 251, -1));
 
         txtdni.setBackground(new java.awt.Color(246, 241, 241));
-        txtdni.setForeground(new java.awt.Color(0, 0, 0));
         txtdni.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtdniKeyTyped(evt);
@@ -357,7 +320,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel1.add(txtdni, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 130, -1));
 
         tblEmpleado.setBackground(new java.awt.Color(246, 241, 241));
-        tblEmpleado.setForeground(new java.awt.Color(0, 0, 0));
         tblEmpleado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -387,7 +349,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 157, 703, 287));
 
         elimTabla.setBackground(new java.awt.Color(255, 255, 255));
-        elimTabla.setForeground(new java.awt.Color(0, 0, 0));
         elimTabla.setText("LIMPIAR");
         elimTabla.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         elimTabla.addActionListener(new java.awt.event.ActionListener() {
@@ -398,7 +359,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
         jPanel1.add(elimTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 460, -1, 39));
 
         agregar.setBackground(new java.awt.Color(0, 162, 232));
-        agregar.setForeground(new java.awt.Color(0, 0, 0));
         agregar.setText("AGREGAR");
         agregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         agregar.addActionListener(new java.awt.event.ActionListener() {
@@ -408,19 +368,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
         });
         jPanel1.add(agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, -1, 39));
 
-        Delete.setBackground(new java.awt.Color(255, 0, 0));
-        Delete.setForeground(new java.awt.Color(0, 0, 0));
-        Delete.setText("ELIMINAR EMPLEADO");
-        Delete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Delete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DeleteActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 460, -1, 39));
-
         SALIR.setBackground(new java.awt.Color(255, 0, 0));
-        SALIR.setForeground(new java.awt.Color(0, 0, 0));
         SALIR.setText("VOLVER");
         SALIR.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         SALIR.addActionListener(new java.awt.event.ActionListener() {
@@ -428,7 +376,7 @@ public class FrameEmpleados extends javax.swing.JFrame {
                 SALIRActionPerformed(evt);
             }
         });
-        jPanel1.add(SALIR, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, -1, 39));
+        jPanel1.add(SALIR, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, -1, 39));
 
         jTextField2.setEditable(false);
         jTextField2.setBackground(new java.awt.Color(7, 62, 91));
@@ -748,39 +696,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbSueldoActionPerformed
 
-    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
-
-        DefaultTableModel model = (DefaultTableModel) tblAdministrador.getModel();
-        if(tblAdministrador.getSelectedRowCount()== 1){
-            model.removeRow(tblAdministrador.getSelectedRow());
-            
-        }else{
-            if(tblAdministrador.getRowCount()== 0){
-                JOptionPane.showMessageDialog(null,"La tabla esta vacía");
-                           
-            }else{ 
-                JOptionPane.showMessageDialog(null, "Debe seleccionar una fila");
-            }
-        }
-    }//GEN-LAST:event_deleteActionPerformed
-
-    private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
-
-      DefaultTableModel model = (DefaultTableModel) tblEmpleado.getModel();
-        if(tblEmpleado.getSelectedRowCount()== 1){
-            model.removeRow(tblEmpleado.getSelectedRow());
-           
-        }else{
-            if(tblEmpleado.getRowCount()== 0){
-                JOptionPane.showMessageDialog(null,"La tabla esta vacía");
-                           
-            }else{ 
-                JOptionPane.showMessageDialog(null, "Debe seleccionar una fila");
-            }
-        }
-        
-    }//GEN-LAST:event_DeleteActionPerformed
-
     private void txtDNIKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDNIKeyTyped
         
         if(txtDNI.getText().length() >=8)
@@ -870,7 +785,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Delete;
     private javax.swing.JButton SALIR;
     private javax.swing.JButton agregar;
     private javax.swing.JButton btnAgregar;
@@ -878,7 +792,6 @@ public class FrameEmpleados extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbAfil;
     private javax.swing.JComboBox<String> cmbSueldo;
     private javax.swing.JComboBox<String> cmbtipo;
-    private javax.swing.JButton delete;
     private javax.swing.JButton elimTabla;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
