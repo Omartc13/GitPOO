@@ -212,7 +212,7 @@ public class Tienda extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Bienvenido: "+user);
                     abrirframeprin();    
                 }else{
-                    JOptionPane.showMessageDialog(null, "Usuario o Contraseña incorreco");
+                    JOptionPane.showMessageDialog(null, "Usuario o Contraseña incorrecto");
                 }    
             } catch (SQLException ex) {
                 Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
