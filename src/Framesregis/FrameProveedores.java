@@ -357,7 +357,7 @@ public class FrameProveedores extends javax.swing.JFrame {
         jPanel3.add(BTNguardarPE, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 490, -1, 30));
 
         BTNvolverPE.setBackground(new java.awt.Color(255, 0, 0));
-        BTNvolverPE.setText("SALIR");
+        BTNvolverPE.setText("VOLVER");
         BTNvolverPE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BTNvolverPE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -577,7 +577,7 @@ public class FrameProveedores extends javax.swing.JFrame {
         
         try {
         anio = Integer.parseInt(TXTañoPE.getText());
-        if (String.valueOf(anio).length() >= 2) {
+        if (String.valueOf(anio).length() > 2) {
         JOptionPane.showMessageDialog(null, "El año debe tener 2 dígitos");
         datosValidos = false; // Marcar los datos como no válidos
         }
