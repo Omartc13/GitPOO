@@ -68,7 +68,6 @@ public class FramePrincipal extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
@@ -362,7 +361,7 @@ public class FramePrincipal extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel8.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 330, 80));
+        jPanel8.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 330, 80));
 
         jButton2.setBackground(new java.awt.Color(246, 241, 241));
         jButton2.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
@@ -374,7 +373,7 @@ public class FramePrincipal extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel8.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 330, 80));
+        jPanel8.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 330, 80));
 
         jButton3.setBackground(new java.awt.Color(246, 241, 241));
         jButton3.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
@@ -386,7 +385,7 @@ public class FramePrincipal extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel8.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 330, 80));
+        jPanel8.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 330, 80));
 
         jButton4.setBackground(new java.awt.Color(246, 241, 241));
         jButton4.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
@@ -398,27 +397,15 @@ public class FramePrincipal extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel8.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, 330, 80));
-
-        jButton5.setBackground(new java.awt.Color(246, 241, 241));
-        jButton5.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Usuario 1.png"))); // NOI18N
-        jButton5.setText("Login");
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel8.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 470, -1, -1));
+        jPanel8.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 330, 80));
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("Stencil", 2, 36)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Stencil", 2, 48)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(246, 241, 241));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("Registros");
-        jPanel8.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 60));
+        jPanel8.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 70));
 
         jPanel3.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 590, 550));
 
@@ -1920,12 +1907,6 @@ FrameSucursales abrir = new FrameSucursales();
         
     }//GEN-LAST:event_cmbtipoSucursalItemStateChanged
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-    Tienda t = new Tienda();
-    t.setVisible(true);
-    this.setVisible(false);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         RegistroGere rege= new RegistroGere();
         rege.setVisible(true);
@@ -2815,7 +2796,6 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;

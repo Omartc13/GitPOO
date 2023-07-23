@@ -525,6 +525,8 @@ public class FrameEmpleados extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Empleado Agregado");
             } catch (SQLException ex) {
                 Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                mostrartablaemple();
+                JOptionPane.showMessageDialog(null, ex);
             }
         }
         }
@@ -677,6 +679,8 @@ public class FrameEmpleados extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Administrador Agregado");
             } catch (SQLException ex) {
                 Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                mostrartablaadmin();
+                JOptionPane.showMessageDialog(null, ex);
             }
         }
         }

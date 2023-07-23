@@ -605,6 +605,8 @@ public class FrameSucursales extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Sucursal Agregada");
             } catch (SQLException ex) {
                 Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                mostrartablaprin();
+                JOptionPane.showMessageDialog(null, ex);
             }
            
         }
@@ -789,6 +791,8 @@ public class FrameSucursales extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Sucursal Prov. Agregada");
             } catch (SQLException ex) {
                 Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                mostrartablaprovin();
+                JOptionPane.showMessageDialog(null, ex);
             }
         }
        

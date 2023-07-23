@@ -812,6 +812,7 @@ public class FrameProductos extends javax.swing.JFrame {
                  resultado
              };
              tHigiene.addRow(fila);
+             
          }
          //agregar datos a la BDD
             try {
@@ -825,9 +826,12 @@ public class FrameProductos extends javax.swing.JFrame {
                 pps.setInt(7, stock);
                 pps.setInt(8, codproveedor);
                 pps.executeUpdate();
+                
                 JOptionPane.showMessageDialog(null, "Producto Guardado");
             } catch (SQLException ex) {
                 Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                mostrartablaprohigi();
+                JOptionPane.showMessageDialog(null, ex);
             }
         }
        
@@ -1004,6 +1008,8 @@ public class FrameProductos extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Producto Guardado");
             } catch (SQLException ex) {
                 Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                mostrartablaprocomes();
+                JOptionPane.showMessageDialog(null, ex);
             }
         }  
         
@@ -1186,6 +1192,8 @@ public class FrameProductos extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Producto Guardado");
             } catch (SQLException ex) {
                 Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                mostrartablapromake();
+                JOptionPane.showMessageDialog(null, ex);
             }
         } 
         

@@ -620,6 +620,8 @@ public class FrameProveedores extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Provedor Ext. Agregado");
             } catch (SQLException ex) {
                 Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                mostrartabExterno();
+                JOptionPane.showMessageDialog(null, ex);
             }
             
             
@@ -786,6 +788,8 @@ public class FrameProveedores extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Provedor Int. Agregado");
             } catch (SQLException ex) {
                 Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                mostrartabinet();
+                JOptionPane.showMessageDialog(null, ex);
             }   
             }
         }
