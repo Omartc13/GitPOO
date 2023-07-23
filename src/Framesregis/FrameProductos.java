@@ -829,9 +829,12 @@ public class FrameProductos extends javax.swing.JFrame {
                 
                 JOptionPane.showMessageDialog(null, "Producto Guardado");
             } catch (SQLException ex) {
-                Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                if(ex.getErrorCode()==1062){
                 mostrartablaprohigi();
-                JOptionPane.showMessageDialog(null, ex);
+                JOptionPane.showMessageDialog(null, "Error: Codigo ya existente");
+                }else{
+                    Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         }
        
@@ -1007,12 +1010,14 @@ public class FrameProductos extends javax.swing.JFrame {
                 pps.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Producto Guardado");
             } catch (SQLException ex) {
-                Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                if(ex.getErrorCode()==1062){
                 mostrartablaprocomes();
-                JOptionPane.showMessageDialog(null, ex);
+                JOptionPane.showMessageDialog(null, "Error: Codigo ya existente");
+                }else{
+                    Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-        }  
-        
+         }
         }
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -1169,9 +1174,7 @@ public class FrameProductos extends javax.swing.JFrame {
                      makeupArray.obtener(i).getTonos(),
                       makeupArray.obtener(i).getDirigidoPara(),
                      makeupArray.obtener(i).getCodproveedor(),
-                     resultado
-                     
-                    
+                     resultado   
                  };
                  tMakeup.addRow(fila);
                  
@@ -1191,9 +1194,12 @@ public class FrameProductos extends javax.swing.JFrame {
                 pps.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Producto Guardado");
             } catch (SQLException ex) {
-                Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                if(ex.getErrorCode()==1062){
                 mostrartablapromake();
-                JOptionPane.showMessageDialog(null, ex);
+                JOptionPane.showMessageDialog(null, "Error: Codigo ya existente");
+                }else{
+                    Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         } 
         

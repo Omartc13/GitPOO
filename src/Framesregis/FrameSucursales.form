@@ -178,11 +178,11 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Ciudad :"/>
+                    <Property name="text" type="java.lang.String" value="Distrito:"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="160" y="120" width="60" height="20"/>
+                      <AbsoluteConstraints x="170" y="120" width="60" height="20"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -401,7 +401,7 @@
                           <Table columnCount="6" rowCount="0">
                             <Column editable="true" title="Numero Sucursal" type="java.lang.Object"/>
                             <Column editable="true" title="Telefono" type="java.lang.Object"/>
-                            <Column editable="true" title="Ciudad" type="java.lang.Object"/>
+                            <Column editable="true" title="Distrito" type="java.lang.Object"/>
                             <Column editable="true" title="Direccion" type="java.lang.Object"/>
                             <Column editable="true" title="Encargado" type="java.lang.Object"/>
                             <Column editable="true" title="DNI" type="java.lang.Object"/>

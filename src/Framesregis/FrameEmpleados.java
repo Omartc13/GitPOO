@@ -524,14 +524,15 @@ public class FrameEmpleados extends javax.swing.JFrame {
                 pps.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Empleado Agregado");
             } catch (SQLException ex) {
-                Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                if(ex.getErrorCode()==1062){
                 mostrartablaemple();
-                JOptionPane.showMessageDialog(null, ex);
-            }
+                JOptionPane.showMessageDialog(null, "Error: DNI Ya existente");
+                }else{
+                    Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                }
+          }
+         }
         }
-        }
-    
-    
     }//GEN-LAST:event_agregarActionPerformed
     
     public static boolean validarLetras(String datos){
@@ -678,12 +679,15 @@ public class FrameEmpleados extends javax.swing.JFrame {
                 pps.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Administrador Agregado");
             } catch (SQLException ex) {
-                Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                if (ex.getErrorCode() == 1062) {
                 mostrartablaadmin();
-                JOptionPane.showMessageDialog(null, ex);
+                JOptionPane.showMessageDialog(null, "Error: DNI Ya existente");
+               }else{
+                    Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex); 
+                }
+              }
+             }
             }
-        }
-        }
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed

@@ -139,8 +139,8 @@ public class FrameSucursales extends javax.swing.JFrame {
         jlabelciudad.setBackground(new java.awt.Color(0, 0, 0));
         jlabelciudad.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jlabelciudad.setForeground(new java.awt.Color(0, 0, 0));
-        jlabelciudad.setText("Ciudad :");
-        jPanel4.add(jlabelciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 60, 20));
+        jlabelciudad.setText("Distrito:");
+        jPanel4.add(jlabelciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 60, 20));
 
         jlabeldireccion.setBackground(new java.awt.Color(0, 0, 0));
         jlabeldireccion.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
@@ -242,7 +242,7 @@ public class FrameSucursales extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Numero Sucursal", "Telefono", "Ciudad", "Direccion", "Encargado", "DNI"
+                "Numero Sucursal", "Telefono", "Distrito", "Direccion", "Encargado", "DNI"
             }
         ));
         jScrollPane3.setViewportView(tblprincipal);
@@ -604,9 +604,12 @@ public class FrameSucursales extends javax.swing.JFrame {
                 pps.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Sucursal Agregada");
             } catch (SQLException ex) {
-                Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                if(ex.getErrorCode()==1062){
                 mostrartablaprin();
-                JOptionPane.showMessageDialog(null, ex);
+                JOptionPane.showMessageDialog(null, "Error: Nro. Suc Ya existente");
+                }else{
+                    Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
            
         }
@@ -645,7 +648,7 @@ public class FrameSucursales extends javax.swing.JFrame {
         tprovincia.addColumn("Teléfono");
         tprovincia.addColumn("Cod. Provincia");
         tprovincia.addColumn("Provincia");
-        tprovincia.addColumn("Ciudad");
+        tprovincia.addColumn("Distrito");
         tprovincia.addColumn("Dirección");
         tprovincia.addColumn("Encargado");
         tprovincia.addColumn("DNI");
@@ -771,11 +774,9 @@ public class FrameSucursales extends javax.swing.JFrame {
                     hspa.obtener(i).getDirección(),
                     hspa.obtener(i).getEncargado(),
                     hspa.obtener(i).getDNI()
- 
-        };
-            tprovincia.addRow(fila);
+                };
+                tprovincia.addRow(fila);
             }
-            
             //Agregar a BDD
             try {
                 PreparedStatement pps=  cn.prepareStatement("INSERT INTO sucursalpro(NumeroSuc,Telefono,CodPro,Provincia,Ciudad,Direccion,Encargado,DNI) VALUES(?,?,?,?,?,?,?,?)");
@@ -790,9 +791,12 @@ public class FrameSucursales extends javax.swing.JFrame {
                 pps.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Sucursal Prov. Agregada");
             } catch (SQLException ex) {
-                Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                if(ex.getErrorCode()==1062){
                 mostrartablaprovin();
-                JOptionPane.showMessageDialog(null, ex);
+                JOptionPane.showMessageDialog(null, "Error: Nro. Suc Ya existente");
+                }else{
+                    Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         }
        

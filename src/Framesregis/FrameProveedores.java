@@ -619,9 +619,12 @@ public class FrameProveedores extends javax.swing.JFrame {
                 pps.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Provedor Ext. Agregado");
             } catch (SQLException ex) {
-                Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                if(ex.getErrorCode()==1062){
                 mostrartabExterno();
-                JOptionPane.showMessageDialog(null, ex);
+                JOptionPane.showMessageDialog(null, "Error: RUC Ya existente");
+                }else{
+                    Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
             
             
@@ -787,9 +790,13 @@ public class FrameProveedores extends javax.swing.JFrame {
                 pps.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Provedor Int. Agregado");
             } catch (SQLException ex) {
-                Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                if(ex.getErrorCode()==1062){
                 mostrartabinet();
-                JOptionPane.showMessageDialog(null, ex);
+                JOptionPane.showMessageDialog(null, "Error: DNI Ya existente");
+                }else{
+                    Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
             }   
             }
         }
