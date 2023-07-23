@@ -483,7 +483,7 @@ public class FrameSucursales extends javax.swing.JFrame {
         tprincipal = new DefaultTableModel();
         tprincipal.addColumn("Numero de sucursal");
         tprincipal.addColumn("Teléfono");
-        tprincipal.addColumn("Ciudad");
+        tprincipal.addColumn("Distrito");
         tprincipal.addColumn("Dirección");
         tprincipal.addColumn("Encargado");
         tprincipal.addColumn("DNI");
@@ -594,7 +594,7 @@ public class FrameSucursales extends javax.swing.JFrame {
 
                 //agregar datos a la BDD
                 try {
-                PreparedStatement pps=  cn.prepareStatement("INSERT INTO sucursalpri(NumeroSuc,Telefono,Ciudad,Direccion,Encargado,DNI) VALUES(?,?,?,?,?,?)");
+                PreparedStatement pps=  cn.prepareStatement("INSERT INTO sucursalpri(NumeroSuc,Telefono,Distrito,Direccion,Encargado,DNI) VALUES(?,?,?,?,?,?)");
                 pps.setInt(1, Sucursal);
                 pps.setInt(2, telefono);
                 pps.setString(3, distrito);

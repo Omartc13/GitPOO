@@ -14,16 +14,12 @@ public class PMakeup extends PProductos{
     private String dirigidoPara;
     private String fabricado;
 
-    public PMakeup(String nombre_producto, int codigo, int proveedor, String tipo, double precio, int stock, String tonos, String dirigidoPara, String fabricado) {
-        super(nombre_producto, codigo, proveedor, tipo, precio, stock);
+    public PMakeup(String nombre_producto, int codigo, Long RucProveedor, String tipo, double precio, int stock, String tonos, String dirigidoPara, String fabricado) {
+        super(nombre_producto, codigo, RucProveedor, tipo, precio, stock);
         this.tonos = tonos;
         this.dirigidoPara = dirigidoPara;
         this.fabricado = fabricado;
     }
-
-    
-    
-    
     
     public String getTonos() {
         return tonos;

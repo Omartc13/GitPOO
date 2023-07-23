@@ -15,23 +15,21 @@ public class PProductos {
     //Atributos principales
     private String nombre_producto;
     private int codigo;
-    private int codproveedor;
+    private Long RucProveedor;
     private String tipo;
     private double precio;
     private int stock;
 
     // Constructor con todos los parámetros
 
-    public PProductos(String nombre_producto, int codigo, int codproveedor, String tipo, double precio, int stock) {
+    public PProductos(String nombre_producto, int codigo, Long RucProveedor, String tipo, double precio, int stock) {
         this.nombre_producto = nombre_producto;
         this.codigo = codigo;
-        this.codproveedor = codproveedor;
+        this.RucProveedor = RucProveedor;
         this.tipo = tipo;
         this.precio = precio;
         this.stock = stock;
     }
-
-    
 
     public double getPrecio() {
         return precio;
@@ -59,13 +57,15 @@ public class PProductos {
         this.codigo = codigo;
     }
 
-    public int getCodproveedor() {
-        return codproveedor;
+    public Long getRucProveedor() {
+        return RucProveedor;
     }
 
-    public void getCodproveedor(int codproveedor) {
-        this.codproveedor = codproveedor;
+    public void setRucProveedor(Long RucProveedor) {
+        this.RucProveedor = RucProveedor;
     }
+
+    
     
     public String detalleProducto(){
         return "...";

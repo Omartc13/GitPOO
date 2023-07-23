@@ -12,14 +12,12 @@ public class PHigiene extends PProductos{
     private double contenido;
     private String tipoFabricado;
 
-    public PHigiene(String nombre_producto, int codigo, int proveedor, String tipo, double precio, int stock,double contenido, String tipoFabricado) {
-        super(nombre_producto, codigo, proveedor, tipo, precio, stock);
+    public PHigiene(String nombre_producto, int codigo, Long RucProveedor, String tipo, double precio, int stock,double contenido, String tipoFabricado) {
+        super(nombre_producto, codigo, RucProveedor, tipo, precio, stock);
         this.contenido = contenido;
         this.tipoFabricado = tipoFabricado;
     }
-
     
-
     public double getContenido() {
         return contenido;
     }

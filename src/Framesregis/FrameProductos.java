@@ -69,7 +69,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtCod = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtCodPro = new javax.swing.JTextField();
+        txtRucPro = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         txtPrecio = new javax.swing.JTextField();
@@ -93,7 +93,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         txtCod2 = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
-        txtCodPro2 = new javax.swing.JTextField();
+        txtRUCPro2 = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         txtPrecio2 = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
@@ -114,7 +114,7 @@ public class FrameProductos extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         txtCod3 = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
-        txtCodPro3 = new javax.swing.JTextField();
+        txtRucPro3 = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         txtPrecio3 = new javax.swing.JTextField();
@@ -180,16 +180,16 @@ public class FrameProductos extends javax.swing.JFrame {
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Codigo Proveedor:");
+        jLabel3.setText("RUC Proveedor:");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 150, -1));
 
-        txtCodPro.setBackground(new java.awt.Color(246, 241, 241));
-        txtCodPro.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtRucPro.setBackground(new java.awt.Color(246, 241, 241));
+        txtRucPro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtCodProKeyTyped(evt);
+                txtRucProKeyTyped(evt);
             }
         });
-        jPanel2.add(txtCodPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 130, -1));
+        jPanel2.add(txtRucPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 130, -1));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
@@ -361,16 +361,16 @@ public class FrameProductos extends javax.swing.JFrame {
         jLabel19.setBackground(new java.awt.Color(0, 0, 0));
         jLabel19.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("Codigo Proveedor:");
+        jLabel19.setText("RUC Proveedor:");
         jPanel5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, 130, -1));
 
-        txtCodPro2.setBackground(new java.awt.Color(246, 241, 241));
-        txtCodPro2.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtRUCPro2.setBackground(new java.awt.Color(246, 241, 241));
+        txtRUCPro2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtCodPro2KeyTyped(evt);
+                txtRUCPro2KeyTyped(evt);
             }
         });
-        jPanel5.add(txtCodPro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 130, -1));
+        jPanel5.add(txtRUCPro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 130, -1));
 
         jLabel21.setBackground(new java.awt.Color(0, 0, 0));
         jLabel21.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
@@ -510,13 +510,13 @@ public class FrameProductos extends javax.swing.JFrame {
         jLabel27.setText("Codigo Proveedor:");
         jPanel7.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 180, -1));
 
-        txtCodPro3.setBackground(new java.awt.Color(246, 241, 241));
-        txtCodPro3.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtRucPro3.setBackground(new java.awt.Color(246, 241, 241));
+        txtRucPro3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtCodPro3KeyTyped(evt);
+                txtRucPro3KeyTyped(evt);
             }
         });
-        jPanel7.add(txtCodPro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 120, -1));
+        jPanel7.add(txtRucPro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 120, -1));
 
         jLabel28.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -686,7 +686,7 @@ public class FrameProductos extends javax.swing.JFrame {
         tHigiene.addColumn("Contenido");
         tHigiene.addColumn("Precio");
         tHigiene.addColumn("Stock");
-        tHigiene.addColumn("Cod. Proveedor");
+        tHigiene.addColumn("RUC Proveedor");
         tHigiene.addColumn("COSTO TOTAL");
         tblHigiene.setModel(tHigiene);
         
@@ -728,13 +728,13 @@ public class FrameProductos extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //Comprobar todos los campos
         int codigo = 0;
-        int codproveedor = 0;
+        Long RUCProv = 0L;
         double precio = 0;
         int stock = 0;
         double contenido = 0;
         boolean datosValidos = true;
         
-        if(cmbtipfabri.getSelectedIndex()==0||txtCod.getText().trim().isEmpty()|| txtCodPro.getText().trim().isEmpty()||txtNamePro.getText().trim().isEmpty()||
+        if(cmbtipfabri.getSelectedIndex()==0||txtCod.getText().trim().isEmpty()|| txtRucPro.getText().trim().isEmpty()||txtNamePro.getText().trim().isEmpty()||
             txttipo.getText().trim().isEmpty()||txtPrecio.getText().trim().isEmpty()||txtStock.getText().trim().isEmpty()
             ||txtcontenido.getText().trim().isEmpty()){
             JOptionPane.showMessageDialog(null, "Complete todos los campos");
@@ -767,9 +767,9 @@ public class FrameProductos extends javax.swing.JFrame {
 
 
         try {
-        codproveedor = Integer.parseInt(txtCodPro.getText());
-        if (String.valueOf(codproveedor).length() != 6) {
-        JOptionPane.showMessageDialog(null, "El código de proveedor debe tener 6 dígitos");
+        RUCProv = Long.parseLong(txtRucPro.getText());
+        if (String.valueOf(RUCProv).length() != 11) {
+        JOptionPane.showMessageDialog(null, "El RUC del proveedor debe tener 11 dígitos");
         datosValidos = false; 
         }
         } catch (NumberFormatException e) {
@@ -796,7 +796,7 @@ public class FrameProductos extends javax.swing.JFrame {
         double resultado = generico1.multiplicar();
         
      if (datosValidos) {
-         PHigiene ph = new PHigiene(nombre_producto, codigo, codproveedor, tipo, precio, stock, contenido, tipoFab);
+         PHigiene ph = new PHigiene(nombre_producto, codigo, RUCProv, tipo, precio, stock, contenido, tipoFab);
          higieneArray.agregarProductoH(ph);
          
          for (int o = 0; o < higieneArray.tamañoArreglo(); o++) {
@@ -808,7 +808,7 @@ public class FrameProductos extends javax.swing.JFrame {
                  higieneArray.obtener(o).getContenido(),
                  higieneArray.obtener(o).getPrecio(),
                  higieneArray.obtener(o).getStock(),
-                 higieneArray.obtener(o).getCodproveedor(),
+                 higieneArray.obtener(o).getRucProveedor(),
                  resultado
              };
              tHigiene.addRow(fila);
@@ -816,7 +816,7 @@ public class FrameProductos extends javax.swing.JFrame {
          }
          //agregar datos a la BDD
             try {
-                PreparedStatement pps=  cn.prepareStatement("INSERT INTO prohigi(Codigo,Nombreprod,TipFabri,Tipo,Contenido,Precio,Stock,CodProv) VALUES(?,?,?,?,?,?,?,?)");
+                PreparedStatement pps=  cn.prepareStatement("INSERT INTO prohigi(Codigo,Nombreprod,TipFabri,Tipo,Contenido,Precio,Stock,RucProv) VALUES(?,?,?,?,?,?,?,?)");
                 pps.setInt(1, codigo);
                 pps.setString(2, nombre_producto);
                 pps.setString(3, tipoFab);
@@ -824,7 +824,7 @@ public class FrameProductos extends javax.swing.JFrame {
                 pps.setDouble(5, contenido);
                 pps.setDouble(6, precio);
                 pps.setInt(7, stock);
-                pps.setInt(8, codproveedor);
+                pps.setLong(8, RUCProv);
                 pps.executeUpdate();
                 
                 JOptionPane.showMessageDialog(null, "Producto Guardado");
@@ -855,7 +855,7 @@ public class FrameProductos extends javax.swing.JFrame {
         
         //Elimina Campos del formulario
         txtCod.setText("");
-        txtCodPro.setText("");
+        txtRucPro.setText("");
         txtNamePro.setText("");
         txtPrecio.setText("");
         txtStock.setText("");
@@ -882,7 +882,7 @@ public class FrameProductos extends javax.swing.JFrame {
         tComida.addColumn("Precio");
         tComida.addColumn("Stock");
         tComida.addColumn("Caducidad");
-        tComida.addColumn("Cod. Proveedor");
+        tComida.addColumn("RUC. Proveedor");
         tComida.addColumn("COSTO TOTAL");
         tblComida.setModel(tComida);
         
@@ -922,13 +922,13 @@ public class FrameProductos extends javax.swing.JFrame {
     
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         int cod = 0;
-        int codprove2 = 0;
+        Long codprove2 = 0L;
         double prec2 = 0;
         int stock2 = 0;
         int caduci = 0;
         boolean datosValidos = true;
         
-        if(cmbTipocomes.getSelectedIndex()==0||txtCod2.getText().trim().isEmpty()||txtCodPro2.getText().trim().isEmpty()||txtNamePro2.getText().trim().isEmpty()
+        if(cmbTipocomes.getSelectedIndex()==0||txtCod2.getText().trim().isEmpty()||txtRUCPro2.getText().trim().isEmpty()||txtNamePro2.getText().trim().isEmpty()
         ||txtPrecio2.getText().trim().isEmpty()||txtStock2.getText().trim().isEmpty()){
         JOptionPane.showMessageDialog(null, "Complete todos los campos");
         datosValidos = false;}
@@ -954,13 +954,13 @@ public class FrameProductos extends javax.swing.JFrame {
 
 
         try {
-        codprove2 = Integer.parseInt(txtCodPro2.getText());
-        if (String.valueOf(codprove2).length() != 6) {
-        JOptionPane.showMessageDialog(null, "El código de proveedor debe tener 6 dígitos");
+        codprove2 = Long.parseLong(txtRUCPro2.getText());
+        if (String.valueOf(codprove2).length() != 11) {
+        JOptionPane.showMessageDialog(null, "El RUC de proveedor debe tener 11 dígitos");
         datosValidos = false; // Marcar los datos como no válidos
         }
         } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(null, "Ingrese un número válido para el código de proveedor");
+        JOptionPane.showMessageDialog(null, "Ingrese un RUC válido para el proveedor");
         datosValidos = false; // Marcar los datos como no válidos
         }
         
@@ -992,21 +992,21 @@ public class FrameProductos extends javax.swing.JFrame {
                   comidaArray.obtener(i).getPrecio(),
                   comidaArray.obtener(i).getStock(),
                   comidaArray.obtener(i).getCaducidad(),
-                  comidaArray.obtener(i).getCodproveedor(),
+                  comidaArray.obtener(i).getRucProveedor(),
                   resultado
                 };
                 tComida.addRow(fila);
             }
         //agregar datos a la BDD
             try {
-                PreparedStatement pps=  cn.prepareStatement("INSERT INTO procomes(Codigo,Nombreprod,Tipo,Precio,Stock,Caducidad,CodProv) VALUES(?,?,?,?,?,?,?)");
+                PreparedStatement pps=  cn.prepareStatement("INSERT INTO procomes(Codigo,Nombreprod,Tipo,Precio,Stock,Caducidad,RucProv) VALUES(?,?,?,?,?,?,?)");
                 pps.setInt(1, cod);
                 pps.setString(2, namepro2);
                 pps.setString(3, tipo2);
                 pps.setDouble(4, prec2);
                 pps.setInt(5, stock2);
                 pps.setInt(6, caduci);
-                pps.setInt(7, codprove2);
+                pps.setLong(7, codprove2);
                 pps.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Producto Guardado");
             } catch (SQLException ex) {
@@ -1024,7 +1024,7 @@ public class FrameProductos extends javax.swing.JFrame {
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         
         txtCod2.setText("");
-        txtCodPro2.setText("");
+        txtRUCPro2.setText("");
         txtNamePro2.setText("");
         txtPrecio2.setText("");
         txtStock2.setText("");
@@ -1047,7 +1047,7 @@ public class FrameProductos extends javax.swing.JFrame {
         tMakeup.addColumn("Tipos");
         tMakeup.addColumn("Tonos");
         tMakeup.addColumn("Dirigido para:");
-        tMakeup.addColumn("Cod. Proveedor");
+        tMakeup.addColumn("RUC. Proveedor");
         tMakeup.addColumn("COSTO TOTAL");
         tblMakeup.setModel(tMakeup);
         
@@ -1089,13 +1089,13 @@ public class FrameProductos extends javax.swing.JFrame {
     
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         int cod = 0;
-        int codpro = 0;
+        Long codpro = 0L;
         int stock = 0;
         double prec = 0;
         boolean datosValidos = true;
         
         
-        if(cmbtipfabri3.getSelectedIndex()==0||txtCod3.getText().trim().isEmpty()||txtCodPro3.getText().trim().isEmpty()||txtPrecio3.getText().trim().isEmpty()
+        if(cmbtipfabri3.getSelectedIndex()==0||txtCod3.getText().trim().isEmpty()||txtRucPro3.getText().trim().isEmpty()||txtPrecio3.getText().trim().isEmpty()
                 ||txtStock3.getText().trim().isEmpty()||txttonos3.getText().trim().isEmpty()||txtdiri3.getText().trim().isEmpty()){
         JOptionPane.showMessageDialog(null, "Complete todos los campos");
         datosValidos = false;} 
@@ -1136,12 +1136,12 @@ public class FrameProductos extends javax.swing.JFrame {
 
 
         try {
-        codpro = Integer.parseInt(txtCodPro3.getText());
-        if (txtCodPro3.getText().length() != 6) {
-        JOptionPane.showMessageDialog(null, "El CÓDIGO PROVEEDOR debe tener 6 dígitos");
+        codpro = Long.parseLong(txtRucPro3.getText());
+        if (txtRucPro3.getText().length() != 11) {
+        JOptionPane.showMessageDialog(null, "El RUC de Provedor debe tener 11 dígitos");
         datosValidos = false;    }}
         catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(null, "Ingrese un número válido para el código de proveedor");
+        JOptionPane.showMessageDialog(null, "Ingrese un número válido para el Ruc de proveedor");
         datosValidos = false; // Marcar los datos como no válidos
         }
         
@@ -1173,7 +1173,7 @@ public class FrameProductos extends javax.swing.JFrame {
                      makeupArray.obtener(i).getTipo(),
                      makeupArray.obtener(i).getTonos(),
                       makeupArray.obtener(i).getDirigidoPara(),
-                     makeupArray.obtener(i).getCodproveedor(),
+                     makeupArray.obtener(i).getRucProveedor(),
                      resultado   
                  };
                  tMakeup.addRow(fila);
@@ -1181,7 +1181,7 @@ public class FrameProductos extends javax.swing.JFrame {
              }
              //agregar datos a la BDD
             try {
-                PreparedStatement pps=  cn.prepareStatement("INSERT INTO promakeup(Codigo,Nombreprod,Precio,Stock,Fabricados,Tipo,Tonos,DigPara,CodProv) VALUES(?,?,?,?,?,?,?,?,?)");
+                PreparedStatement pps=  cn.prepareStatement("INSERT INTO promakeup(Codigo,Nombreprod,Precio,Stock,Fabricados,Tipo,Tonos,DigPara,RucProv) VALUES(?,?,?,?,?,?,?,?,?)");
                 pps.setInt(1, cod);
                 pps.setString(2, namepro);
                 pps.setDouble(3, prec);
@@ -1190,7 +1190,7 @@ public class FrameProductos extends javax.swing.JFrame {
                 pps.setString(6, tipo);
                 pps.setString(7, tonos);
                 pps.setString(8, diri);
-                pps.setInt(9, codpro);
+                pps.setLong(9, codpro);
                 pps.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Producto Guardado");
             } catch (SQLException ex) {
@@ -1208,7 +1208,7 @@ public class FrameProductos extends javax.swing.JFrame {
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         txtCod3.setText("");
-        txtCodPro3.setText("");
+        txtRucPro3.setText("");
         txtNamePro3.setText("");
         txtPrecio3.setText("");
         txtStock3.setText("");
@@ -1242,14 +1242,14 @@ public class FrameProductos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCodActionPerformed
 
-    private void txtCodProKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodProKeyTyped
+    private void txtRucProKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRucProKeyTyped
 
         //maximo de digitos
-        if (txtCodPro.getText().length()>=6)
+        if (txtRucPro.getText().length()>=11)
         {
             evt.consume();
         }
-    }//GEN-LAST:event_txtCodProKeyTyped
+    }//GEN-LAST:event_txtRucProKeyTyped
 
     private void txtStockKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtStockKeyTyped
         Character c = evt.getKeyChar();
@@ -1270,13 +1270,13 @@ public class FrameProductos extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtCod2KeyTyped
 
-    private void txtCodPro2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodPro2KeyTyped
+    private void txtRUCPro2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRUCPro2KeyTyped
 
-        if (txtCodPro2.getText().length()>=6)
+        if (txtRUCPro2.getText().length()>=11)
         {
             evt.consume();
         }
-    }//GEN-LAST:event_txtCodPro2KeyTyped
+    }//GEN-LAST:event_txtRUCPro2KeyTyped
 
     private void txtCod3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCod3KeyTyped
 
@@ -1287,13 +1287,13 @@ public class FrameProductos extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtCod3KeyTyped
 
-    private void txtCodPro3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodPro3KeyTyped
+    private void txtRucPro3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRucPro3KeyTyped
   
-        if (txtCodPro3.getText().length()>=6)
+        if (txtRucPro3.getText().length()>=11)
         {
             evt.consume();
         }
-    }//GEN-LAST:event_txtCodPro3KeyTyped
+    }//GEN-LAST:event_txtRucPro3KeyTyped
     
     private void txtStock3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtStock3KeyTyped
         Character c = evt.getKeyChar();
@@ -1451,15 +1451,15 @@ public class FrameProductos extends javax.swing.JFrame {
     private javax.swing.JTextField txtCod;
     private javax.swing.JTextField txtCod2;
     private javax.swing.JTextField txtCod3;
-    private javax.swing.JTextField txtCodPro;
-    private javax.swing.JTextField txtCodPro2;
-    private javax.swing.JTextField txtCodPro3;
     private javax.swing.JTextField txtNamePro;
     private javax.swing.JTextField txtNamePro2;
     private javax.swing.JTextField txtNamePro3;
     private javax.swing.JTextField txtPrecio;
     private javax.swing.JTextField txtPrecio2;
     private javax.swing.JTextField txtPrecio3;
+    private javax.swing.JTextField txtRUCPro2;
+    private javax.swing.JTextField txtRucPro;
+    private javax.swing.JTextField txtRucPro3;
     private javax.swing.JTextField txtStock;
     private javax.swing.JTextField txtStock2;
     private javax.swing.JTextField txtStock3;

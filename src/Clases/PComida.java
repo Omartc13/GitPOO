@@ -12,12 +12,12 @@ public class PComida extends PProductos {
     
     private int caducidad;
 
-
-    public PComida(String nombre_producto, int codigo, int proveedor, String tipo, double precio, int stock,int caducidad) {
-        super(nombre_producto, codigo, proveedor, tipo, precio, stock);
+    public PComida(String nombre_producto, int codigo, Long RucProveedor, String tipo, double precio, int stock,int caducidad) {
+        super(nombre_producto, codigo, RucProveedor, tipo, precio, stock);
         this.caducidad = caducidad;
     }
 
+    
     public int getCaducidad() {
         return caducidad;
     }
