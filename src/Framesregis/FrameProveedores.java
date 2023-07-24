@@ -653,7 +653,7 @@ public class FrameProveedores extends javax.swing.JFrame {
 
     private void TXTañoPEKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TXTañoPEKeyTyped
 
-        if (TXTañoPE.getText().length()>=4)
+        if (TXTañoPE.getText().length()>=2)
         {
             evt.consume();
         }
