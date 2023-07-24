@@ -44,7 +44,7 @@ public class Registro_Gerente {
     
     public void guardarusuario(String dni, String Nombre, String Apellido, String Usuario, String contraseña){
         Conexion db = new Conexion();
-            String in= "insert into usuario(DNI,Nombre,Apellido,Usuario,Contraseña) values('"+dni+"','"+Nombre+"','"+Apellido+"','"+Usuario+"','"+contraseña+"')";
+        String in= "insert into usuario(DNI,Nombre,Apellido,Usuario,Contraseña) values('"+dni+"','"+Nombre+"','"+Apellido+"','"+Usuario+"','"+contraseña+"')";
         Statement st;
         Connection conexion= db.conectar();
         try

@@ -762,10 +762,6 @@ public class FrameProveedores extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Ingrese un número válido para el DNI");
                 datosValidos = false; // Marcar los datos como no válidos
             }
-
-            
-            
-            
             // Creacion del objeto en un array para la tabla
             if (datosValidos) {
               CAPInterno inte = new CAPInterno(area, dni, nom);
