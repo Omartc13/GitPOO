@@ -785,11 +785,7 @@ public class FrameProductos extends javax.swing.JFrame {
         catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(null, "ERROR EN UNO DE LOS CAMPOS: PRECIO, STOCK O CONTENIDO");
         datosValidos = false;
-        
-        
-    } 
-            
-        
+    }
         
         //USAMOS LA CLASE GENERICA
         Generico1<Double, Integer> generico1= new Generico1(precio, stock);
@@ -815,6 +811,7 @@ public class FrameProductos extends javax.swing.JFrame {
              
          }
          //agregar datos a la BDD
+         //marcadores de posición
             try {
                 PreparedStatement pps=  cn.prepareStatement("INSERT INTO prohigi(Codigo,Nombreprod,TipFabri,Tipo,Contenido,Precio,Stock,RucProv) VALUES(?,?,?,?,?,?,?,?)");
                 pps.setInt(1, codigo);
@@ -889,8 +886,6 @@ public class FrameProductos extends javax.swing.JFrame {
         String sql="Select * From procomes";
         String datos [] = new String [8];
         Statement st;
-        
-        
         
         try{
             st= cn.createStatement();
@@ -1218,8 +1213,6 @@ public class FrameProductos extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void txtCodKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodKeyTyped
-
-        
         if (txtCod.getText().length()>=6)
         {
             evt.consume();

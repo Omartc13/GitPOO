@@ -4,7 +4,7 @@
  */
 package Framesregis;
 
-import Clases.Registro_Gerente;
+
 import conexionbd.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author yosse
+ * @author OmarTc
  */
 public class FramePrincipal extends javax.swing.JFrame {
         Conexion db= new Conexion();
@@ -118,6 +118,33 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         cmbProductos = new javax.swing.JComboBox<>();
         PanelPrinPro = new javax.swing.JPanel();
+        PanelComes = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
+        jSeparator19 = new javax.swing.JSeparator();
+        txtBuscCadComes = new javax.swing.JTextField();
+        jSeparator20 = new javax.swing.JSeparator();
+        jSeparator22 = new javax.swing.JSeparator();
+        jSeparator24 = new javax.swing.JSeparator();
+        jSeparator25 = new javax.swing.JSeparator();
+        jSeparator26 = new javax.swing.JSeparator();
+        jSeparator27 = new javax.swing.JSeparator();
+        txtBuscCodComes = new javax.swing.JTextField();
+        txtBuscNomComes = new javax.swing.JTextField();
+        txtBuscCodProdComes = new javax.swing.JTextField();
+        txtBuscPrecComes = new javax.swing.JTextField();
+        txtBuscStockComes = new javax.swing.JTextField();
+        jcombTipoProComes = new javax.swing.JComboBox<>();
+        jSeparator29 = new javax.swing.JSeparator();
+        btnEditarProComes = new javax.swing.JButton();
+        butEliProdComes = new javax.swing.JButton();
         PanelMake = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
@@ -151,33 +178,6 @@ public class FramePrincipal extends javax.swing.JFrame {
         jSeparator65 = new javax.swing.JSeparator();
         btnEditarProMake = new javax.swing.JButton();
         butEliProdMake = new javax.swing.JButton();
-        PanelComes = new javax.swing.JPanel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jButton9 = new javax.swing.JButton();
-        jSeparator19 = new javax.swing.JSeparator();
-        txtBuscCadComes = new javax.swing.JTextField();
-        jSeparator20 = new javax.swing.JSeparator();
-        jSeparator22 = new javax.swing.JSeparator();
-        jSeparator24 = new javax.swing.JSeparator();
-        jSeparator25 = new javax.swing.JSeparator();
-        jSeparator26 = new javax.swing.JSeparator();
-        jSeparator27 = new javax.swing.JSeparator();
-        txtBuscCodComes = new javax.swing.JTextField();
-        txtBuscNomComes = new javax.swing.JTextField();
-        txtBuscCodProdComes = new javax.swing.JTextField();
-        txtBuscPrecComes = new javax.swing.JTextField();
-        txtBuscStockComes = new javax.swing.JTextField();
-        jcombTipoProComes = new javax.swing.JComboBox<>();
-        jSeparator29 = new javax.swing.JSeparator();
-        btnEditarProComes = new javax.swing.JButton();
-        butEliProdComes = new javax.swing.JButton();
         PanelHigiene = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -675,6 +675,153 @@ public class FramePrincipal extends javax.swing.JFrame {
         PanelPrinPro.setBackground(new java.awt.Color(25, 167, 206));
         PanelPrinPro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        PanelComes.setBackground(new java.awt.Color(246, 241, 241));
+        PanelComes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 1.png"))); // NOI18N
+        jLabel24.setText("Productos Comestibles");
+        PanelComes.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 570, -1));
+
+        jLabel25.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel25.setText("Codigo:");
+        PanelComes.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 100, 30));
+
+        jLabel26.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel26.setText("Cod. Prod:");
+        PanelComes.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 80, 30));
+
+        jLabel27.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
+        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel27.setText("Nombre Prod:");
+        PanelComes.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 100, 30));
+
+        jLabel29.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel29.setText("Caducidad:");
+        PanelComes.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 100, 30));
+
+        jLabel30.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
+        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel30.setText("Tipo:");
+        PanelComes.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 80, 30));
+
+        jLabel31.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
+        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel31.setText("Precio:");
+        PanelComes.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 80, 30));
+
+        jLabel32.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
+        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel32.setText("Stock:");
+        PanelComes.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 100, 30));
+
+        jButton9.setBackground(new java.awt.Color(246, 241, 241));
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/64673 1.png"))); // NOI18N
+        jButton9.setText("Consultar");
+        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        PanelComes.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, -1, -1));
+
+        jSeparator19.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator19.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        PanelComes.add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, 10, 280));
+
+        txtBuscCadComes.setBackground(new java.awt.Color(246, 241, 241));
+        txtBuscCadComes.setText("\n");
+        txtBuscCadComes.setBorder(null);
+        PanelComes.add(txtBuscCadComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 140, 30));
+
+        jSeparator20.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator20.setForeground(new java.awt.Color(0, 0, 0));
+        PanelComes.add(jSeparator20, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 140, 10));
+
+        jSeparator22.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator22.setForeground(new java.awt.Color(0, 0, 0));
+        PanelComes.add(jSeparator22, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 230, 140, 10));
+
+        jSeparator24.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator24.setForeground(new java.awt.Color(0, 0, 0));
+        PanelComes.add(jSeparator24, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 140, 10));
+
+        jSeparator25.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator25.setForeground(new java.awt.Color(0, 0, 0));
+        PanelComes.add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 140, 10));
+
+        jSeparator26.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator26.setForeground(new java.awt.Color(0, 0, 0));
+        PanelComes.add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 140, 10));
+
+        jSeparator27.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator27.setForeground(new java.awt.Color(0, 0, 0));
+        PanelComes.add(jSeparator27, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 140, 10));
+
+        txtBuscCodComes.setBackground(new java.awt.Color(246, 241, 241));
+        txtBuscCodComes.setText("\n");
+        txtBuscCodComes.setBorder(null);
+        PanelComes.add(txtBuscCodComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 140, 30));
+
+        txtBuscNomComes.setBackground(new java.awt.Color(246, 241, 241));
+        txtBuscNomComes.setText("\n");
+        txtBuscNomComes.setBorder(null);
+        PanelComes.add(txtBuscNomComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 140, 30));
+
+        txtBuscCodProdComes.setBackground(new java.awt.Color(246, 241, 241));
+        txtBuscCodProdComes.setText("\n");
+        txtBuscCodProdComes.setBorder(null);
+        PanelComes.add(txtBuscCodProdComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 140, 30));
+
+        txtBuscPrecComes.setBackground(new java.awt.Color(246, 241, 241));
+        txtBuscPrecComes.setText("\n");
+        txtBuscPrecComes.setBorder(null);
+        PanelComes.add(txtBuscPrecComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 140, 30));
+
+        txtBuscStockComes.setBackground(new java.awt.Color(246, 241, 241));
+        txtBuscStockComes.setText("\n");
+        txtBuscStockComes.setBorder(null);
+        PanelComes.add(txtBuscStockComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 140, 30));
+
+        jcombTipoProComes.setBackground(new java.awt.Color(246, 241, 241));
+        jcombTipoProComes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Selecionar--", "Fruta/Verdura", "Embutidos", "Otros", "Bebida", "Proteina" }));
+        PanelComes.add(jcombTipoProComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 140, 30));
+
+        jSeparator29.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator29.setForeground(new java.awt.Color(0, 0, 0));
+        PanelComes.add(jSeparator29, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 140, 10));
+
+        btnEditarProComes.setBackground(new java.awt.Color(246, 241, 241));
+        btnEditarProComes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/5854505 1.png"))); // NOI18N
+        btnEditarProComes.setText("Editar");
+        btnEditarProComes.setActionCommand(" Editar");
+        btnEditarProComes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEditarProComes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarProComesActionPerformed(evt);
+            }
+        });
+        PanelComes.add(btnEditarProComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 110, -1));
+
+        butEliProdComes.setBackground(new java.awt.Color(246, 241, 241));
+        butEliProdComes.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        butEliProdComes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 6.png"))); // NOI18N
+        butEliProdComes.setText("Eliminar");
+        butEliProdComes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        butEliProdComes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                butEliProdComesActionPerformed(evt);
+            }
+        });
+        PanelComes.add(butEliProdComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 120, 40));
+
+        PanelPrinPro.add(PanelComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 450));
+
         PanelMake.setBackground(new java.awt.Color(246, 241, 241));
         PanelMake.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -851,153 +998,6 @@ public class FramePrincipal extends javax.swing.JFrame {
         PanelMake.add(butEliProdMake, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 400, 120, -1));
 
         PanelPrinPro.add(PanelMake, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 450));
-
-        PanelComes.setBackground(new java.awt.Color(246, 241, 241));
-        PanelComes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 1.png"))); // NOI18N
-        jLabel24.setText("Productos Comestibles");
-        PanelComes.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 570, -1));
-
-        jLabel25.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
-        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel25.setText("Codigo:");
-        PanelComes.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 100, 30));
-
-        jLabel26.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
-        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel26.setText("Cod. Prod:");
-        PanelComes.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 80, 30));
-
-        jLabel27.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
-        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setText("Nombre Prod:");
-        PanelComes.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 100, 30));
-
-        jLabel29.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
-        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel29.setText("Caducidad:");
-        PanelComes.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 100, 30));
-
-        jLabel30.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
-        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel30.setText("Tipo:");
-        PanelComes.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 80, 30));
-
-        jLabel31.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
-        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel31.setText("Precio:");
-        PanelComes.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 80, 30));
-
-        jLabel32.setFont(new java.awt.Font("Serif", 1, 16)); // NOI18N
-        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel32.setText("Stock:");
-        PanelComes.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 100, 30));
-
-        jButton9.setBackground(new java.awt.Color(246, 241, 241));
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/64673 1.png"))); // NOI18N
-        jButton9.setText("Consultar");
-        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-        PanelComes.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, -1, -1));
-
-        jSeparator19.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator19.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        PanelComes.add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, 10, 280));
-
-        txtBuscCadComes.setBackground(new java.awt.Color(246, 241, 241));
-        txtBuscCadComes.setText("\n");
-        txtBuscCadComes.setBorder(null);
-        PanelComes.add(txtBuscCadComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 140, 30));
-
-        jSeparator20.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator20.setForeground(new java.awt.Color(0, 0, 0));
-        PanelComes.add(jSeparator20, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 140, 10));
-
-        jSeparator22.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator22.setForeground(new java.awt.Color(0, 0, 0));
-        PanelComes.add(jSeparator22, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 230, 140, 10));
-
-        jSeparator24.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator24.setForeground(new java.awt.Color(0, 0, 0));
-        PanelComes.add(jSeparator24, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 140, 10));
-
-        jSeparator25.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator25.setForeground(new java.awt.Color(0, 0, 0));
-        PanelComes.add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 140, 10));
-
-        jSeparator26.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator26.setForeground(new java.awt.Color(0, 0, 0));
-        PanelComes.add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 140, 10));
-
-        jSeparator27.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator27.setForeground(new java.awt.Color(0, 0, 0));
-        PanelComes.add(jSeparator27, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 140, 10));
-
-        txtBuscCodComes.setBackground(new java.awt.Color(246, 241, 241));
-        txtBuscCodComes.setText("\n");
-        txtBuscCodComes.setBorder(null);
-        PanelComes.add(txtBuscCodComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 140, 30));
-
-        txtBuscNomComes.setBackground(new java.awt.Color(246, 241, 241));
-        txtBuscNomComes.setText("\n");
-        txtBuscNomComes.setBorder(null);
-        PanelComes.add(txtBuscNomComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 140, 30));
-
-        txtBuscCodProdComes.setBackground(new java.awt.Color(246, 241, 241));
-        txtBuscCodProdComes.setText("\n");
-        txtBuscCodProdComes.setBorder(null);
-        PanelComes.add(txtBuscCodProdComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 140, 30));
-
-        txtBuscPrecComes.setBackground(new java.awt.Color(246, 241, 241));
-        txtBuscPrecComes.setText("\n");
-        txtBuscPrecComes.setBorder(null);
-        PanelComes.add(txtBuscPrecComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 140, 30));
-
-        txtBuscStockComes.setBackground(new java.awt.Color(246, 241, 241));
-        txtBuscStockComes.setText("\n");
-        txtBuscStockComes.setBorder(null);
-        PanelComes.add(txtBuscStockComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 140, 30));
-
-        jcombTipoProComes.setBackground(new java.awt.Color(246, 241, 241));
-        jcombTipoProComes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Selecionar--", "Fruta/Verdura", "Embutidos", "Otros", "Bebida", "Proteina" }));
-        PanelComes.add(jcombTipoProComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 140, 30));
-
-        jSeparator29.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator29.setForeground(new java.awt.Color(0, 0, 0));
-        PanelComes.add(jSeparator29, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 140, 10));
-
-        btnEditarProComes.setBackground(new java.awt.Color(246, 241, 241));
-        btnEditarProComes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/5854505 1.png"))); // NOI18N
-        btnEditarProComes.setText("Editar");
-        btnEditarProComes.setActionCommand(" Editar");
-        btnEditarProComes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEditarProComes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarProComesActionPerformed(evt);
-            }
-        });
-        PanelComes.add(btnEditarProComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 110, -1));
-
-        butEliProdComes.setBackground(new java.awt.Color(246, 241, 241));
-        butEliProdComes.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        butEliProdComes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/image 6.png"))); // NOI18N
-        butEliProdComes.setText("Eliminar");
-        butEliProdComes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        butEliProdComes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                butEliProdComesActionPerformed(evt);
-            }
-        });
-        PanelComes.add(butEliProdComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 120, 40));
-
-        PanelPrinPro.add(PanelComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 450));
 
         PanelHigiene.setBackground(new java.awt.Color(246, 241, 241));
         PanelHigiene.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -2340,7 +2340,7 @@ FrameSucursales abrir = new FrameSucursales();
         
         try{
             PreparedStatement pps= cn.prepareStatement("UPDATE promakeup SET Codigo='"+co+"',Nombreprod='"+nom+"',Precio='"+pre+"',Stock='"+sto+"',Fabricados='"+fab+"',Tipo='"+tip+
-                    "',Tonos='"+ton+"',DigPara='"+dig+"',CodProv='"+codpro+"' Where Codigo="+co);
+                    "',Tonos='"+ton+"',DigPara='"+dig+"',RucProv='"+codpro+"' Where Codigo="+co);
             pps.execute();
             JOptionPane.showMessageDialog(null, "Datos acutalizados");
         }catch (SQLException ex) {
@@ -2358,7 +2358,7 @@ FrameSucursales abrir = new FrameSucursales();
         String codp=txtBuscCodProdComes.getText();
         
         try{
-            PreparedStatement pps= cn.prepareStatement("UPDATE procomes SET Codigo='"+cod+"',Nombreprod='"+nom+"',Tipo='"+tip+"',Precio='"+pre+"',Stock='"+sto+"',Caducidad='"+cad+"',CodProv='"+codp+"' Where Codigo="+cod);
+            PreparedStatement pps= cn.prepareStatement("UPDATE procomes SET Codigo='"+cod+"',Nombreprod='"+nom+"',Tipo='"+tip+"',Precio='"+pre+"',Stock='"+sto+"',Caducidad='"+cad+"',RucProv='"+codp+"' Where Codigo="+cod);
             pps.execute();
             JOptionPane.showMessageDialog(null, "Datos acutalizados");
         }catch (SQLException ex) {
@@ -2378,7 +2378,7 @@ FrameSucursales abrir = new FrameSucursales();
         
         try{
             PreparedStatement pps= cn.prepareStatement("UPDATE prohigi SET Codigo='"+cod+"',Nombreprod='"+nom+"',TipFabri='"+tipofa+"',Tipo='"+tip+"',Contenido='"+cont+
-                    "',Precio='"+pre+"',Stock='"+stoc+"',CodProv='"+codpro+"' Where Codigo="+cod);
+                    "',Precio='"+pre+"',Stock='"+stoc+"',RucProv='"+codpro+"' Where Codigo="+cod);
             pps.execute();
             JOptionPane.showMessageDialog(null, "Datos acutalizados");
         }catch (SQLException ex) {
@@ -2642,7 +2642,7 @@ FrameSucursales abrir = new FrameSucursales();
         txtBuscAniProvEx.setText("");
     }
     private void butEliProvExtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_butEliProvExtActionPerformed
-        String ruc=txtBuscRucProvEx.getText();
+            String ruc=txtBuscRucProvEx.getText();
         String sql="DELETE FROM provedorext Where RUC="+ruc;
         
         int els=JOptionPane.showConfirmDialog(null, "Esta seguro de eliminar Provedor?","Confirmacion",JOptionPane.YES_NO_OPTION);

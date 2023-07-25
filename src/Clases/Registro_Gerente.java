@@ -98,10 +98,4 @@ public class Registro_Gerente {
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
-    
-    
-    
-    
-    
-    
 }
