@@ -5,6 +5,7 @@
 package Framesregis;
 
 
+import Clases.IntDAdministrador;
 import conexionbd.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -24,6 +25,9 @@ public class FramePrincipal extends javax.swing.JFrame {
         Conexion db= new Conexion();
         Connection cn=  db.conectar();
         DefaultTableModel tusuario = new DefaultTableModel();
+        
+        DefaultTableModel tadmin = new DefaultTableModel();
+        DefaultTableModel temple = new DefaultTableModel();
         
     /**
      * Creates new form FramePrincipal
@@ -322,6 +326,13 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel15 = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel16 = new javax.swing.JPanel();
+        jPanel20 = new javax.swing.JPanel();
+        jcomOrdEmplead = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel21 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblOrdEmpAd = new javax.swing.JTable();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel17 = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
@@ -1969,17 +1980,55 @@ public class FramePrincipal extends javax.swing.JFrame {
         jTabbedPane3.setForeground(new java.awt.Color(0, 0, 0));
 
         jPanel16.setBackground(new java.awt.Color(25, 167, 206));
+        jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
-        jPanel16.setLayout(jPanel16Layout);
-        jPanel16Layout.setHorizontalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-        jPanel16Layout.setVerticalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 539, Short.MAX_VALUE)
-        );
+        jPanel20.setBackground(new java.awt.Color(246, 241, 241));
+        jPanel20.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jcomOrdEmplead.setBackground(new java.awt.Color(25, 167, 206));
+        jcomOrdEmplead.setForeground(new java.awt.Color(0, 0, 0));
+        jcomOrdEmplead.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Nombre", "Apellido", "DNI", "Año Ing", " " }));
+        jcomOrdEmplead.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcomOrdEmpleadItemStateChanged(evt);
+            }
+        });
+        jPanel20.add(jcomOrdEmplead, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, 30));
+
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Ordenar Por:");
+        jPanel20.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
+
+        jPanel21.setBackground(new java.awt.Color(25, 167, 206));
+        jPanel21.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblOrdEmpAd.setBackground(new java.awt.Color(246, 241, 241));
+        tblOrdEmpAd.setForeground(new java.awt.Color(0, 0, 0));
+        tblOrdEmpAd.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Nombre", "Apellido", "DNI", "Año Ing", "Sueldo"
+            }
+        ));
+        jScrollPane2.setViewportView(tblOrdEmpAd);
+
+        jPanel21.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 520, 400));
+
+        jPanel20.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 540, 420));
+
+        jPanel16.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 570, 480));
+
+        jComboBox1.setBackground(new java.awt.Color(246, 241, 241));
+        jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Administrador", "Empleado" }));
+        jPanel16.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 30));
 
         jTabbedPane3.addTab("Empleados", jPanel16);
 
@@ -2971,12 +3020,181 @@ FrameSucursales abrir = new FrameSucursales();
             }
         }
     }//GEN-LAST:event_butEliSucproActionPerformed
-
+    
+    public void mostrartablaadminNombre(){
+        tadmin = new DefaultTableModel();
+        tadmin.addColumn("Nombre");
+        tadmin.addColumn("Apellido");
+        tadmin.addColumn("DNI");
+        tadmin.addColumn("Año");
+        tadmin.addColumn("Sueldo");
+        tadmin.addColumn("Afiliación");
+        tadmin.addColumn("SueldoBruto");
+        tblOrdEmpAd.setModel(tadmin);
+        
+        String sql="Select * From empleadoad ORDER BY Nombre;";
+        String datos [] = new String [7];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //Pasando datos para el calculo del SB
+                int sueldo=rs.getInt("Sueldo");
+                String afili=rs.getString("Afiliacion");
+                IntDAdministrador ad = new IntDAdministrador(sueldo, afili);
+                double sueldob=ad.sueldoBruto();
+                
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=String.valueOf(sueldob);
+                tadmin.addRow(datos);
+            }
+            tblOrdEmpAd.setModel(tadmin);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaadminApellido(){
+        tadmin = new DefaultTableModel();
+        tadmin.addColumn("Nombre");
+        tadmin.addColumn("Apellido");
+        tadmin.addColumn("DNI");
+        tadmin.addColumn("Año");
+        tadmin.addColumn("Sueldo");
+        tadmin.addColumn("Afiliación");
+        tadmin.addColumn("SueldoBruto");
+        tblOrdEmpAd.setModel(tadmin);
+        String sql="Select * From empleadoad ORDER BY Apellido;";
+        String datos [] = new String [7];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                //Pasando datos para el calculo del SB
+                int sueldo=rs.getInt("Sueldo");
+                String afili=rs.getString("Afiliacion");
+                IntDAdministrador ad = new IntDAdministrador(sueldo, afili);
+                double sueldob=ad.sueldoBruto();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=String.valueOf(sueldob);
+                tadmin.addRow(datos);
+            }
+            tblOrdEmpAd.setModel(tadmin);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaadminDNI(){
+        tadmin = new DefaultTableModel();
+        tadmin.addColumn("Nombre");
+        tadmin.addColumn("Apellido");
+        tadmin.addColumn("DNI");
+        tadmin.addColumn("Año");
+        tadmin.addColumn("Sueldo");
+        tadmin.addColumn("Afiliación");
+        tadmin.addColumn("SueldoBruto");
+        tblOrdEmpAd.setModel(tadmin);
+        String sql="Select * From empleadoad ORDER BY DNI;";
+        String datos [] = new String [7];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                //Pasando datos para el calculo del SB
+                int sueldo=rs.getInt("Sueldo");
+                String afili=rs.getString("Afiliacion");
+                IntDAdministrador ad = new IntDAdministrador(sueldo, afili);
+                double sueldob=ad.sueldoBruto();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=String.valueOf(sueldob);
+                tadmin.addRow(datos);
+            }
+            tblOrdEmpAd.setModel(tadmin);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaadminAnio(){
+        tadmin = new DefaultTableModel();
+        tadmin.addColumn("Nombre");
+        tadmin.addColumn("Apellido");
+        tadmin.addColumn("DNI");
+        tadmin.addColumn("Año");
+        tadmin.addColumn("Sueldo");
+        tadmin.addColumn("Afiliación");
+        tadmin.addColumn("SueldoBruto");
+        tblOrdEmpAd.setModel(tadmin);
+        String sql="Select * From empleadoad ORDER BY AnioIng;";
+        String datos [] = new String [7];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //Pasando datos para el calculo del SB
+                int sueldo=rs.getInt("Sueldo");
+                String afili=rs.getString("Afiliacion");
+                IntDAdministrador ad = new IntDAdministrador(sueldo, afili);
+                double sueldob=ad.sueldoBruto();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=String.valueOf(sueldob);
+                tadmin.addRow(datos);
+            }
+            tblOrdEmpAd.setModel(tadmin);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         Tienda ti= new Tienda();
         ti.setVisible(true);
         this.setVisible(false); 
     }//GEN-LAST:event_jButton16ActionPerformed
+    
+    
+    
+    private void jcomOrdEmpleadItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomOrdEmpleadItemStateChanged
+        if(jcomOrdEmplead.getSelectedIndex()==1){
+            mostrartablaadminNombre();
+        }if(jcomOrdEmplead.getSelectedIndex()==2){
+            mostrartablaadminApellido();
+        }if(jcomOrdEmplead.getSelectedIndex()==3){
+            mostrartablaadminDNI();
+        }if(jcomOrdEmplead.getSelectedIndex()==4){
+            mostrartablaadminAnio();
+        }
+        
+    }//GEN-LAST:event_jcomOrdEmpleadItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -3064,6 +3282,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -3086,6 +3305,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -3146,6 +3366,8 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -3154,6 +3376,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
@@ -3221,6 +3444,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JComboBox<String> jcomOrdEmplead;
     private javax.swing.JComboBox<String> jcombTipoProComes;
     private javax.swing.JComboBox<String> jcomboAreaProvInt;
     private javax.swing.JComboBox<String> jcomboEmpleadSuel;
@@ -3228,6 +3452,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JComboBox<String> jcomboTipoEm;
     private javax.swing.JComboBox<String> jcomboTipoFaProMake;
     private javax.swing.JComboBox<String> jcomboTipoFabHigi;
+    private javax.swing.JTable tblOrdEmpAd;
     private javax.swing.JTable tblusuario;
     private javax.swing.JTextField txtBusApeAd;
     private javax.swing.JTextField txtBusDistSucPri;
