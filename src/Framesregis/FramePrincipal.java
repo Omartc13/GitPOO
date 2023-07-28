@@ -6,6 +6,7 @@ package Framesregis;
 
 
 import Clases.IntDAdministrador;
+import Clases.IntDEmpleado;
 import conexionbd.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -48,6 +49,9 @@ public class FramePrincipal extends javax.swing.JFrame {
         
         PanelSucPri.setVisible(false);
         PanelSucProv.setVisible(false);
+        
+        PaneleFiltroAd.setVisible(false);
+        PanelFilEmple.setVisible(false);
         mostrartableusu();
     }
     
@@ -326,13 +330,19 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel15 = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel16 = new javax.swing.JPanel();
+        jcomFiltEmple = new javax.swing.JComboBox<>();
+        PanelFilEmple = new javax.swing.JPanel();
         jPanel20 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tblordEmple = new javax.swing.JTable();
+        jLabel41 = new javax.swing.JLabel();
+        jcomOrdEmple = new javax.swing.JComboBox<>();
+        PaneleFiltroAd = new javax.swing.JPanel();
         jcomOrdEmplead = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblOrdEmpAd = new javax.swing.JTable();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel17 = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
@@ -1982,9 +1992,59 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel16.setBackground(new java.awt.Color(25, 167, 206));
         jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel20.setBackground(new java.awt.Color(246, 241, 241));
+        jcomFiltEmple.setBackground(new java.awt.Color(246, 241, 241));
+        jcomFiltEmple.setForeground(new java.awt.Color(0, 0, 0));
+        jcomFiltEmple.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Administrador", "Empleado" }));
+        jcomFiltEmple.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcomFiltEmpleItemStateChanged(evt);
+            }
+        });
+        jPanel16.add(jcomFiltEmple, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 30));
+
+        PanelFilEmple.setBackground(new java.awt.Color(246, 241, 241));
+        PanelFilEmple.setForeground(new java.awt.Color(0, 0, 0));
+        PanelFilEmple.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel20.setBackground(new java.awt.Color(25, 167, 206));
         jPanel20.setForeground(new java.awt.Color(0, 0, 0));
         jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblordEmple.setBackground(new java.awt.Color(246, 241, 241));
+        tblordEmple.setForeground(new java.awt.Color(0, 0, 0));
+        tblordEmple.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Apellido", "DNI", "Tipo"
+            }
+        ));
+        jScrollPane3.setViewportView(tblordEmple);
+
+        jPanel20.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 510, 390));
+
+        PanelFilEmple.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 530, 410));
+
+        jLabel41.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel41.setText("Ordenar Por:");
+        PanelFilEmple.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
+
+        jcomOrdEmple.setBackground(new java.awt.Color(25, 167, 206));
+        jcomOrdEmple.setForeground(new java.awt.Color(0, 0, 0));
+        jcomOrdEmple.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Nombre", "Apellido", "DNI", "Tipo" }));
+        jcomOrdEmple.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcomOrdEmpleItemStateChanged(evt);
+            }
+        });
+        PanelFilEmple.add(jcomOrdEmple, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 120, 30));
+
+        jPanel16.add(PanelFilEmple, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 570, 480));
+
+        PaneleFiltroAd.setBackground(new java.awt.Color(246, 241, 241));
+        PaneleFiltroAd.setForeground(new java.awt.Color(0, 0, 0));
+        PaneleFiltroAd.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jcomOrdEmplead.setBackground(new java.awt.Color(25, 167, 206));
         jcomOrdEmplead.setForeground(new java.awt.Color(0, 0, 0));
@@ -1994,11 +2054,11 @@ public class FramePrincipal extends javax.swing.JFrame {
                 jcomOrdEmpleadItemStateChanged(evt);
             }
         });
-        jPanel20.add(jcomOrdEmplead, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, 30));
+        PaneleFiltroAd.add(jcomOrdEmplead, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, 30));
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Ordenar Por:");
-        jPanel20.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
+        PaneleFiltroAd.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
 
         jPanel21.setBackground(new java.awt.Color(25, 167, 206));
         jPanel21.setForeground(new java.awt.Color(0, 0, 0));
@@ -2008,10 +2068,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         tblOrdEmpAd.setForeground(new java.awt.Color(0, 0, 0));
         tblOrdEmpAd.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "Nombre", "Apellido", "DNI", "Año Ing", "Sueldo"
@@ -2021,14 +2078,9 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         jPanel21.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 520, 400));
 
-        jPanel20.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 540, 420));
+        PaneleFiltroAd.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 540, 420));
 
-        jPanel16.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 570, 480));
-
-        jComboBox1.setBackground(new java.awt.Color(246, 241, 241));
-        jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Administrador", "Empleado" }));
-        jPanel16.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 30));
+        jPanel16.add(PaneleFiltroAd, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 570, 480));
 
         jTabbedPane3.addTab("Empleados", jPanel16);
 
@@ -3021,6 +3073,46 @@ FrameSucursales abrir = new FrameSucursales();
         }
     }//GEN-LAST:event_butEliSucproActionPerformed
     
+    public void mostrartablaadmi(){
+        tadmin = new DefaultTableModel();
+        tadmin.addColumn("Nombre");
+        tadmin.addColumn("Apellido");
+        tadmin.addColumn("DNI");
+        tadmin.addColumn("Año");
+        tadmin.addColumn("Sueldo");
+        tadmin.addColumn("Afiliación");
+        tadmin.addColumn("SueldoBruto");
+        tblOrdEmpAd.setModel(tadmin);
+        
+        String sql="Select * From empleadoad";
+        String datos [] = new String [7];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                //Pasando datos para el calculo del SB
+                int sueldo=rs.getInt("Sueldo");
+                String afili=rs.getString("Afiliacion");
+                IntDAdministrador ad = new IntDAdministrador(sueldo, afili);
+                double sueldob=ad.sueldoBruto();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=String.valueOf(sueldob);
+            }
+            tblOrdEmpAd.setModel(tadmin);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    
+    
     public void mostrartablaadminNombre(){
         tadmin = new DefaultTableModel();
         tadmin.addColumn("Nombre");
@@ -3175,6 +3267,181 @@ FrameSucursales abrir = new FrameSucursales();
         }
     }
     
+    public void mostrartablaEmple(){
+        temple= new DefaultTableModel();
+        temple.addColumn("Nombre");
+        temple.addColumn("Apellido");
+        temple.addColumn("Dni");
+        temple.addColumn("Tipo");
+        temple.addColumn("Sueldo Inicial");
+        temple.addColumn("Sueldo Bruto");
+        tblordEmple.setModel(temple);
+        
+        String sql="Select * From empleado";
+        String datos []= new String [6];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                String tipo=rs.getNString("Tipo");
+                IntDEmpleado em= new IntDEmpleado(tipo);
+                int sueldoIni=em.sueldoInicial();
+                double sueldobruto=em.sueldoBruto();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=String.valueOf(sueldoIni);
+                datos[5]=String.valueOf(sueldobruto);
+                temple.addRow(datos);
+            }
+            tblordEmple.setModel(temple);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaEmpleNom(){
+        temple= new DefaultTableModel();
+        temple.addColumn("Nombre");
+        temple.addColumn("Apellido");
+        temple.addColumn("Dni");
+        temple.addColumn("Tipo");
+        temple.addColumn("Sueldo Inicial");
+        temple.addColumn("Sueldo Bruto");
+        tblordEmple.setModel(temple);
+        
+        String sql="Select * From empleado ORDER BY Nombre;";
+        String datos []= new String [6];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                String tipo=rs.getNString("Tipo");
+                IntDEmpleado em= new IntDEmpleado(tipo);
+                int sueldoIni=em.sueldoInicial();
+                double sueldobruto=em.sueldoBruto();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=String.valueOf(sueldoIni);
+                datos[5]=String.valueOf(sueldobruto);
+                temple.addRow(datos);
+            }
+            tblordEmple.setModel(temple);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaEmpleApe(){
+        temple= new DefaultTableModel();
+        temple.addColumn("Nombre");
+        temple.addColumn("Apellido");
+        temple.addColumn("Dni");
+        temple.addColumn("Tipo");
+        temple.addColumn("Sueldo Inicial");
+        temple.addColumn("Sueldo Bruto");
+        tblordEmple.setModel(temple);
+        
+        String sql="Select * From empleado ORDER BY Apellido";
+        String datos []= new String [6];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                String tipo=rs.getNString("Tipo");
+                IntDEmpleado em= new IntDEmpleado(tipo);
+                int sueldoIni=em.sueldoInicial();
+                double sueldobruto=em.sueldoBruto();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=String.valueOf(sueldoIni);
+                datos[5]=String.valueOf(sueldobruto);
+                temple.addRow(datos);
+            }
+            tblordEmple.setModel(temple);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaEmpleDni(){
+        temple= new DefaultTableModel();
+        temple.addColumn("Nombre");
+        temple.addColumn("Apellido");
+        temple.addColumn("Dni");
+        temple.addColumn("Tipo");
+        temple.addColumn("Sueldo Inicial");
+        temple.addColumn("Sueldo Bruto");
+        tblordEmple.setModel(temple);
+        
+        String sql="Select * From empleado ORDER BY DNI;";
+        String datos []= new String [6];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                String tipo=rs.getNString("Tipo");
+                IntDEmpleado em= new IntDEmpleado(tipo);
+                int sueldoIni=em.sueldoInicial();
+                double sueldobruto=em.sueldoBruto();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=String.valueOf(sueldoIni);
+                datos[5]=String.valueOf(sueldobruto);
+                temple.addRow(datos);
+            }
+            tblordEmple.setModel(temple);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaEmpleTipo(){
+        temple= new DefaultTableModel();
+        temple.addColumn("Nombre");
+        temple.addColumn("Apellido");
+        temple.addColumn("Dni");
+        temple.addColumn("Tipo");
+        temple.addColumn("Sueldo Inicial");
+        temple.addColumn("Sueldo Bruto");
+        tblordEmple.setModel(temple);
+        
+        String sql="Select * From empleado ORDER BY Tipo;";
+        String datos []= new String [6];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                String tipo=rs.getNString("Tipo");
+                IntDEmpleado em= new IntDEmpleado(tipo);
+                int sueldoIni=em.sueldoInicial();
+                double sueldobruto=em.sueldoBruto();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=String.valueOf(sueldoIni);
+                datos[5]=String.valueOf(sueldobruto);
+                temple.addRow(datos);
+            }
+            tblordEmple.setModel(temple);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         Tienda ti= new Tienda();
         ti.setVisible(true);
@@ -3183,8 +3450,23 @@ FrameSucursales abrir = new FrameSucursales();
     
     
     
+    private void jcomFiltEmpleItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomFiltEmpleItemStateChanged
+        int TipoFilEmple=jcomFiltEmple.getSelectedIndex();
+        
+        if(TipoFilEmple==1){
+            PaneleFiltroAd.setVisible(true);
+            PanelFilEmple.setVisible(false);
+        }if(TipoFilEmple==2){
+            PanelFilEmple.setVisible(true);
+            PaneleFiltroAd.setVisible(false);
+        }
+        
+    }//GEN-LAST:event_jcomFiltEmpleItemStateChanged
+
     private void jcomOrdEmpleadItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomOrdEmpleadItemStateChanged
-        if(jcomOrdEmplead.getSelectedIndex()==1){
+        if(jcomOrdEmplead.getSelectedIndex()==0){
+            mostrartablaadmi();
+        }if(jcomOrdEmplead.getSelectedIndex()==1){
             mostrartablaadminNombre();
         }if(jcomOrdEmplead.getSelectedIndex()==2){
             mostrartablaadminApellido();
@@ -3193,8 +3475,23 @@ FrameSucursales abrir = new FrameSucursales();
         }if(jcomOrdEmplead.getSelectedIndex()==4){
             mostrartablaadminAnio();
         }
-        
     }//GEN-LAST:event_jcomOrdEmpleadItemStateChanged
+    
+    private void jcomOrdEmpleItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomOrdEmpleItemStateChanged
+        if(jcomOrdEmple.getSelectedIndex()==0){
+            mostrartablaEmple();
+        }if(jcomOrdEmple.getSelectedIndex()==1){
+            mostrartablaEmpleNom();
+        }if(jcomOrdEmple.getSelectedIndex()==2){
+            mostrartablaEmpleApe();
+        }if(jcomOrdEmple.getSelectedIndex()==3){
+            mostrartablaEmpleDni();
+        }if(jcomOrdEmple.getSelectedIndex()==4){
+            mostrartablaEmpleTipo();
+        }
+        
+        
+    }//GEN-LAST:event_jcomOrdEmpleItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -3235,6 +3532,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JPanel PanelAd;
     private javax.swing.JPanel PanelComes;
     private javax.swing.JPanel PanelEm;
+    private javax.swing.JPanel PanelFilEmple;
     private javax.swing.JPanel PanelHigiene;
     private javax.swing.JPanel PanelMake;
     private javax.swing.JPanel PanelPri;
@@ -3244,6 +3542,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JPanel PanelProvInterno;
     private javax.swing.JPanel PanelSucPri;
     private javax.swing.JPanel PanelSucProv;
+    private javax.swing.JPanel PaneleFiltroAd;
     private javax.swing.JPanel PanelprinProvedores;
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEditarEmple;
@@ -3282,7 +3581,6 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -3318,6 +3616,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
@@ -3377,6 +3676,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
@@ -3444,6 +3744,8 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JComboBox<String> jcomFiltEmple;
+    private javax.swing.JComboBox<String> jcomOrdEmple;
     private javax.swing.JComboBox<String> jcomOrdEmplead;
     private javax.swing.JComboBox<String> jcombTipoProComes;
     private javax.swing.JComboBox<String> jcomboAreaProvInt;
@@ -3453,6 +3755,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JComboBox<String> jcomboTipoFaProMake;
     private javax.swing.JComboBox<String> jcomboTipoFabHigi;
     private javax.swing.JTable tblOrdEmpAd;
+    private javax.swing.JTable tblordEmple;
     private javax.swing.JTable tblusuario;
     private javax.swing.JTextField txtBusApeAd;
     private javax.swing.JTextField txtBusDistSucPri;
