@@ -5,6 +5,7 @@
 package Framesregis;
 
 
+import CGen.Generico1;
 import Clases.IntDAdministrador;
 import Clases.IntDEmpleado;
 import conexionbd.Conexion;
@@ -29,6 +30,10 @@ public class FramePrincipal extends javax.swing.JFrame {
         
         DefaultTableModel tadmin = new DefaultTableModel();
         DefaultTableModel temple = new DefaultTableModel();
+        
+        DefaultTableModel tHigiene = new DefaultTableModel();
+        DefaultTableModel tComida = new DefaultTableModel();
+        DefaultTableModel tMakeup = new DefaultTableModel();
         
     /**
      * Creates new form FramePrincipal
@@ -344,6 +349,13 @@ public class FramePrincipal extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblOrdEmpAd = new javax.swing.JTable();
         jPanel17 = new javax.swing.JPanel();
+        jcomFiltProduc = new javax.swing.JComboBox<>();
+        PanelFilhigi = new javax.swing.JPanel();
+        jLabel62 = new javax.swing.JLabel();
+        jcomOrdProd = new javax.swing.JComboBox<>();
+        jPanel22 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tblordProdHigi = new javax.swing.JTable();
         jPanel18 = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
 
@@ -2085,17 +2097,57 @@ public class FramePrincipal extends javax.swing.JFrame {
         jTabbedPane3.addTab("Empleados", jPanel16);
 
         jPanel17.setBackground(new java.awt.Color(25, 167, 206));
+        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 539, Short.MAX_VALUE)
-        );
+        jcomFiltProduc.setBackground(new java.awt.Color(246, 241, 241));
+        jcomFiltProduc.setForeground(new java.awt.Color(0, 0, 0));
+        jcomFiltProduc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Higiene", "Comestible", "Make Up" }));
+        jcomFiltProduc.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcomFiltProducItemStateChanged(evt);
+            }
+        });
+        jPanel17.add(jcomFiltProduc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 120, 30));
+
+        PanelFilhigi.setBackground(new java.awt.Color(246, 241, 241));
+        PanelFilhigi.setForeground(new java.awt.Color(0, 0, 0));
+        PanelFilhigi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel62.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel62.setText("Ordenar por:");
+        PanelFilhigi.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
+
+        jcomOrdProd.setBackground(new java.awt.Color(25, 167, 206));
+        jcomOrdProd.setForeground(new java.awt.Color(0, 0, 0));
+        jcomOrdProd.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Codigo", "Nombre Prod.", "Tipo Fab.", "Tipo", "Contenido", "Precio", "Stock", "RucProv" }));
+        jcomOrdProd.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcomOrdProdItemStateChanged(evt);
+            }
+        });
+        PanelFilhigi.add(jcomOrdProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 120, 30));
+
+        jPanel22.setBackground(new java.awt.Color(25, 167, 206));
+        jPanel22.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblordProdHigi.setBackground(new java.awt.Color(246, 241, 241));
+        tblordProdHigi.setForeground(new java.awt.Color(0, 0, 0));
+        tblordProdHigi.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Codigo", "Nombre", "T. Fab.", "Tipo", "Cont.", "Prec.", "Stock", "Ruc P."
+            }
+        ));
+        jScrollPane4.setViewportView(tblordProdHigi);
+
+        jPanel22.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 510, 390));
+
+        PanelFilhigi.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 530, 410));
+
+        jPanel17.add(PanelFilhigi, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 560, 470));
 
         jTabbedPane3.addTab("Productos", jPanel17);
 
@@ -3442,6 +3494,375 @@ FrameSucursales abrir = new FrameSucursales();
         }
     }
     
+    public void mostrartabProdhigi(){
+        tHigiene = new DefaultTableModel();
+        tHigiene.addColumn("Código");
+        tHigiene.addColumn("Nombre");
+        tHigiene.addColumn("Tipo fabricado");
+        tHigiene.addColumn("Tipo");
+        tHigiene.addColumn("Contenido");
+        tHigiene.addColumn("Precio");
+        tHigiene.addColumn("Stock");
+        tHigiene.addColumn("RUC Proveedor");
+        tHigiene.addColumn("COSTO TOTAL");
+        tblordProdHigi.setModel(tHigiene);
+        String sql="Select * From prohigi";
+        String datos [] = new String [9];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=String.valueOf(total);
+                tHigiene.addRow(datos);
+            }
+            tblordProdHigi.setModel(tHigiene);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartabProdhigicod(){
+        tHigiene = new DefaultTableModel();
+        tHigiene.addColumn("Código");
+        tHigiene.addColumn("Nombre");
+        tHigiene.addColumn("Tipo fabricado");
+        tHigiene.addColumn("Tipo");
+        tHigiene.addColumn("Contenido");
+        tHigiene.addColumn("Precio");
+        tHigiene.addColumn("Stock");
+        tHigiene.addColumn("RUC Proveedor");
+        tHigiene.addColumn("COSTO TOTAL");
+        tblordProdHigi.setModel(tHigiene);
+        String sql="Select * From prohigi ORDER BY Codigo";
+        String datos [] = new String [9];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=String.valueOf(total);
+                tHigiene.addRow(datos);
+            }
+            tblordProdHigi.setModel(tHigiene);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartabProdhiginom(){
+        tHigiene = new DefaultTableModel();
+        tHigiene.addColumn("Código");
+        tHigiene.addColumn("Nombre");
+        tHigiene.addColumn("Tipo fabricado");
+        tHigiene.addColumn("Tipo");
+        tHigiene.addColumn("Contenido");
+        tHigiene.addColumn("Precio");
+        tHigiene.addColumn("Stock");
+        tHigiene.addColumn("RUC Proveedor");
+        tHigiene.addColumn("COSTO TOTAL");
+        tblordProdHigi.setModel(tHigiene);
+        String sql="Select * From prohigi ORDER BY Nombreprod";
+        String datos [] = new String [9];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=String.valueOf(total);
+                tHigiene.addRow(datos);
+            }
+            tblordProdHigi.setModel(tHigiene);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartabProdhigitipfab(){
+        tHigiene = new DefaultTableModel();
+        tHigiene.addColumn("Código");
+        tHigiene.addColumn("Nombre");
+        tHigiene.addColumn("Tipo fabricado");
+        tHigiene.addColumn("Tipo");
+        tHigiene.addColumn("Contenido");
+        tHigiene.addColumn("Precio");
+        tHigiene.addColumn("Stock");
+        tHigiene.addColumn("RUC Proveedor");
+        tHigiene.addColumn("COSTO TOTAL");
+        tblordProdHigi.setModel(tHigiene);
+        String sql="Select * From prohigi ORDER BY TipFabri";
+        String datos [] = new String [9];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=String.valueOf(total);
+                tHigiene.addRow(datos);
+            }
+            tblordProdHigi.setModel(tHigiene);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartabProdhigiTip(){
+        tHigiene = new DefaultTableModel();
+        tHigiene.addColumn("Código");
+        tHigiene.addColumn("Nombre");
+        tHigiene.addColumn("Tipo fabricado");
+        tHigiene.addColumn("Tipo");
+        tHigiene.addColumn("Contenido");
+        tHigiene.addColumn("Precio");
+        tHigiene.addColumn("Stock");
+        tHigiene.addColumn("RUC Proveedor");
+        tHigiene.addColumn("COSTO TOTAL");
+        tblordProdHigi.setModel(tHigiene);
+        String sql="Select * From prohigi ORDER BY Tipo";
+        String datos [] = new String [9];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=String.valueOf(total);
+                tHigiene.addRow(datos);
+            }
+            tblordProdHigi.setModel(tHigiene);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartabProdhigicont(){
+        tHigiene = new DefaultTableModel();
+        tHigiene.addColumn("Código");
+        tHigiene.addColumn("Nombre");
+        tHigiene.addColumn("Tipo fabricado");
+        tHigiene.addColumn("Tipo");
+        tHigiene.addColumn("Contenido");
+        tHigiene.addColumn("Precio");
+        tHigiene.addColumn("Stock");
+        tHigiene.addColumn("RUC Proveedor");
+        tHigiene.addColumn("COSTO TOTAL");
+        tblordProdHigi.setModel(tHigiene);
+        String sql="Select * From prohigi ORDER BY Contenido";
+        String datos [] = new String [9];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=String.valueOf(total);
+                tHigiene.addRow(datos);
+            }
+            tblordProdHigi.setModel(tHigiene);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartabProdhigiprec(){
+        tHigiene = new DefaultTableModel();
+        tHigiene.addColumn("Código");
+        tHigiene.addColumn("Nombre");
+        tHigiene.addColumn("Tipo fabricado");
+        tHigiene.addColumn("Tipo");
+        tHigiene.addColumn("Contenido");
+        tHigiene.addColumn("Precio");
+        tHigiene.addColumn("Stock");
+        tHigiene.addColumn("RUC Proveedor");
+        tHigiene.addColumn("COSTO TOTAL");
+        tblordProdHigi.setModel(tHigiene);
+        String sql="Select * From prohigi ORDER BY Precio";
+        String datos [] = new String [9];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=String.valueOf(total);
+                tHigiene.addRow(datos);
+            }
+            tblordProdHigi.setModel(tHigiene);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartabProdhigiStock(){
+        tHigiene = new DefaultTableModel();
+        tHigiene.addColumn("Código");
+        tHigiene.addColumn("Nombre");
+        tHigiene.addColumn("Tipo fabricado");
+        tHigiene.addColumn("Tipo");
+        tHigiene.addColumn("Contenido");
+        tHigiene.addColumn("Precio");
+        tHigiene.addColumn("Stock");
+        tHigiene.addColumn("RUC Proveedor");
+        tHigiene.addColumn("COSTO TOTAL");
+        tblordProdHigi.setModel(tHigiene);
+        String sql="Select * From prohigi ORDER BY Stock";
+        String datos [] = new String [9];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=String.valueOf(total);
+                tHigiene.addRow(datos);
+            }
+            tblordProdHigi.setModel(tHigiene);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartabProdhigiruc(){
+        tHigiene = new DefaultTableModel();
+        tHigiene.addColumn("Código");
+        tHigiene.addColumn("Nombre");
+        tHigiene.addColumn("Tipo fabricado");
+        tHigiene.addColumn("Tipo");
+        tHigiene.addColumn("Contenido");
+        tHigiene.addColumn("Precio");
+        tHigiene.addColumn("Stock");
+        tHigiene.addColumn("RUC Proveedor");
+        tHigiene.addColumn("COSTO TOTAL");
+        tblordProdHigi.setModel(tHigiene);
+        String sql="Select * From prohigi ORDER BY RucProv";
+        String datos [] = new String [9];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=String.valueOf(total);
+                tHigiene.addRow(datos);
+            }
+            tblordProdHigi.setModel(tHigiene);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         Tienda ti= new Tienda();
         ti.setVisible(true);
@@ -3493,6 +3914,32 @@ FrameSucursales abrir = new FrameSucursales();
         
     }//GEN-LAST:event_jcomOrdEmpleItemStateChanged
 
+    private void jcomFiltProducItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomFiltProducItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcomFiltProducItemStateChanged
+
+    private void jcomOrdProdItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomOrdProdItemStateChanged
+        if(jcomOrdProd.getSelectedIndex()==0){
+            mostrartabProdhigi();
+        }if(jcomOrdProd.getSelectedIndex()==1){
+            mostrartabProdhigicod();
+        }if(jcomOrdProd.getSelectedIndex()==2){
+            mostrartabProdhiginom();
+        }if(jcomOrdProd.getSelectedIndex()==3){
+            mostrartabProdhigitipfab();
+        }if(jcomOrdProd.getSelectedIndex()==4){
+            mostrartabProdhigiTip();
+        }if(jcomOrdProd.getSelectedIndex()==5){
+            mostrartabProdhigicont();
+        }if(jcomOrdProd.getSelectedIndex()==6){
+            mostrartabProdhigiprec();
+        }if(jcomOrdProd.getSelectedIndex()==7){
+            mostrartabProdhigiStock();
+        }if(jcomOrdProd.getSelectedIndex()==8){
+            mostrartabProdhigiruc();
+        }
+    }//GEN-LAST:event_jcomOrdProdItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -3533,6 +3980,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JPanel PanelComes;
     private javax.swing.JPanel PanelEm;
     private javax.swing.JPanel PanelFilEmple;
+    private javax.swing.JPanel PanelFilhigi;
     private javax.swing.JPanel PanelHigiene;
     private javax.swing.JPanel PanelMake;
     private javax.swing.JPanel PanelPri;
@@ -3639,6 +4087,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
@@ -3667,6 +4116,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -3677,6 +4127,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
@@ -3745,8 +4196,10 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JComboBox<String> jcomFiltEmple;
+    private javax.swing.JComboBox<String> jcomFiltProduc;
     private javax.swing.JComboBox<String> jcomOrdEmple;
     private javax.swing.JComboBox<String> jcomOrdEmplead;
+    private javax.swing.JComboBox<String> jcomOrdProd;
     private javax.swing.JComboBox<String> jcombTipoProComes;
     private javax.swing.JComboBox<String> jcomboAreaProvInt;
     private javax.swing.JComboBox<String> jcomboEmpleadSuel;
@@ -3756,6 +4209,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JComboBox<String> jcomboTipoFabHigi;
     private javax.swing.JTable tblOrdEmpAd;
     private javax.swing.JTable tblordEmple;
+    private javax.swing.JTable tblordProdHigi;
     private javax.swing.JTable tblusuario;
     private javax.swing.JTextField txtBusApeAd;
     private javax.swing.JTextField txtBusDistSucPri;

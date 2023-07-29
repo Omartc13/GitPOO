@@ -676,7 +676,6 @@ public class FrameProductos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     private void mostrartablaprohigi(){
-        
         tHigiene = new DefaultTableModel();
         tHigiene.addColumn("Código");
         tHigiene.addColumn("Nombre");
