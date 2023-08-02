@@ -57,6 +57,10 @@ public class FramePrincipal extends javax.swing.JFrame {
         
         PaneleFiltroAd.setVisible(false);
         PanelFilEmple.setVisible(false);
+        
+        PanelFilhigi.setVisible(false);
+        PanelFilComes.setVisible(false);
+        
         mostrartableusu();
     }
     
@@ -350,9 +354,15 @@ public class FramePrincipal extends javax.swing.JFrame {
         tblOrdEmpAd = new javax.swing.JTable();
         jPanel17 = new javax.swing.JPanel();
         jcomFiltProduc = new javax.swing.JComboBox<>();
+        PanelFilComes = new javax.swing.JPanel();
+        jLabel71 = new javax.swing.JLabel();
+        jcomOrdComes = new javax.swing.JComboBox<>();
+        jPanel23 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tblordProdComes = new javax.swing.JTable();
         PanelFilhigi = new javax.swing.JPanel();
         jLabel62 = new javax.swing.JLabel();
-        jcomOrdProd = new javax.swing.JComboBox<>();
+        jcomOrdHigi = new javax.swing.JComboBox<>();
         jPanel22 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tblordProdHigi = new javax.swing.JTable();
@@ -2107,25 +2117,65 @@ public class FramePrincipal extends javax.swing.JFrame {
                 jcomFiltProducItemStateChanged(evt);
             }
         });
-        jPanel17.add(jcomFiltProduc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 120, 30));
+        jPanel17.add(jcomFiltProduc, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 30));
+
+        PanelFilComes.setBackground(new java.awt.Color(246, 241, 241));
+        PanelFilComes.setForeground(new java.awt.Color(0, 0, 0));
+        PanelFilComes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel71.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel71.setText("Ordenar Por:");
+        PanelFilComes.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
+
+        jcomOrdComes.setBackground(new java.awt.Color(25, 167, 206));
+        jcomOrdComes.setForeground(new java.awt.Color(0, 0, 0));
+        jcomOrdComes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Codigo", "Nombre Prod.", "Tipo", "Precio", "Stock", "Caducidad", "RucProv" }));
+        jcomOrdComes.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcomOrdComesItemStateChanged(evt);
+            }
+        });
+        PanelFilComes.add(jcomOrdComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 120, 30));
+
+        jPanel23.setBackground(new java.awt.Color(25, 167, 206));
+        jPanel23.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel23.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblordProdComes.setBackground(new java.awt.Color(246, 241, 241));
+        tblordProdComes.setForeground(new java.awt.Color(0, 0, 0));
+        tblordProdComes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Codigo", "Nombre", "Tipo", "Prec.", "Stock", "Cad.", "Ruc P."
+            }
+        ));
+        jScrollPane5.setViewportView(tblordProdComes);
+
+        jPanel23.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 510, 390));
+
+        PanelFilComes.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 530, 410));
+
+        jPanel17.add(PanelFilComes, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 570, 480));
 
         PanelFilhigi.setBackground(new java.awt.Color(246, 241, 241));
         PanelFilhigi.setForeground(new java.awt.Color(0, 0, 0));
         PanelFilhigi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel62.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel62.setText("Ordenar por:");
+        jLabel62.setText("Ordenar Por:");
         PanelFilhigi.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
 
-        jcomOrdProd.setBackground(new java.awt.Color(25, 167, 206));
-        jcomOrdProd.setForeground(new java.awt.Color(0, 0, 0));
-        jcomOrdProd.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Codigo", "Nombre Prod.", "Tipo Fab.", "Tipo", "Contenido", "Precio", "Stock", "RucProv" }));
-        jcomOrdProd.addItemListener(new java.awt.event.ItemListener() {
+        jcomOrdHigi.setBackground(new java.awt.Color(25, 167, 206));
+        jcomOrdHigi.setForeground(new java.awt.Color(0, 0, 0));
+        jcomOrdHigi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Codigo", "Nombre Prod.", "Tipo Fab.", "Tipo", "Contenido", "Precio", "Stock", "RucProv" }));
+        jcomOrdHigi.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jcomOrdProdItemStateChanged(evt);
+                jcomOrdHigiItemStateChanged(evt);
             }
         });
-        PanelFilhigi.add(jcomOrdProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 120, 30));
+        PanelFilhigi.add(jcomOrdHigi, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 120, 30));
 
         jPanel22.setBackground(new java.awt.Color(25, 167, 206));
         jPanel22.setForeground(new java.awt.Color(0, 0, 0));
@@ -2147,7 +2197,7 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         PanelFilhigi.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 530, 410));
 
-        jPanel17.add(PanelFilhigi, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 560, 470));
+        jPanel17.add(PanelFilhigi, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 570, 480));
 
         jTabbedPane3.addTab("Productos", jPanel17);
 
@@ -3863,6 +3913,359 @@ FrameSucursales abrir = new FrameSucursales();
         }
     }
     
+    private void mostrartablaprocomes(){
+        
+        tComida = new DefaultTableModel();
+        tComida.addColumn("Código");
+        tComida.addColumn("Nombre");
+        tComida.addColumn("Tipo");
+        tComida.addColumn("Precio");
+        tComida.addColumn("Stock");
+        tComida.addColumn("Caducidad");
+        tComida.addColumn("RUC. Proveedor");
+        tComida.addColumn("COSTO TOTAL");
+        tblordProdComes.setModel(tComida);
+        
+        String sql="Select * From procomes";
+        String datos [] = new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=String.valueOf(total);
+                tComida.addRow(datos);
+            }
+            tblordProdComes.setModel(tComida);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+
+private void mostrartablaprocomescod(){
+        
+        tComida = new DefaultTableModel();
+        tComida.addColumn("Código");
+        tComida.addColumn("Nombre");
+        tComida.addColumn("Tipo");
+        tComida.addColumn("Precio");
+        tComida.addColumn("Stock");
+        tComida.addColumn("Caducidad");
+        tComida.addColumn("RUC. Proveedor");
+        tComida.addColumn("COSTO TOTAL");
+        tblordProdComes.setModel(tComida);
+        
+        String sql="Select * From procomes ORDER BY Codigo";
+        String datos [] = new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=String.valueOf(total);
+                tComida.addRow(datos);
+            }
+            tblordProdComes.setModel(tComida);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+private void mostrartablaprocomesnom(){
+        
+        tComida = new DefaultTableModel();
+        tComida.addColumn("Código");
+        tComida.addColumn("Nombre");
+        tComida.addColumn("Tipo");
+        tComida.addColumn("Precio");
+        tComida.addColumn("Stock");
+        tComida.addColumn("Caducidad");
+        tComida.addColumn("RUC. Proveedor");
+        tComida.addColumn("COSTO TOTAL");
+        tblordProdComes.setModel(tComida);
+        
+        String sql="Select * From procomes ORDER BY Nombreprod";
+        String datos [] = new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=String.valueOf(total);
+                tComida.addRow(datos);
+            }
+            tblordProdComes.setModel(tComida);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+private void mostrartablaprocomesTipo(){
+        
+        tComida = new DefaultTableModel();
+        tComida.addColumn("Código");
+        tComida.addColumn("Nombre");
+        tComida.addColumn("Tipo");
+        tComida.addColumn("Precio");
+        tComida.addColumn("Stock");
+        tComida.addColumn("Caducidad");
+        tComida.addColumn("RUC. Proveedor");
+        tComida.addColumn("COSTO TOTAL");
+        tblordProdComes.setModel(tComida);
+        
+        String sql="Select * From procomes ORDER BY Tipo";
+        String datos [] = new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=String.valueOf(total);
+                tComida.addRow(datos);
+            }
+            tblordProdComes.setModel(tComida);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+private void mostrartablaprocomesPrec(){
+        
+        tComida = new DefaultTableModel();
+        tComida.addColumn("Código");
+        tComida.addColumn("Nombre");
+        tComida.addColumn("Tipo");
+        tComida.addColumn("Precio");
+        tComida.addColumn("Stock");
+        tComida.addColumn("Caducidad");
+        tComida.addColumn("RUC. Proveedor");
+        tComida.addColumn("COSTO TOTAL");
+        tblordProdComes.setModel(tComida);
+        
+        String sql="Select * From procomes ORDER BY Precio";
+        String datos [] = new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=String.valueOf(total);
+                tComida.addRow(datos);
+            }
+            tblordProdComes.setModel(tComida);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+private void mostrartablaprocomesstock(){
+        
+        tComida = new DefaultTableModel();
+        tComida.addColumn("Código");
+        tComida.addColumn("Nombre");
+        tComida.addColumn("Tipo");
+        tComida.addColumn("Precio");
+        tComida.addColumn("Stock");
+        tComida.addColumn("Caducidad");
+        tComida.addColumn("RUC. Proveedor");
+        tComida.addColumn("COSTO TOTAL");
+        tblordProdComes.setModel(tComida);
+        
+        String sql="Select * From procomes ORDER BY Stock";
+        String datos [] = new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=String.valueOf(total);
+                tComida.addRow(datos);
+            }
+            tblordProdComes.setModel(tComida);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+private void mostrartablaprocomescadu(){
+        
+        tComida = new DefaultTableModel();
+        tComida.addColumn("Código");
+        tComida.addColumn("Nombre");
+        tComida.addColumn("Tipo");
+        tComida.addColumn("Precio");
+        tComida.addColumn("Stock");
+        tComida.addColumn("Caducidad");
+        tComida.addColumn("RUC. Proveedor");
+        tComida.addColumn("COSTO TOTAL");
+        tblordProdComes.setModel(tComida);
+        
+        String sql="Select * From procomes ORDER BY Caducidad";
+        String datos [] = new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=String.valueOf(total);
+                tComida.addRow(datos);
+            }
+            tblordProdComes.setModel(tComida);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+private void mostrartablaprocomesruc(){
+        
+        tComida = new DefaultTableModel();
+        tComida.addColumn("Código");
+        tComida.addColumn("Nombre");
+        tComida.addColumn("Tipo");
+        tComida.addColumn("Precio");
+        tComida.addColumn("Stock");
+        tComida.addColumn("Caducidad");
+        tComida.addColumn("RUC. Proveedor");
+        tComida.addColumn("COSTO TOTAL");
+        tblordProdComes.setModel(tComida);
+        
+        String sql="Select * From procomes ORDER BY RucProv";
+        String datos [] = new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=String.valueOf(total);
+                tComida.addRow(datos);
+            }
+            tblordProdComes.setModel(tComida);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         Tienda ti= new Tienda();
         ti.setVisible(true);
@@ -3915,30 +4318,61 @@ FrameSucursales abrir = new FrameSucursales();
     }//GEN-LAST:event_jcomOrdEmpleItemStateChanged
 
     private void jcomFiltProducItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomFiltProducItemStateChanged
-        // TODO add your handling code here:
+        if(jcomFiltProduc.getSelectedIndex()==0){
+            PanelFilhigi.setVisible(false);
+            PanelFilComes.setVisible(false);
+        }if(jcomFiltProduc.getSelectedIndex()==1){
+            PanelFilhigi.setVisible(true);
+            PanelFilComes.setVisible(false);
+        }if(jcomFiltProduc.getSelectedIndex()==2){
+            PanelFilhigi.setVisible(false);
+            PanelFilComes.setVisible(true);
+        }if(jcomFiltProduc.getSelectedIndex()==3){
+            
+        }
     }//GEN-LAST:event_jcomFiltProducItemStateChanged
 
-    private void jcomOrdProdItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomOrdProdItemStateChanged
-        if(jcomOrdProd.getSelectedIndex()==0){
+    private void jcomOrdHigiItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomOrdHigiItemStateChanged
+        if(jcomOrdHigi.getSelectedIndex()==0){
             mostrartabProdhigi();
-        }if(jcomOrdProd.getSelectedIndex()==1){
+        }if(jcomOrdHigi.getSelectedIndex()==1){
             mostrartabProdhigicod();
-        }if(jcomOrdProd.getSelectedIndex()==2){
+        }if(jcomOrdHigi.getSelectedIndex()==2){
             mostrartabProdhiginom();
-        }if(jcomOrdProd.getSelectedIndex()==3){
+        }if(jcomOrdHigi.getSelectedIndex()==3){
             mostrartabProdhigitipfab();
-        }if(jcomOrdProd.getSelectedIndex()==4){
+        }if(jcomOrdHigi.getSelectedIndex()==4){
             mostrartabProdhigiTip();
-        }if(jcomOrdProd.getSelectedIndex()==5){
+        }if(jcomOrdHigi.getSelectedIndex()==5){
             mostrartabProdhigicont();
-        }if(jcomOrdProd.getSelectedIndex()==6){
+        }if(jcomOrdHigi.getSelectedIndex()==6){
             mostrartabProdhigiprec();
-        }if(jcomOrdProd.getSelectedIndex()==7){
+        }if(jcomOrdHigi.getSelectedIndex()==7){
             mostrartabProdhigiStock();
-        }if(jcomOrdProd.getSelectedIndex()==8){
+        }if(jcomOrdHigi.getSelectedIndex()==8){
             mostrartabProdhigiruc();
         }
-    }//GEN-LAST:event_jcomOrdProdItemStateChanged
+    }//GEN-LAST:event_jcomOrdHigiItemStateChanged
+
+    private void jcomOrdComesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomOrdComesItemStateChanged
+        if(jcomOrdComes.getSelectedIndex()==0){
+            mostrartablaprocomes();
+        }if(jcomOrdComes.getSelectedIndex()==1){
+            mostrartablaprocomescod();
+        }if(jcomOrdComes.getSelectedIndex()==2){
+            mostrartablaprocomesnom();
+        }if(jcomOrdComes.getSelectedIndex()==3){
+            mostrartablaprocomesTipo();
+        }if(jcomOrdComes.getSelectedIndex()==4){
+            mostrartablaprocomesPrec();
+        }if(jcomOrdComes.getSelectedIndex()==5){
+            mostrartablaprocomesstock();
+        }if(jcomOrdComes.getSelectedIndex()==6){
+            mostrartablaprocomescadu();
+        }if(jcomOrdComes.getSelectedIndex()==7){
+            mostrartablaprocomesruc();
+        }
+    }//GEN-LAST:event_jcomOrdComesItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -3979,6 +4413,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JPanel PanelAd;
     private javax.swing.JPanel PanelComes;
     private javax.swing.JPanel PanelEm;
+    private javax.swing.JPanel PanelFilComes;
     private javax.swing.JPanel PanelFilEmple;
     private javax.swing.JPanel PanelFilhigi;
     private javax.swing.JPanel PanelHigiene;
@@ -4097,6 +4532,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
@@ -4117,6 +4553,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -4128,6 +4565,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
@@ -4197,9 +4635,10 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JTextField jTextField1;
     private javax.swing.JComboBox<String> jcomFiltEmple;
     private javax.swing.JComboBox<String> jcomFiltProduc;
+    private javax.swing.JComboBox<String> jcomOrdComes;
     private javax.swing.JComboBox<String> jcomOrdEmple;
     private javax.swing.JComboBox<String> jcomOrdEmplead;
-    private javax.swing.JComboBox<String> jcomOrdProd;
+    private javax.swing.JComboBox<String> jcomOrdHigi;
     private javax.swing.JComboBox<String> jcombTipoProComes;
     private javax.swing.JComboBox<String> jcomboAreaProvInt;
     private javax.swing.JComboBox<String> jcomboEmpleadSuel;
@@ -4209,6 +4648,7 @@ FrameSucursales abrir = new FrameSucursales();
     private javax.swing.JComboBox<String> jcomboTipoFabHigi;
     private javax.swing.JTable tblOrdEmpAd;
     private javax.swing.JTable tblordEmple;
+    private javax.swing.JTable tblordProdComes;
     private javax.swing.JTable tblordProdHigi;
     private javax.swing.JTable tblusuario;
     private javax.swing.JTextField txtBusApeAd;
