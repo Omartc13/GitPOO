@@ -60,6 +60,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         
         PanelFilhigi.setVisible(false);
         PanelFilComes.setVisible(false);
+        PanelFilMake.setVisible(false);
         
         mostrartableusu();
     }
@@ -354,6 +355,12 @@ public class FramePrincipal extends javax.swing.JFrame {
         tblOrdEmpAd = new javax.swing.JTable();
         jPanel17 = new javax.swing.JPanel();
         jcomFiltProduc = new javax.swing.JComboBox<>();
+        PanelFilMake = new javax.swing.JPanel();
+        jLabel75 = new javax.swing.JLabel();
+        jcomOrdMake = new javax.swing.JComboBox<>();
+        jPanel24 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        tblordProdMake = new javax.swing.JTable();
         PanelFilComes = new javax.swing.JPanel();
         jLabel71 = new javax.swing.JLabel();
         jcomOrdComes = new javax.swing.JComboBox<>();
@@ -2118,6 +2125,46 @@ public class FramePrincipal extends javax.swing.JFrame {
             }
         });
         jPanel17.add(jcomFiltProduc, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 30));
+
+        PanelFilMake.setBackground(new java.awt.Color(246, 241, 241));
+        PanelFilMake.setForeground(new java.awt.Color(0, 0, 0));
+        PanelFilMake.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel75.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel75.setText("Ordenar Por:");
+        PanelFilMake.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
+
+        jcomOrdMake.setBackground(new java.awt.Color(25, 167, 206));
+        jcomOrdMake.setForeground(new java.awt.Color(0, 0, 0));
+        jcomOrdMake.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Codigo", "Nombre Prod.", "Precio", "Stock", "Fabricado", "Tipo", "Tonos", "Para", "RucProv" }));
+        jcomOrdMake.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcomOrdMakeItemStateChanged(evt);
+            }
+        });
+        PanelFilMake.add(jcomOrdMake, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 120, 30));
+
+        jPanel24.setBackground(new java.awt.Color(25, 167, 206));
+        jPanel24.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel24.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblordProdMake.setBackground(new java.awt.Color(246, 241, 241));
+        tblordProdMake.setForeground(new java.awt.Color(0, 0, 0));
+        tblordProdMake.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Codigo", "Nombre", "Prec.", "Stock", "Fabric", "Tipo", "Tonos", "Para", "Ruc P."
+            }
+        ));
+        jScrollPane6.setViewportView(tblordProdMake);
+
+        jPanel24.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 510, 390));
+
+        PanelFilMake.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 530, 410));
+
+        jPanel17.add(PanelFilMake, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 570, 480));
 
         PanelFilComes.setBackground(new java.awt.Color(246, 241, 241));
         PanelFilComes.setForeground(new java.awt.Color(0, 0, 0));
@@ -4266,6 +4313,481 @@ private void mostrartablaprocomesruc(){
         }
     }
     
+    private void mostrartablapromake(){
+        
+        tMakeup = new DefaultTableModel();
+        tMakeup.addColumn("Código");
+        tMakeup.addColumn("Nombre");
+        tMakeup.addColumn("Precio");
+        tMakeup.addColumn("Stock");
+        tMakeup.addColumn("Fabricados");
+        tMakeup.addColumn("Tipos");
+        tMakeup.addColumn("Tonos");
+        tMakeup.addColumn("Dirigido para:");
+        tMakeup.addColumn("RUC. Proveedor");
+        tMakeup.addColumn("COSTO TOTAL");
+        tblordProdMake.setModel(tMakeup);
+        
+        String sql="Select * From promakeup";
+        String datos [] = new String [10];
+        Statement st;
+        
+        
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=rs.getString(9);
+                datos[9]=String.valueOf(total);
+                tMakeup.addRow(datos);
+            }
+            tblordProdMake.setModel(tMakeup);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    private void mostrartablapromakeCod(){
+        
+        tMakeup = new DefaultTableModel();
+        tMakeup.addColumn("Código");
+        tMakeup.addColumn("Nombre");
+        tMakeup.addColumn("Precio");
+        tMakeup.addColumn("Stock");
+        tMakeup.addColumn("Fabricados");
+        tMakeup.addColumn("Tipos");
+        tMakeup.addColumn("Tonos");
+        tMakeup.addColumn("Dirigido para:");
+        tMakeup.addColumn("RUC. Proveedor");
+        tMakeup.addColumn("COSTO TOTAL");
+        tblordProdMake.setModel(tMakeup);
+        
+        String sql="Select * From promakeup ORDER BY Codigo";
+        String datos [] = new String [10];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=rs.getString(9);
+                datos[9]=String.valueOf(total);
+                tMakeup.addRow(datos);
+            }
+            tblordProdMake.setModel(tMakeup);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    private void mostrartablapromakeNombre(){
+        
+        tMakeup = new DefaultTableModel();
+        tMakeup.addColumn("Código");
+        tMakeup.addColumn("Nombre");
+        tMakeup.addColumn("Precio");
+        tMakeup.addColumn("Stock");
+        tMakeup.addColumn("Fabricados");
+        tMakeup.addColumn("Tipos");
+        tMakeup.addColumn("Tonos");
+        tMakeup.addColumn("Dirigido para:");
+        tMakeup.addColumn("RUC. Proveedor");
+        tMakeup.addColumn("COSTO TOTAL");
+        tblordProdMake.setModel(tMakeup);
+        
+        String sql="Select * From promakeup ORDER BY Nombreprod";
+        String datos [] = new String [10];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=rs.getString(9);
+                datos[9]=String.valueOf(total);
+                tMakeup.addRow(datos);
+            }
+            tblordProdMake.setModel(tMakeup);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+
+private void mostrartablapromakePrec(){
+        
+        tMakeup = new DefaultTableModel();
+        tMakeup.addColumn("Código");
+        tMakeup.addColumn("Nombre");
+        tMakeup.addColumn("Precio");
+        tMakeup.addColumn("Stock");
+        tMakeup.addColumn("Fabricados");
+        tMakeup.addColumn("Tipos");
+        tMakeup.addColumn("Tonos");
+        tMakeup.addColumn("Dirigido para:");
+        tMakeup.addColumn("RUC. Proveedor");
+        tMakeup.addColumn("COSTO TOTAL");
+        tblordProdMake.setModel(tMakeup);
+        
+        String sql="Select * From promakeup ORDER BY Precio";
+        String datos [] = new String [10];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=rs.getString(9);
+                datos[9]=String.valueOf(total);
+                tMakeup.addRow(datos);
+            }
+            tblordProdMake.setModel(tMakeup);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+private void mostrartablapromakeStock(){
+        
+        tMakeup = new DefaultTableModel();
+        tMakeup.addColumn("Código");
+        tMakeup.addColumn("Nombre");
+        tMakeup.addColumn("Precio");
+        tMakeup.addColumn("Stock");
+        tMakeup.addColumn("Fabricados");
+        tMakeup.addColumn("Tipos");
+        tMakeup.addColumn("Tonos");
+        tMakeup.addColumn("Dirigido para:");
+        tMakeup.addColumn("RUC. Proveedor");
+        tMakeup.addColumn("COSTO TOTAL");
+        tblordProdMake.setModel(tMakeup);
+        
+        String sql="Select * From promakeup ORDER BY Stock";
+        String datos [] = new String [10];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=rs.getString(9);
+                datos[9]=String.valueOf(total);
+                tMakeup.addRow(datos);
+            }
+            tblordProdMake.setModel(tMakeup);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+private void mostrartablapromakeFab(){
+        
+        tMakeup = new DefaultTableModel();
+        tMakeup.addColumn("Código");
+        tMakeup.addColumn("Nombre");
+        tMakeup.addColumn("Precio");
+        tMakeup.addColumn("Stock");
+        tMakeup.addColumn("Fabricados");
+        tMakeup.addColumn("Tipos");
+        tMakeup.addColumn("Tonos");
+        tMakeup.addColumn("Dirigido para:");
+        tMakeup.addColumn("RUC. Proveedor");
+        tMakeup.addColumn("COSTO TOTAL");
+        tblordProdMake.setModel(tMakeup);
+        
+        String sql="Select * From promakeup ORDER BY Fabricados";
+        String datos [] = new String [10];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=rs.getString(9);
+                datos[9]=String.valueOf(total);
+                tMakeup.addRow(datos);
+            }
+            tblordProdMake.setModel(tMakeup);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+private void mostrartablapromakeTipo(){
+        
+        tMakeup = new DefaultTableModel();
+        tMakeup.addColumn("Código");
+        tMakeup.addColumn("Nombre");
+        tMakeup.addColumn("Precio");
+        tMakeup.addColumn("Stock");
+        tMakeup.addColumn("Fabricados");
+        tMakeup.addColumn("Tipos");
+        tMakeup.addColumn("Tonos");
+        tMakeup.addColumn("Dirigido para:");
+        tMakeup.addColumn("RUC. Proveedor");
+        tMakeup.addColumn("COSTO TOTAL");
+        tblordProdMake.setModel(tMakeup);
+        
+        String sql="Select * From promakeup ORDER BY Tipo";
+        String datos [] = new String [10];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=rs.getString(9);
+                datos[9]=String.valueOf(total);
+                tMakeup.addRow(datos);
+            }
+            tblordProdMake.setModel(tMakeup);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+private void mostrartablapromakeTonos(){
+        
+        tMakeup = new DefaultTableModel();
+        tMakeup.addColumn("Código");
+        tMakeup.addColumn("Nombre");
+        tMakeup.addColumn("Precio");
+        tMakeup.addColumn("Stock");
+        tMakeup.addColumn("Fabricados");
+        tMakeup.addColumn("Tipos");
+        tMakeup.addColumn("Tonos");
+        tMakeup.addColumn("Dirigido para:");
+        tMakeup.addColumn("RUC. Proveedor");
+        tMakeup.addColumn("COSTO TOTAL");
+        tblordProdMake.setModel(tMakeup);
+        
+        String sql="Select * From promakeup ORDER BY Tonos";
+        String datos [] = new String [10];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=rs.getString(9);
+                datos[9]=String.valueOf(total);
+                tMakeup.addRow(datos);
+            }
+            tblordProdMake.setModel(tMakeup);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+private void mostrartablapromakeDig(){
+        
+        tMakeup = new DefaultTableModel();
+        tMakeup.addColumn("Código");
+        tMakeup.addColumn("Nombre");
+        tMakeup.addColumn("Precio");
+        tMakeup.addColumn("Stock");
+        tMakeup.addColumn("Fabricados");
+        tMakeup.addColumn("Tipos");
+        tMakeup.addColumn("Tonos");
+        tMakeup.addColumn("Dirigido para:");
+        tMakeup.addColumn("RUC. Proveedor");
+        tMakeup.addColumn("COSTO TOTAL");
+        tblordProdMake.setModel(tMakeup);
+        
+        String sql="Select * From promakeup ORDER BY DigPara";
+        String datos [] = new String [10];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=rs.getString(9);
+                datos[9]=String.valueOf(total);
+                tMakeup.addRow(datos);
+            }
+            tblordProdMake.setModel(tMakeup);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+private void mostrartablapromakeRuc(){
+        
+        tMakeup = new DefaultTableModel();
+        tMakeup.addColumn("Código");
+        tMakeup.addColumn("Nombre");
+        tMakeup.addColumn("Precio");
+        tMakeup.addColumn("Stock");
+        tMakeup.addColumn("Fabricados");
+        tMakeup.addColumn("Tipos");
+        tMakeup.addColumn("Tonos");
+        tMakeup.addColumn("Dirigido para:");
+        tMakeup.addColumn("RUC. Proveedor");
+        tMakeup.addColumn("COSTO TOTAL");
+        tblordProdMake.setModel(tMakeup);
+        
+        String sql="Select * From promakeup ORDER BY RucProv";
+        String datos [] = new String [10];
+        Statement st;
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                //usando la clase generica
+                double precio=rs.getDouble("Precio");
+                int Stock = rs.getInt("Stock");
+                Generico1<Double,Integer> generico = new Generico1<>(precio,Stock);
+                double total=generico.multiplicar();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=rs.getString(9);
+                datos[9]=String.valueOf(total);
+                tMakeup.addRow(datos);
+            }
+            tblordProdMake.setModel(tMakeup);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+    
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         Tienda ti= new Tienda();
         ti.setVisible(true);
@@ -4321,14 +4843,19 @@ private void mostrartablaprocomesruc(){
         if(jcomFiltProduc.getSelectedIndex()==0){
             PanelFilhigi.setVisible(false);
             PanelFilComes.setVisible(false);
+            PanelFilMake.setVisible(false);
         }if(jcomFiltProduc.getSelectedIndex()==1){
             PanelFilhigi.setVisible(true);
             PanelFilComes.setVisible(false);
+            PanelFilMake.setVisible(false);
         }if(jcomFiltProduc.getSelectedIndex()==2){
             PanelFilhigi.setVisible(false);
             PanelFilComes.setVisible(true);
+            PanelFilMake.setVisible(false);
         }if(jcomFiltProduc.getSelectedIndex()==3){
-            
+            PanelFilhigi.setVisible(false);
+            PanelFilComes.setVisible(false);
+            PanelFilMake.setVisible(true);
         }
     }//GEN-LAST:event_jcomFiltProducItemStateChanged
 
@@ -4374,6 +4901,31 @@ private void mostrartablaprocomesruc(){
         }
     }//GEN-LAST:event_jcomOrdComesItemStateChanged
 
+    private void jcomOrdMakeItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomOrdMakeItemStateChanged
+    if(jcomOrdMake.getSelectedIndex()==0){
+        mostrartablapromake();
+    }if(jcomOrdMake.getSelectedIndex()==1){
+        mostrartablapromakeCod();
+    }if(jcomOrdMake.getSelectedIndex()==2){
+        mostrartablapromakeNombre();
+    }if(jcomOrdMake.getSelectedIndex()==3){
+        mostrartablapromakePrec();
+    }if(jcomOrdMake.getSelectedIndex()==4){
+        mostrartablapromakeStock();
+    }if(jcomOrdMake.getSelectedIndex()==5){
+        mostrartablapromakeFab();
+    }if(jcomOrdMake.getSelectedIndex()==6){
+        mostrartablapromakeTipo();
+    }if(jcomOrdMake.getSelectedIndex()==7){
+        mostrartablapromakeTonos();
+    }if(jcomOrdMake.getSelectedIndex()==8){
+        mostrartablapromakeDig();
+    }if(jcomOrdMake.getSelectedIndex()==9){
+        mostrartablapromakeRuc();
+    }
+        
+    }//GEN-LAST:event_jcomOrdMakeItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -4415,6 +4967,7 @@ private void mostrartablaprocomesruc(){
     private javax.swing.JPanel PanelEm;
     private javax.swing.JPanel PanelFilComes;
     private javax.swing.JPanel PanelFilEmple;
+    private javax.swing.JPanel PanelFilMake;
     private javax.swing.JPanel PanelFilhigi;
     private javax.swing.JPanel PanelHigiene;
     private javax.swing.JPanel PanelMake;
@@ -4536,6 +5089,7 @@ private void mostrartablaprocomesruc(){
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -4554,6 +5108,7 @@ private void mostrartablaprocomesruc(){
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -4566,6 +5121,7 @@ private void mostrartablaprocomesruc(){
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
@@ -4639,6 +5195,7 @@ private void mostrartablaprocomesruc(){
     private javax.swing.JComboBox<String> jcomOrdEmple;
     private javax.swing.JComboBox<String> jcomOrdEmplead;
     private javax.swing.JComboBox<String> jcomOrdHigi;
+    private javax.swing.JComboBox<String> jcomOrdMake;
     private javax.swing.JComboBox<String> jcombTipoProComes;
     private javax.swing.JComboBox<String> jcomboAreaProvInt;
     private javax.swing.JComboBox<String> jcomboEmpleadSuel;
@@ -4650,6 +5207,7 @@ private void mostrartablaprocomesruc(){
     private javax.swing.JTable tblordEmple;
     private javax.swing.JTable tblordProdComes;
     private javax.swing.JTable tblordProdHigi;
+    private javax.swing.JTable tblordProdMake;
     private javax.swing.JTable tblusuario;
     private javax.swing.JTextField txtBusApeAd;
     private javax.swing.JTextField txtBusDistSucPri;
