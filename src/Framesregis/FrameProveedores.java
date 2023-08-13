@@ -469,8 +469,6 @@ public class FrameProveedores extends javax.swing.JFrame {
         }catch(SQLException ex){
             Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
         }
-        
-        
     }
     private void TXTrucActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TXTrucActionPerformed
         // TODO add your handling code here:

@@ -6,6 +6,8 @@ package Framesregis;
 
 
 import CGen.Generico1;
+import Clases.CAPExterno;
+import Clases.CAPInterno;
 import Clases.IntDAdministrador;
 import Clases.IntDEmpleado;
 import conexionbd.Conexion;
@@ -35,6 +37,12 @@ public class FramePrincipal extends javax.swing.JFrame {
         DefaultTableModel tComida = new DefaultTableModel();
         DefaultTableModel tMakeup = new DefaultTableModel();
         
+        DefaultTableModel tinterno = new DefaultTableModel();
+        DefaultTableModel texterno = new DefaultTableModel();
+        
+        DefaultTableModel tprincipal = new DefaultTableModel();
+        DefaultTableModel tprovincia = new DefaultTableModel();
+        
     /**
      * Creates new form FramePrincipal
      */
@@ -61,6 +69,12 @@ public class FramePrincipal extends javax.swing.JFrame {
         PanelFilhigi.setVisible(false);
         PanelFilComes.setVisible(false);
         PanelFilMake.setVisible(false);
+        
+        PanelFilProvInt.setVisible(false);
+        PanelFilProvEx.setVisible(false);
+        
+        PanelFilSucPri.setVisible(false);
+        PanelFilSucPro.setVisible(false);
         
         mostrartableusu();
     }
@@ -374,7 +388,33 @@ public class FramePrincipal extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         tblordProdHigi = new javax.swing.JTable();
         jPanel18 = new javax.swing.JPanel();
+        jcomFiltProve = new javax.swing.JComboBox<>();
+        PanelFilProvEx = new javax.swing.JPanel();
+        jLabel77 = new javax.swing.JLabel();
+        jcomOrdProvExt = new javax.swing.JComboBox<>();
+        jPanel26 = new javax.swing.JPanel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        tblordProvEx = new javax.swing.JTable();
+        PanelFilProvInt = new javax.swing.JPanel();
+        jLabel76 = new javax.swing.JLabel();
+        jcomOrdProvIn = new javax.swing.JComboBox<>();
+        jPanel25 = new javax.swing.JPanel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        tblordProvInt = new javax.swing.JTable();
         jPanel19 = new javax.swing.JPanel();
+        jcomFiltSucur = new javax.swing.JComboBox<>();
+        PanelFilSucPri = new javax.swing.JPanel();
+        jLabel78 = new javax.swing.JLabel();
+        jcomOrdSucPri = new javax.swing.JComboBox<>();
+        jPanel27 = new javax.swing.JPanel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        tblordSucPri = new javax.swing.JTable();
+        PanelFilSucPro = new javax.swing.JPanel();
+        jLabel79 = new javax.swing.JLabel();
+        jcomOrdSucProv = new javax.swing.JComboBox<>();
+        jPanel28 = new javax.swing.JPanel();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        tblordSucProv = new javax.swing.JTable();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -2250,33 +2290,200 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         jPanel18.setBackground(new java.awt.Color(25, 167, 206));
         jPanel18.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 539, Short.MAX_VALUE)
-        );
+        jcomFiltProve.setBackground(new java.awt.Color(246, 241, 241));
+        jcomFiltProve.setForeground(new java.awt.Color(0, 0, 0));
+        jcomFiltProve.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Interno", "Externo" }));
+        jcomFiltProve.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcomFiltProveItemStateChanged(evt);
+            }
+        });
+        jPanel18.add(jcomFiltProve, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 30));
+
+        PanelFilProvEx.setBackground(new java.awt.Color(246, 241, 241));
+        PanelFilProvEx.setForeground(new java.awt.Color(0, 0, 0));
+        PanelFilProvEx.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel77.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel77.setText("Ordenar Por:");
+        PanelFilProvEx.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
+
+        jcomOrdProvExt.setBackground(new java.awt.Color(25, 167, 206));
+        jcomOrdProvExt.setForeground(new java.awt.Color(0, 0, 0));
+        jcomOrdProvExt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Nombre", "Ruc", "Telf", "Direccion", "Correo", "Año", "Gerente" }));
+        jcomOrdProvExt.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcomOrdProvExtItemStateChanged(evt);
+            }
+        });
+        PanelFilProvEx.add(jcomOrdProvExt, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 120, 30));
+
+        jPanel26.setBackground(new java.awt.Color(25, 167, 206));
+        jPanel26.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblordProvEx.setBackground(new java.awt.Color(246, 241, 241));
+        tblordProvEx.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "RUC", "Año", "Teléfono", "Correo", "Dirección", "Encargado", "Demora"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane9.setViewportView(tblordProvEx);
+
+        jPanel26.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 510, 390));
+
+        PanelFilProvEx.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 530, 410));
+
+        jPanel18.add(PanelFilProvEx, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 570, 480));
+
+        PanelFilProvInt.setBackground(new java.awt.Color(246, 241, 241));
+        PanelFilProvInt.setForeground(new java.awt.Color(0, 0, 0));
+        PanelFilProvInt.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel76.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel76.setText("Ordenar Por:");
+        PanelFilProvInt.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
+
+        jcomOrdProvIn.setBackground(new java.awt.Color(25, 167, 206));
+        jcomOrdProvIn.setForeground(new java.awt.Color(0, 0, 0));
+        jcomOrdProvIn.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Nombre", "DNI", "Area" }));
+        jcomOrdProvIn.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcomOrdProvInItemStateChanged(evt);
+            }
+        });
+        PanelFilProvInt.add(jcomOrdProvIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 120, 30));
+
+        jPanel25.setBackground(new java.awt.Color(25, 167, 206));
+        jPanel25.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel25.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblordProvInt.setBackground(new java.awt.Color(246, 241, 241));
+        tblordProvInt.setForeground(new java.awt.Color(0, 0, 0));
+        tblordProvInt.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "DNI", "Area", "Sueldo"
+            }
+        ));
+        jScrollPane7.setViewportView(tblordProvInt);
+
+        jPanel25.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 510, 390));
+
+        PanelFilProvInt.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 530, 410));
+
+        jPanel18.add(PanelFilProvInt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 570, 480));
 
         jTabbedPane3.addTab("Provedores", jPanel18);
 
         jPanel19.setBackground(new java.awt.Color(25, 167, 206));
         jPanel19.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
-        jPanel19.setLayout(jPanel19Layout);
-        jPanel19Layout.setHorizontalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-        jPanel19Layout.setVerticalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 539, Short.MAX_VALUE)
-        );
+        jcomFiltSucur.setBackground(new java.awt.Color(246, 241, 241));
+        jcomFiltSucur.setForeground(new java.awt.Color(0, 0, 0));
+        jcomFiltSucur.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Principal", "Provincia" }));
+        jcomFiltSucur.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcomFiltSucurItemStateChanged(evt);
+            }
+        });
+        jPanel19.add(jcomFiltSucur, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 30));
+
+        PanelFilSucPri.setBackground(new java.awt.Color(246, 241, 241));
+        PanelFilSucPri.setForeground(new java.awt.Color(0, 0, 0));
+        PanelFilSucPri.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel78.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel78.setText("Ordenar Por:");
+        PanelFilSucPri.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
+
+        jcomOrdSucPri.setBackground(new java.awt.Color(25, 167, 206));
+        jcomOrdSucPri.setForeground(new java.awt.Color(0, 0, 0));
+        jcomOrdSucPri.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Num. Suc", "Telefono", "Distrito", "Direccion", "Encargado", "DNI" }));
+        jcomOrdSucPri.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcomOrdSucPriItemStateChanged(evt);
+            }
+        });
+        PanelFilSucPri.add(jcomOrdSucPri, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 120, 30));
+
+        jPanel27.setBackground(new java.awt.Color(25, 167, 206));
+        jPanel27.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel27.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblordSucPri.setBackground(new java.awt.Color(246, 241, 241));
+        tblordSucPri.setForeground(new java.awt.Color(0, 0, 0));
+        tblordSucPri.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "N. Sucursal", "Telefono", "Distrito", "Direccion", "Encargado", "DNI"
+            }
+        ));
+        jScrollPane8.setViewportView(tblordSucPri);
+
+        jPanel27.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 510, 390));
+
+        PanelFilSucPri.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 530, 410));
+
+        jPanel19.add(PanelFilSucPri, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 570, 480));
+
+        PanelFilSucPro.setBackground(new java.awt.Color(246, 241, 241));
+        PanelFilSucPro.setForeground(new java.awt.Color(0, 0, 0));
+        PanelFilSucPro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel79.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel79.setText("Ordenar Por:");
+        PanelFilSucPro.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
+
+        jcomOrdSucProv.setBackground(new java.awt.Color(25, 167, 206));
+        jcomOrdSucProv.setForeground(new java.awt.Color(0, 0, 0));
+        jcomOrdSucProv.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Num Suc", "Telefono", "Cod.Prov", "Provincia", "Ciudad", "Direccion", "Encargado", "Dni" }));
+        jcomOrdSucProv.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcomOrdSucProvItemStateChanged(evt);
+            }
+        });
+        PanelFilSucPro.add(jcomOrdSucProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 120, 30));
+
+        jPanel28.setBackground(new java.awt.Color(25, 167, 206));
+        jPanel28.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel28.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblordSucProv.setBackground(new java.awt.Color(246, 241, 241));
+        tblordSucProv.setForeground(new java.awt.Color(0, 0, 0));
+        tblordSucProv.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Numero Sucursal", "Telefono", "Cod. Provincia", "Provincia", "Ciudad", "Direccion", "Encargado", "DNI"
+            }
+        ));
+        jScrollPane11.setViewportView(tblordSucProv);
+
+        jPanel28.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 510, 390));
+
+        PanelFilSucPro.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 530, 410));
+
+        jPanel19.add(PanelFilSucPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 570, 480));
 
         jTabbedPane3.addTab("Sucursales", jPanel19);
 
@@ -2305,6 +2512,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     public void mostrarinfousu(){
         String sql="Select * From usuario";
     }
+    
     public void mostrartableusu(){
         tusuario= new DefaultTableModel();
         tusuario.addColumn("DNI");
@@ -2335,7 +2543,6 @@ public class FramePrincipal extends javax.swing.JFrame {
         
         
     }
-    
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     FrameEmpleados abrir = new FrameEmpleados();
@@ -3260,8 +3467,6 @@ FrameSucursales abrir = new FrameSucursales();
         }
     }
     
-    
-    
     public void mostrartablaadminNombre(){
         tadmin = new DefaultTableModel();
         tadmin.addColumn("Nombre");
@@ -4004,8 +4209,7 @@ FrameSucursales abrir = new FrameSucursales();
         }
     }
 
-
-private void mostrartablaprocomescod(){
+    private void mostrartablaprocomescod(){
         
         tComida = new DefaultTableModel();
         tComida.addColumn("Código");
@@ -4049,7 +4253,7 @@ private void mostrartablaprocomescod(){
         }
     }
 
-private void mostrartablaprocomesnom(){
+    private void mostrartablaprocomesnom(){
         
         tComida = new DefaultTableModel();
         tComida.addColumn("Código");
@@ -4093,7 +4297,7 @@ private void mostrartablaprocomesnom(){
         }
     }
 
-private void mostrartablaprocomesTipo(){
+    private void mostrartablaprocomesTipo(){
         
         tComida = new DefaultTableModel();
         tComida.addColumn("Código");
@@ -4137,7 +4341,7 @@ private void mostrartablaprocomesTipo(){
         }
     }
 
-private void mostrartablaprocomesPrec(){
+    private void mostrartablaprocomesPrec(){
         
         tComida = new DefaultTableModel();
         tComida.addColumn("Código");
@@ -4181,7 +4385,7 @@ private void mostrartablaprocomesPrec(){
         }
     }
 
-private void mostrartablaprocomesstock(){
+    private void mostrartablaprocomesstock(){
         
         tComida = new DefaultTableModel();
         tComida.addColumn("Código");
@@ -4225,7 +4429,7 @@ private void mostrartablaprocomesstock(){
         }
     }
 
-private void mostrartablaprocomescadu(){
+    private void mostrartablaprocomescadu(){
         
         tComida = new DefaultTableModel();
         tComida.addColumn("Código");
@@ -4269,7 +4473,7 @@ private void mostrartablaprocomescadu(){
         }
     }
 
-private void mostrartablaprocomesruc(){
+    private void mostrartablaprocomesruc(){
         
         tComida = new DefaultTableModel();
         tComida.addColumn("Código");
@@ -4457,8 +4661,7 @@ private void mostrartablaprocomesruc(){
         }
     }
     
-
-private void mostrartablapromakePrec(){
+    private void mostrartablapromakePrec(){
         
         tMakeup = new DefaultTableModel();
         tMakeup.addColumn("Código");
@@ -4505,7 +4708,7 @@ private void mostrartablapromakePrec(){
         }
     }
 
-private void mostrartablapromakeStock(){
+    private void mostrartablapromakeStock(){
         
         tMakeup = new DefaultTableModel();
         tMakeup.addColumn("Código");
@@ -4552,7 +4755,7 @@ private void mostrartablapromakeStock(){
         }
     }
 
-private void mostrartablapromakeFab(){
+    private void mostrartablapromakeFab(){
         
         tMakeup = new DefaultTableModel();
         tMakeup.addColumn("Código");
@@ -4599,7 +4802,7 @@ private void mostrartablapromakeFab(){
         }
     }
 
-private void mostrartablapromakeTipo(){
+    private void mostrartablapromakeTipo(){
         
         tMakeup = new DefaultTableModel();
         tMakeup.addColumn("Código");
@@ -4646,7 +4849,7 @@ private void mostrartablapromakeTipo(){
         }
     }
 
-private void mostrartablapromakeTonos(){
+    private void mostrartablapromakeTonos(){
         
         tMakeup = new DefaultTableModel();
         tMakeup.addColumn("Código");
@@ -4693,7 +4896,7 @@ private void mostrartablapromakeTonos(){
         }
     }
 
-private void mostrartablapromakeDig(){
+    private void mostrartablapromakeDig(){
         
         tMakeup = new DefaultTableModel();
         tMakeup.addColumn("Código");
@@ -4740,7 +4943,7 @@ private void mostrartablapromakeDig(){
         }
     }
 
-private void mostrartablapromakeRuc(){
+    private void mostrartablapromakeRuc(){
         
         tMakeup = new DefaultTableModel();
         tMakeup.addColumn("Código");
@@ -4787,14 +4990,1088 @@ private void mostrartablapromakeRuc(){
         }
     }
 
+    public void mostrartabinet(){
+        tinterno = new DefaultTableModel();
+       tinterno.addColumn("Nombre");
+       tinterno.addColumn("DNI");
+       tinterno.addColumn("Area");
+       tinterno.addColumn("Sueldo");
+       tblordProvInt.setModel(tinterno);
+       
+       String sql="Select * From provedorint";
+        String datos []= new String [4];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                String area=rs.getNString("Area");
+                
+                CAPInterno inte= new CAPInterno(area);
+                double sueldoi=inte.getSueldo();
+                
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=String.valueOf(sueldoi);
+                tinterno.addRow(datos);
+            }
+            tblordProvInt.setModel(tinterno);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartabinetNom(){
+        tinterno = new DefaultTableModel();
+       tinterno.addColumn("Nombre");
+       tinterno.addColumn("DNI");
+       tinterno.addColumn("Area");
+       tinterno.addColumn("Sueldo");
+       tblordProvInt.setModel(tinterno);
+       
+       String sql="Select * From provedorint ORDER BY Nombre";
+        String datos []= new String [4];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                String area=rs.getNString("Area");
+                
+                CAPInterno inte= new CAPInterno(area);
+                double sueldoi=inte.getSueldo();
+                
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=String.valueOf(sueldoi);
+                tinterno.addRow(datos);
+            }
+            tblordProvInt.setModel(tinterno);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartabinetDNI(){
+        tinterno = new DefaultTableModel();
+       tinterno.addColumn("Nombre");
+       tinterno.addColumn("DNI");
+       tinterno.addColumn("Area");
+       tinterno.addColumn("Sueldo");
+       tblordProvInt.setModel(tinterno);
+       
+       String sql="Select * From provedorint ORDER BY DNI";
+        String datos []= new String [4];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                String area=rs.getNString("Area");
+                
+                CAPInterno inte= new CAPInterno(area);
+                double sueldoi=inte.getSueldo();
+                
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=String.valueOf(sueldoi);
+                tinterno.addRow(datos);
+            }
+            tblordProvInt.setModel(tinterno);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartabinetAre(){
+        tinterno = new DefaultTableModel();
+       tinterno.addColumn("Nombre");
+       tinterno.addColumn("DNI");
+       tinterno.addColumn("Area");
+       tinterno.addColumn("Sueldo");
+       tblordProvInt.setModel(tinterno);
+       
+       String sql="Select * From provedorint ORDER BY Area";
+        String datos []= new String [4];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                String area=rs.getNString("Area");
+                
+                CAPInterno inte= new CAPInterno(area);
+                double sueldoi=inte.getSueldo();
+                
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=String.valueOf(sueldoi);
+                tinterno.addRow(datos);
+            }
+            tblordProvInt.setModel(tinterno);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartabExterno(){
+       texterno = new DefaultTableModel();
+       texterno.addColumn("Nombre Empresa");
+       texterno.addColumn("RUC");
+       texterno.addColumn("Telèfono");
+       texterno.addColumn("Direcciòn");
+       texterno.addColumn("Correo");
+       texterno.addColumn("Año de colaboraciòn");
+       texterno.addColumn("Gerente General");
+       texterno.addColumn("Demora");
+       tblordProvEx.setModel(texterno);
+       
+       String sql="Select * From provedorext";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                int anio=Integer.parseInt(rs.getString("AnioColab"));
+                
+                CAPExterno ext= new CAPExterno(anio);
+                String tiempod=ext.tiempoProveedor();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]= tiempod;
+                
+                texterno.addRow(datos);
+            }
+            tblordProvEx.setModel(texterno);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartabExternoNom(){
+       texterno = new DefaultTableModel();
+       texterno.addColumn("Nombre Empresa");
+       texterno.addColumn("RUC");
+       texterno.addColumn("Telèfono");
+       texterno.addColumn("Direcciòn");
+       texterno.addColumn("Correo");
+       texterno.addColumn("Año de colaboraciòn");
+       texterno.addColumn("Gerente General");
+       texterno.addColumn("Demora");
+       tblordProvEx.setModel(texterno);
+       
+       String sql="Select * From provedorext ORDER BY NombreEmp";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                int anio=Integer.parseInt(rs.getString("AnioColab"));
+                
+                CAPExterno ext= new CAPExterno(anio);
+                String tiempod=ext.tiempoProveedor();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]= tiempod;
+                
+                texterno.addRow(datos);
+            }
+            tblordProvEx.setModel(texterno);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartabExternoruc(){
+       texterno = new DefaultTableModel();
+       texterno.addColumn("Nombre Empresa");
+       texterno.addColumn("RUC");
+       texterno.addColumn("Telèfono");
+       texterno.addColumn("Direcciòn");
+       texterno.addColumn("Correo");
+       texterno.addColumn("Año de colaboraciòn");
+       texterno.addColumn("Gerente General");
+       texterno.addColumn("Demora");
+       tblordProvEx.setModel(texterno);
+       
+       String sql="Select * From provedorext ORDER BY RUC";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                int anio=Integer.parseInt(rs.getString("AnioColab"));
+                
+                CAPExterno ext= new CAPExterno(anio);
+                String tiempod=ext.tiempoProveedor();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]= tiempod;
+                
+                texterno.addRow(datos);
+            }
+            tblordProvEx.setModel(texterno);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartabExternotelf(){
+       texterno = new DefaultTableModel();
+       texterno.addColumn("Nombre Empresa");
+       texterno.addColumn("RUC");
+       texterno.addColumn("Telèfono");
+       texterno.addColumn("Direcciòn");
+       texterno.addColumn("Correo");
+       texterno.addColumn("Año de colaboraciòn");
+       texterno.addColumn("Gerente General");
+       texterno.addColumn("Demora");
+       tblordProvEx.setModel(texterno);
+       
+       String sql="Select * From provedorext ORDER BY Telefono";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                int anio=Integer.parseInt(rs.getString("AnioColab"));
+                
+                CAPExterno ext= new CAPExterno(anio);
+                String tiempod=ext.tiempoProveedor();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]= tiempod;
+                
+                texterno.addRow(datos);
+            }
+            tblordProvEx.setModel(texterno);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartabExternoDirec(){
+       texterno = new DefaultTableModel();
+       texterno.addColumn("Nombre Empresa");
+       texterno.addColumn("RUC");
+       texterno.addColumn("Telèfono");
+       texterno.addColumn("Direcciòn");
+       texterno.addColumn("Correo");
+       texterno.addColumn("Año de colaboraciòn");
+       texterno.addColumn("Gerente General");
+       texterno.addColumn("Demora");
+       tblordProvEx.setModel(texterno);
+       
+       String sql="Select * From provedorext ORDER BY Direccion";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                int anio=Integer.parseInt(rs.getString("AnioColab"));
+                
+                CAPExterno ext= new CAPExterno(anio);
+                String tiempod=ext.tiempoProveedor();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]= tiempod;
+                
+                texterno.addRow(datos);
+            }
+            tblordProvEx.setModel(texterno);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartabExternoCor(){
+       texterno = new DefaultTableModel();
+       texterno.addColumn("Nombre Empresa");
+       texterno.addColumn("RUC");
+       texterno.addColumn("Telèfono");
+       texterno.addColumn("Direcciòn");
+       texterno.addColumn("Correo");
+       texterno.addColumn("Año de colaboraciòn");
+       texterno.addColumn("Gerente General");
+       texterno.addColumn("Demora");
+       tblordProvEx.setModel(texterno);
+       
+       String sql="Select * From provedorext ORDER BY Correo";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                int anio=Integer.parseInt(rs.getString("AnioColab"));
+                
+                CAPExterno ext= new CAPExterno(anio);
+                String tiempod=ext.tiempoProveedor();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]= tiempod;
+                
+                texterno.addRow(datos);
+            }
+            tblordProvEx.setModel(texterno);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartabExternoAnio(){
+       texterno = new DefaultTableModel();
+       texterno.addColumn("Nombre Empresa");
+       texterno.addColumn("RUC");
+       texterno.addColumn("Telèfono");
+       texterno.addColumn("Direcciòn");
+       texterno.addColumn("Correo");
+       texterno.addColumn("Año de colaboraciòn");
+       texterno.addColumn("Gerente General");
+       texterno.addColumn("Demora");
+       tblordProvEx.setModel(texterno);
+       
+       String sql="Select * From provedorext ORDER BY AnioColab";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                int anio=Integer.parseInt(rs.getString("AnioColab"));
+                
+                CAPExterno ext= new CAPExterno(anio);
+                String tiempod=ext.tiempoProveedor();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]= tiempod;
+                
+                texterno.addRow(datos);
+            }
+            tblordProvEx.setModel(texterno);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartabExternoGeren(){
+       texterno = new DefaultTableModel();
+       texterno.addColumn("Nombre Empresa");
+       texterno.addColumn("RUC");
+       texterno.addColumn("Telèfono");
+       texterno.addColumn("Direcciòn");
+       texterno.addColumn("Correo");
+       texterno.addColumn("Año de colaboraciòn");
+       texterno.addColumn("Gerente General");
+       texterno.addColumn("Demora");
+       tblordProvEx.setModel(texterno);
+       
+       String sql="Select * From provedorext ORDER BY GerenteGe";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                int anio=Integer.parseInt(rs.getString("AnioColab"));
+                
+                CAPExterno ext= new CAPExterno(anio);
+                String tiempod=ext.tiempoProveedor();
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]= tiempod;
+                
+                texterno.addRow(datos);
+            }
+            tblordProvEx.setModel(texterno);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartablaSucPrin(){
+        
+        tprincipal = new DefaultTableModel();
+        tprincipal.addColumn("Numero de sucursal");
+        tprincipal.addColumn("Teléfono");
+        tprincipal.addColumn("Distrito");
+        tprincipal.addColumn("Dirección");
+        tprincipal.addColumn("Encargado");
+        tprincipal.addColumn("DNI");
+        tblordSucPri.setModel(tprincipal);
+        
+        String sql="Select * From sucursalpri";
+        String datos [] = new String [6];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                
+                tprincipal.addRow(datos);
+            }
+            tblordSucPri.setModel(tprincipal);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartablaSucPrinNum(){
+        
+        tprincipal = new DefaultTableModel();
+        tprincipal.addColumn("Numero de sucursal");
+        tprincipal.addColumn("Teléfono");
+        tprincipal.addColumn("Distrito");
+        tprincipal.addColumn("Dirección");
+        tprincipal.addColumn("Encargado");
+        tprincipal.addColumn("DNI");
+        tblordSucPri.setModel(tprincipal);
+        
+        String sql="Select * From sucursalpri ORDER BY NumeroSuc";
+        String datos [] = new String [6];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                
+                tprincipal.addRow(datos);
+            }
+            tblordSucPri.setModel(tprincipal);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartablaSucPrinTelf(){
+        
+        tprincipal = new DefaultTableModel();
+        tprincipal.addColumn("Numero de sucursal");
+        tprincipal.addColumn("Teléfono");
+        tprincipal.addColumn("Distrito");
+        tprincipal.addColumn("Dirección");
+        tprincipal.addColumn("Encargado");
+        tprincipal.addColumn("DNI");
+        tblordSucPri.setModel(tprincipal);
+        
+        String sql="Select * From sucursalpri ORDER BY Telefono";
+        String datos [] = new String [6];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                
+                tprincipal.addRow(datos);
+            }
+            tblordSucPri.setModel(tprincipal);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartablaSucPrinDist(){
+        
+        tprincipal = new DefaultTableModel();
+        tprincipal.addColumn("Numero de sucursal");
+        tprincipal.addColumn("Teléfono");
+        tprincipal.addColumn("Distrito");
+        tprincipal.addColumn("Dirección");
+        tprincipal.addColumn("Encargado");
+        tprincipal.addColumn("DNI");
+        tblordSucPri.setModel(tprincipal);
+        
+        String sql="Select * From sucursalpri ORDER BY Distrito";
+        String datos [] = new String [6];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                
+                tprincipal.addRow(datos);
+            }
+            tblordSucPri.setModel(tprincipal);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartablaSucPrinDirec(){
+        
+        tprincipal = new DefaultTableModel();
+        tprincipal.addColumn("Numero de sucursal");
+        tprincipal.addColumn("Teléfono");
+        tprincipal.addColumn("Distrito");
+        tprincipal.addColumn("Dirección");
+        tprincipal.addColumn("Encargado");
+        tprincipal.addColumn("DNI");
+        tblordSucPri.setModel(tprincipal);
+        
+        String sql="Select * From sucursalpri ORDER BY Direccion";
+        String datos [] = new String [6];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                
+                tprincipal.addRow(datos);
+            }
+            tblordSucPri.setModel(tprincipal);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartablaSucPrinEnc(){
+        
+        tprincipal = new DefaultTableModel();
+        tprincipal.addColumn("Numero de sucursal");
+        tprincipal.addColumn("Teléfono");
+        tprincipal.addColumn("Distrito");
+        tprincipal.addColumn("Dirección");
+        tprincipal.addColumn("Encargado");
+        tprincipal.addColumn("DNI");
+        tblordSucPri.setModel(tprincipal);
+        
+        String sql="Select * From sucursalpri ORDER BY Encargado";
+        String datos [] = new String [6];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                
+                tprincipal.addRow(datos);
+            }
+            tblordSucPri.setModel(tprincipal);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartablaSucPrinDni(){
+        
+        tprincipal = new DefaultTableModel();
+        tprincipal.addColumn("Numero de sucursal");
+        tprincipal.addColumn("Teléfono");
+        tprincipal.addColumn("Distrito");
+        tprincipal.addColumn("Dirección");
+        tprincipal.addColumn("Encargado");
+        tprincipal.addColumn("DNI");
+        tblordSucPri.setModel(tprincipal);
+        
+        String sql="Select * From sucursalpri ORDER BY DNI";
+        String datos [] = new String [6];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                
+                tprincipal.addRow(datos);
+            }
+            tblordSucPri.setModel(tprincipal);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        
+    }
+    
+    public void mostrartablaSucProvin(){
+        tprovincia = new DefaultTableModel();
+        tprovincia.addColumn("Número Sucursal");
+        tprovincia.addColumn("Teléfono");
+        tprovincia.addColumn("Cod. Provincia");
+        tprovincia.addColumn("Provincia");
+        tprovincia.addColumn("Distrito");
+        tprovincia.addColumn("Dirección");
+        tprovincia.addColumn("Encargado");
+        tprovincia.addColumn("DNI");
+        tblordSucProv.setModel(tprovincia);
+        String sql="Select * From sucursalpro";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                tprovincia.addRow(datos);
+            }
+            tblordSucProv.setModel(tprovincia);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaSucProvinNum(){
+        tprovincia = new DefaultTableModel();
+        tprovincia.addColumn("Número Sucursal");
+        tprovincia.addColumn("Teléfono");
+        tprovincia.addColumn("Cod. Provincia");
+        tprovincia.addColumn("Provincia");
+        tprovincia.addColumn("Distrito");
+        tprovincia.addColumn("Dirección");
+        tprovincia.addColumn("Encargado");
+        tprovincia.addColumn("DNI");
+        tblordSucProv.setModel(tprovincia);
+        String sql="Select * From sucursalpro ORDER BY NumeroSuc";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                tprovincia.addRow(datos);
+            }
+            tblordSucProv.setModel(tprovincia);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaSucProvintelf(){
+        tprovincia = new DefaultTableModel();
+        tprovincia.addColumn("Número Sucursal");
+        tprovincia.addColumn("Teléfono");
+        tprovincia.addColumn("Cod. Provincia");
+        tprovincia.addColumn("Provincia");
+        tprovincia.addColumn("Distrito");
+        tprovincia.addColumn("Dirección");
+        tprovincia.addColumn("Encargado");
+        tprovincia.addColumn("DNI");
+        tblordSucProv.setModel(tprovincia);
+        
+        
+        String sql="Select * From sucursalpro ORDER BY Telefono";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                tprovincia.addRow(datos);
+            }
+            tblordSucProv.setModel(tprovincia);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaSucProvinCodPro(){
+        tprovincia = new DefaultTableModel();
+        tprovincia.addColumn("Número Sucursal");
+        tprovincia.addColumn("Teléfono");
+        tprovincia.addColumn("Cod. Provincia");
+        tprovincia.addColumn("Provincia");
+        tprovincia.addColumn("Distrito");
+        tprovincia.addColumn("Dirección");
+        tprovincia.addColumn("Encargado");
+        tprovincia.addColumn("DNI");
+        tblordSucProv.setModel(tprovincia);
+        
+        
+        String sql="Select * From sucursalpro ORDER BY CodPro";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                tprovincia.addRow(datos);
+            }
+            tblordSucProv.setModel(tprovincia);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaSucProvinPro(){
+        tprovincia = new DefaultTableModel();
+        tprovincia.addColumn("Número Sucursal");
+        tprovincia.addColumn("Teléfono");
+        tprovincia.addColumn("Cod. Provincia");
+        tprovincia.addColumn("Provincia");
+        tprovincia.addColumn("Distrito");
+        tprovincia.addColumn("Dirección");
+        tprovincia.addColumn("Encargado");
+        tprovincia.addColumn("DNI");
+        tblordSucProv.setModel(tprovincia);
+        String sql="Select * From sucursalpro ORDER BY Provincia";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                tprovincia.addRow(datos);
+            }
+            tblordSucProv.setModel(tprovincia);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaSucProvinCiud(){
+        tprovincia = new DefaultTableModel();
+        tprovincia.addColumn("Número Sucursal");
+        tprovincia.addColumn("Teléfono");
+        tprovincia.addColumn("Cod. Provincia");
+        tprovincia.addColumn("Provincia");
+        tprovincia.addColumn("Distrito");
+        tprovincia.addColumn("Dirección");
+        tprovincia.addColumn("Encargado");
+        tprovincia.addColumn("DNI");
+        tblordSucProv.setModel(tprovincia);
+        
+        
+        String sql="Select * From sucursalpro OREDER BY Ciudad";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                tprovincia.addRow(datos);
+            }
+            tblordSucProv.setModel(tprovincia);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaSucProvinDire(){
+        tprovincia = new DefaultTableModel();
+        tprovincia.addColumn("Número Sucursal");
+        tprovincia.addColumn("Teléfono");
+        tprovincia.addColumn("Cod. Provincia");
+        tprovincia.addColumn("Provincia");
+        tprovincia.addColumn("Distrito");
+        tprovincia.addColumn("Dirección");
+        tprovincia.addColumn("Encargado");
+        tprovincia.addColumn("DNI");
+        tblordSucProv.setModel(tprovincia);
+        
+        
+        String sql="Select * From sucursalpro ORDER BY Direccion";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                tprovincia.addRow(datos);
+            }
+            tblordSucProv.setModel(tprovincia);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaSucProvinEnca(){
+        tprovincia = new DefaultTableModel();
+        tprovincia.addColumn("Número Sucursal");
+        tprovincia.addColumn("Teléfono");
+        tprovincia.addColumn("Cod. Provincia");
+        tprovincia.addColumn("Provincia");
+        tprovincia.addColumn("Distrito");
+        tprovincia.addColumn("Dirección");
+        tprovincia.addColumn("Encargado");
+        tprovincia.addColumn("DNI");
+        tblordSucProv.setModel(tprovincia);
+        String sql="Select * From sucursalpro ORDER BY Encargado";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                tprovincia.addRow(datos);
+            }
+            tblordSucProv.setModel(tprovincia);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
+    public void mostrartablaSucProvinDni(){
+        tprovincia = new DefaultTableModel();
+        tprovincia.addColumn("Número Sucursal");
+        tprovincia.addColumn("Teléfono");
+        tprovincia.addColumn("Cod. Provincia");
+        tprovincia.addColumn("Provincia");
+        tprovincia.addColumn("Distrito");
+        tprovincia.addColumn("Dirección");
+        tprovincia.addColumn("Encargado");
+        tprovincia.addColumn("DNI");
+        tblordSucProv.setModel(tprovincia);
+        String sql="Select * From sucursalpro ORDER BY DNI";
+        String datos []= new String [8];
+        Statement st;
+        
+        try{
+            st= cn.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                tprovincia.addRow(datos);
+            }
+            tblordSucProv.setModel(tprovincia);
+        }catch(SQLException ex){
+            Logger.getLogger(FrameProductos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+    
     
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         Tienda ti= new Tienda();
         ti.setVisible(true);
         this.setVisible(false); 
     }//GEN-LAST:event_jButton16ActionPerformed
-    
-    
     
     private void jcomFiltEmpleItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomFiltEmpleItemStateChanged
         int TipoFilEmple=jcomFiltEmple.getSelectedIndex();
@@ -4926,6 +6203,106 @@ private void mostrartablapromakeRuc(){
         
     }//GEN-LAST:event_jcomOrdMakeItemStateChanged
 
+    private void jcomFiltProveItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomFiltProveItemStateChanged
+        if(jcomFiltProve.getSelectedIndex()==0){
+            PanelFilProvInt.setVisible(false);
+            PanelFilProvEx.setVisible(false);
+        }if(jcomFiltProve.getSelectedIndex()==1){
+            PanelFilProvInt.setVisible(true);
+            PanelFilProvEx.setVisible(false);
+        }if(jcomFiltProve.getSelectedIndex()==2){
+            PanelFilProvInt.setVisible(false);
+            PanelFilProvEx.setVisible(true);
+        }
+    }//GEN-LAST:event_jcomFiltProveItemStateChanged
+
+    private void jcomOrdProvInItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomOrdProvInItemStateChanged
+        if(jcomOrdProvIn.getSelectedIndex()==0){
+            mostrartabinet();
+        }if(jcomOrdProvIn.getSelectedIndex()==1){
+            mostrartabinetNom();
+        }if(jcomOrdProvIn.getSelectedIndex()==2){
+            mostrartabinetDNI();
+        }if(jcomOrdProvIn.getSelectedIndex()==3){
+            mostrartabinetAre();
+        }
+    }//GEN-LAST:event_jcomOrdProvInItemStateChanged
+
+    private void jcomOrdProvExtItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomOrdProvExtItemStateChanged
+        if(jcomOrdProvExt.getSelectedIndex()==0){
+            mostrartabExterno();
+        }if(jcomOrdProvExt.getSelectedIndex()==1){
+            mostrartabExternoNom();
+        }if(jcomOrdProvExt.getSelectedIndex()==2){
+            mostrartabExternoruc();
+        }if(jcomOrdProvExt.getSelectedIndex()==3){
+            mostrartabExternotelf();
+        }if(jcomOrdProvExt.getSelectedIndex()==4){
+            mostrartabExternoDirec();
+        }if(jcomOrdProvExt.getSelectedIndex()==5){
+            mostrartabExternoCor();
+        }if(jcomOrdProvExt.getSelectedIndex()==6){
+            mostrartabExternoAnio();
+        }if(jcomOrdProvExt.getSelectedIndex()==7){
+            mostrartabExternoGeren();
+        }
+    }//GEN-LAST:event_jcomOrdProvExtItemStateChanged
+
+    private void jcomFiltSucurItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomFiltSucurItemStateChanged
+        if(jcomFiltSucur.getSelectedIndex()==0){
+            PanelFilSucPri.setVisible(false);
+            PanelFilSucPro.setVisible(false);
+        }if(jcomFiltSucur.getSelectedIndex()==1){
+            PanelFilSucPri.setVisible(true);
+            PanelFilSucPro.setVisible(false);
+        }if(jcomFiltSucur.getSelectedIndex()==2){
+            PanelFilSucPri.setVisible(false);
+            PanelFilSucPro.setVisible(true);
+        }
+    }//GEN-LAST:event_jcomFiltSucurItemStateChanged
+
+    private void jcomOrdSucPriItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomOrdSucPriItemStateChanged
+        if(jcomOrdSucPri.getSelectedIndex()==0){
+            mostrartablaSucPrin();
+        }if(jcomOrdSucPri.getSelectedIndex()==1){
+            mostrartablaSucPrinNum();
+        }if(jcomOrdSucPri.getSelectedIndex()==2){
+            mostrartablaSucPrinTelf();
+        }if(jcomOrdSucPri.getSelectedIndex()==3){
+            mostrartablaSucPrinDist();
+        }if(jcomOrdSucPri.getSelectedIndex()==4){
+            mostrartablaSucPrinDirec();
+        }if(jcomOrdSucPri.getSelectedIndex()==5){
+            mostrartablaSucPrinEnc();
+        }if(jcomOrdSucPri.getSelectedIndex()==6){
+            mostrartablaSucPrinDni();
+        }
+    }//GEN-LAST:event_jcomOrdSucPriItemStateChanged
+
+    private void jcomOrdSucProvItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcomOrdSucProvItemStateChanged
+        if(jcomOrdSucProv.getSelectedIndex()==0){
+            mostrartablaSucProvin();
+        }if(jcomOrdSucProv.getSelectedIndex()==1){
+            mostrartablaSucProvinNum();
+        }if(jcomOrdSucProv.getSelectedIndex()==2){
+            mostrartablaSucProvintelf();
+        }if(jcomOrdSucProv.getSelectedIndex()==3){
+            mostrartablaSucProvinCodPro();
+        }if(jcomOrdSucProv.getSelectedIndex()==4){
+            mostrartablaSucProvinPro();
+        }if(jcomOrdSucProv.getSelectedIndex()==5){
+            mostrartablaSucProvinCiud();
+        }if(jcomOrdSucProv.getSelectedIndex()==6){
+            mostrartablaSucProvinDire();
+        }if(jcomOrdSucProv.getSelectedIndex()==7){
+            mostrartablaSucProvinEnca();
+        }if(jcomOrdSucProv.getSelectedIndex()==8){
+            mostrartablaSucProvinDni();
+        }
+        
+        
+    }//GEN-LAST:event_jcomOrdSucProvItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -4968,6 +6345,10 @@ private void mostrartablapromakeRuc(){
     private javax.swing.JPanel PanelFilComes;
     private javax.swing.JPanel PanelFilEmple;
     private javax.swing.JPanel PanelFilMake;
+    private javax.swing.JPanel PanelFilProvEx;
+    private javax.swing.JPanel PanelFilProvInt;
+    private javax.swing.JPanel PanelFilSucPri;
+    private javax.swing.JPanel PanelFilSucPro;
     private javax.swing.JPanel PanelFilhigi;
     private javax.swing.JPanel PanelHigiene;
     private javax.swing.JPanel PanelMake;
@@ -5090,6 +6471,10 @@ private void mostrartablapromakeRuc(){
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -5109,6 +6494,10 @@ private void mostrartablapromakeRuc(){
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -5117,11 +6506,15 @@ private void mostrartablapromakeRuc(){
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
@@ -5191,11 +6584,17 @@ private void mostrartablapromakeRuc(){
     private javax.swing.JTextField jTextField1;
     private javax.swing.JComboBox<String> jcomFiltEmple;
     private javax.swing.JComboBox<String> jcomFiltProduc;
+    private javax.swing.JComboBox<String> jcomFiltProve;
+    private javax.swing.JComboBox<String> jcomFiltSucur;
     private javax.swing.JComboBox<String> jcomOrdComes;
     private javax.swing.JComboBox<String> jcomOrdEmple;
     private javax.swing.JComboBox<String> jcomOrdEmplead;
     private javax.swing.JComboBox<String> jcomOrdHigi;
     private javax.swing.JComboBox<String> jcomOrdMake;
+    private javax.swing.JComboBox<String> jcomOrdProvExt;
+    private javax.swing.JComboBox<String> jcomOrdProvIn;
+    private javax.swing.JComboBox<String> jcomOrdSucPri;
+    private javax.swing.JComboBox<String> jcomOrdSucProv;
     private javax.swing.JComboBox<String> jcombTipoProComes;
     private javax.swing.JComboBox<String> jcomboAreaProvInt;
     private javax.swing.JComboBox<String> jcomboEmpleadSuel;
@@ -5208,6 +6607,10 @@ private void mostrartablapromakeRuc(){
     private javax.swing.JTable tblordProdComes;
     private javax.swing.JTable tblordProdHigi;
     private javax.swing.JTable tblordProdMake;
+    private javax.swing.JTable tblordProvEx;
+    private javax.swing.JTable tblordProvInt;
+    private javax.swing.JTable tblordSucPri;
+    private javax.swing.JTable tblordSucProv;
     private javax.swing.JTable tblusuario;
     private javax.swing.JTextField txtBusApeAd;
     private javax.swing.JTextField txtBusDistSucPri;
