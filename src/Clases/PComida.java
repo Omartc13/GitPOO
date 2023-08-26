@@ -6,7 +6,7 @@ package Clases;
 
 /**
  *
- * @author yosse
+ * @author yosse,OmarTc
  */
 public class PComida extends PProductos {
     

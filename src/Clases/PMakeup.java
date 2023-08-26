@@ -6,7 +6,7 @@ package Clases;
 
 /**
  *
- * @author yosse
+ * @author yosse,OmarTc
  */
 public class PMakeup extends PProductos{
     

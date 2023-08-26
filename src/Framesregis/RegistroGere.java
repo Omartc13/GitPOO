@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Omar Tc
+ * @author OmarTc
  */
 public class RegistroGere extends javax.swing.JFrame {
     

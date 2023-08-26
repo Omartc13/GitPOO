@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 /**
  *
- * @author yosse
+ * @author yosse,OmarTc
  */
 public class FrameEmpleados extends javax.swing.JFrame {
     

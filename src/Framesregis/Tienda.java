@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /** 
  *
- * @author Omar,Andrea,Alan
+ * @author Omar,Andrea
  */
 
 

@@ -6,7 +6,7 @@ package Clases;
 
 /**
  *
- * @author yosse
+ * @author yosse,OmarTc
  */
 
 // Clase del tipo polimorfismo

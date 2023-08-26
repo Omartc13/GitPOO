@@ -23,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author USER
+ * @author OmarTc
  */
 public class FrameSucursales extends javax.swing.JFrame {
     DefaultTableModel tprincipal = new DefaultTableModel();
